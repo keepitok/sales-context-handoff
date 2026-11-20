@@ -48,14 +48,11 @@ Collection starts with your website and offer material, saving separate offer an
 | File | What it contains |
 | --- | --- |
 | `working/reports/offer.md` | Evidence-backed offer description, refined throughout collection and analysis: problem, promise, delivery, terms and observed buyer value. |
-| `working/reports/icp.md` | Evidence-backed working ICP, refined throughout collection and analysis, with fit criteria, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
+| `working/reports/icp.md` | Evidence-backed working ICP, refined throughout collection and analysis, with company/customer fit, buyer roles, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
 | `working/reports/sales-context.md` | Your sales process, qualification rules and operational constraints. |
-| `working/reports/customer-context.md` | Customers' and prospects' goals, problems, workflows, alternatives and decision criteria. |
+| `working/reports/customer-context.md` | Customers' and prospects' situations, needs, workflows, alternatives and constraints, plus signals and triggers that may reveal fit or timing. |
 | `working/reports/outcome-analysis.md` | Outcome comparisons, patterns, objections and counterexamples. |
-| `working/reports/buyer-roles.md` | Observed buyer or participant roles, influence and decision involvement. |
-| `working/reports/signals-and-triggers.md` | Conditions and events that may help identify similar future opportunities, with timing, evidence and limits. |
-| `working/reports/case-study.md` | One documented deal or contact journey, from initial context to observed outcome. |
-| `working/reports/outreach-examples.md` | Exact openings, follow-ups and replies, with identifiable examples and observed outcomes. |
+| `working/reports/examples.md` | One documented journey plus exact outreach sequences and replies, with identifiable accounts/contacts and verified outcomes. |
 | `working/reports/gaps.md` | Missing information, contradictions and the next inputs needed. |
 | `working/extracts/*.md` | Source excerpts and exact conversations supporting the reports and tables. |
 

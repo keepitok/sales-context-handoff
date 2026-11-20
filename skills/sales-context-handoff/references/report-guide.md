@@ -7,14 +7,11 @@ Use the business name and clear factual descriptions. Include only supported, us
 | File in working/reports | What to include |
 |---|---|
 | offer.md | Initial website/document-based offer and current evidence-backed description: problem, promise, scope, terms, buyer value and observed outcomes, kept distinct |
-| icp.md | Initial intended audience and refined working ICP/audience profile, with supported criteria, named examples, counterexamples, hypotheses and unknowns |
+| icp.md | Refined working ICP/audience profile and its initial basis: company/customer fit and buyer/participant roles, with supported criteria, named examples, counterexamples, hypotheses and unknowns |
 | sales-context.md | Seller's sales motion, stages, qualification/scoring definitions, operational constraints and documented practices; distinguish current from historical material |
-| customer-context.md | Customers'/prospects' observed goals, problems, current workflows, alternatives, constraints and decision criteria, with buyer language and named cases |
+| customer-context.md | Observed goals, problems, workflows, alternatives, constraints and decision criteria, plus signals/triggers, chronology, availability before outreach, counterexamples and hypotheses |
 | outcome-analysis.md | Sample/coverage, positive/negative/unknown outcome comparison, counts, counterexamples, objections and supported explanations |
-| buyer-roles.md | Observed participants, decision roles and interactions; distinguish job titles, seller designations and demonstrated roles |
-| signals-and-triggers.md | Observed conditions and events that may indicate fit, need or timing, with chronology, availability before outreach, counterexamples and untested hypotheses |
-| case-study.md | One well-documented deal or noncommercial contact journey: context, timeline, participants, exchanges, decision/outcome and gaps |
-| outreach-examples.md | Curated examples with channel, context, exact message excerpts, observed reply/meeting/won association and source links |
+| examples.md | One well-documented deal/contact journey plus curated outreach sequences: context, participants, exact exchanges, timeline, verified outcomes and source links |
 | gaps.md | Missing data, contradictions, inaccessible/unqueried sources and next inputs needed to resolve open questions; enrichment only where relevant |
 
 The CSV tables hold identifiable accounts, contacts, deals, outreach, outcome observations and evidence. Do not duplicate every row in prose. If a report has no supporting evidence, say what was unavailable in one sentence rather than filling a template with unknowns.
@@ -26,7 +23,7 @@ In outcome-analysis, make these two comparisons explicit:
 
 Beside each featured example, include the observed contact/account profile or source-record link and links to the relevant conversation and outcome evidence. A name or internal ID alone is not a usable external reference. If a profile link is unavailable, keep the source-record link and identify the missing profile; never guess one.
 
-Each report owns its topic. Keep fit criteria and their hypotheses in icp, timing/detection candidates in signals-and-triggers, and the detailed journey in case-study. Cross-link relevant reports rather than repeating their full contents or producing a catch-all findings file. For customer-context and signals-and-triggers, use [the dedicated guidance](evidence/customer-context-and-signals.md).
+Each report owns its topic. In icp, cover company/customer fit and buyer roles as distinct sections. In customer-context, cover observed situations and signals/triggers as distinct sections, using [the dedicated guidance](evidence/customer-context-and-signals.md). In examples, include a documented journey and selected outreach sequences; link to a shared sequence rather than quoting it twice. Keep hypotheses beside their supporting evidence in the relevant report. Cross-link reports without repeating their full contents. Each topic needs a substantive synthesis or an explicit evidence shortfall; merging files does not make a topic optional.
 
 Label reports **Preliminary** when material coverage gaps remain. Put the next useful collection steps or limits to accept in gaps. Writing the reports does not complete analysis: follow the [coverage and findings review](evidence/coverage.md) before offering packaging.
 

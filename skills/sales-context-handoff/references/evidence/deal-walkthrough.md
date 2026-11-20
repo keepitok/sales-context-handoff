@@ -4,7 +4,7 @@ Modified 2026-11-20 from Checkpoint GTM's deal-qualification-review; see [NOTICE
 
 Choose the sampled deal with the clearest existing evidence across origin, problem, exchanges, stakeholders and outcome. Do not automatically choose the largest or a win. Explain the selection in one sentence.
 
-Write case-study.md as a short narrative or dated bullets:
+Write a documented-journey section in examples.md as a short narrative or dated bullets, alongside the selected outreach examples:
 - How the opportunity began.
 - The buyer's stated pain and expected outcome.
 - Who participated and what decision roles are supported.
