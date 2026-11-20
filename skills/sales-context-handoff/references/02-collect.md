@@ -38,4 +38,4 @@ Run `python tools/context_tools.py validate .` from the workspace when Python is
 
 Show deal and outreach counts, coverage, missing inputs and two or three evidence examples. Mark collection complete or partial honestly. Do not run synthesis automatically.
 
-Next prompt: "Analyze my sales context and prepare findings for my chosen recipient."
+Offer analysis: "Next is analysis: I'll turn the collected evidence into supported findings and gaps for your chosen recipient. Shall we proceed?" Wait for the user's answer.

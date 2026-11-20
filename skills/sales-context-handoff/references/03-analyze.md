@@ -38,4 +38,4 @@ Run the workspace helper's validate command and resolve structural errors. If a 
 
 Save the milestone state. Summarize the strongest findings, limitations and only material clarification questions. Do not block the handoff because evidence is incomplete.
 
-Next prompt: "Help me review and redact my sales-context handoff, then package the results I choose to share."
+Offer review and handoff: "Next we'll review the contents you want to share, apply corrections or redactions, and package the reviewed results. Shall we proceed?" Wait for the user's answer.

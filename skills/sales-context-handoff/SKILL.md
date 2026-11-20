@@ -9,9 +9,9 @@ Help the user explain their business's sales context to a chosen recipient using
 
 ## Choose the current stage
 
-Locate the user-selected workspace and read `working/progress.json` if it exists. Use the user's request to choose the stage; use saved progress to resume when they have not named one. For a new workspace, start with setup. If the request and saved state leave the next step unclear, ask one short question.
+Locate the user-selected workspace and read `working/progress.json` if it exists. Use the user's request to choose the stage; use saved progress to resume when they have not named one. For a new workspace, propose setup. If the request and saved state leave the next step unclear, ask one short question.
 
-If the user has just installed the skill and asks what comes next, briefly offer setup and ask whether to begin by identifying their sources. If they already asked to start setup, ask the first missing setup question directly. Do not require them to paste another prompt or assemble evidence first. Reuse stated context, but confirm an unknown recipient or purpose rather than inventing one.
+Installation alone, including an installation request that mentions a test scenario, does not start setup. After installing, say the skill is installed, introduce setup's purpose in one sentence and ask whether to begin. Wait for the answer before setup questions, workspace creation or source access. Do not require the user to paste another prompt or assemble evidence first. Reuse stated context, but confirm an unknown recipient or purpose rather than inventing one.
 
 | Stage | Input | Saved result | Instructions |
 | --- | --- | --- | --- |
@@ -22,7 +22,17 @@ If the user has just installed the skill and asks what comes next, briefly offer
 
 Read only the current stage's instructions. Load its linked references when needed for the selected sources or output. Other stage files are not prerequisites to load. If an input is missing, use the stage table to identify the required earlier stage; do not silently execute the whole workflow.
 
-Work one stage at a time. At completion, save progress, show the result and offer the next prompt. Wait for the user to continue. Partial collection can still support analysis when its limits are stated. If all stages are complete, use the requested revision or ask what the user wants to revisit.
+## Stage transitions
+
+Before beginning a stage, name it and explain its purpose in one short sentence. If the user explicitly requested that stage or agreed to the proposed transition, proceed without asking again. Otherwise ask whether to begin and wait. Supplying background, a URL or source names does not by itself accept a stage transition; retain that information for when the user proceeds.
+
+Use these purposes in natural wording:
+- Setup: confirm scope and recipient, connect selected sources and verify access with small reads.
+- Collect: retrieve the agreed evidence and preserve traceable records and exact messages.
+- Analyze: turn collected evidence into supported findings and gaps for the recipient.
+- Review and hand off: review selected contents, apply redactions and package the reviewed results.
+
+Work one stage at a time. At completion, save progress, show the result, introduce the next stage's purpose and ask whether to proceed. Stop there; do not begin its work in the same response. A simple "yes" is enough after a clear invitation. Keep the next stage not_started until the user proceeds. On resume, continue an already started stage when requested; if the previous stage is complete, offer the next one. Partial collection can still support analysis when its limits are stated. If all stages are complete, use the requested revision or ask what the user wants to revisit.
 
 ## Shared working rules
 

@@ -18,11 +18,11 @@ Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once publish
 
 > **For agents:** Before installing, check that the user is in ChatGPT Work or Claude Cowork, in a dedicated project with skill support and persistent file access. Ask if the app or project is unclear. If needed, guide the user to the appropriate app and help them start a project, then ask them to paste the prompt there. Reuse an existing Sales Context Handoff project when resuming.
 
-> After installation, load the skill and offer to start setup with one short question. Setup discovers where relevant evidence lives and helps connect those sources. Do not ask the user to assemble a sample of threads or exports before source discovery. Confirm any unknown recipient or purpose. Installation checks should establish that the skill is available; repository development tests are not an end-user setup step.
+> After installation, load the skill, confirm it is installed and introduce setup: it confirms scope and recipient, connects selected sources and verifies access. Ask whether to begin, then wait before setup questions or source access. An installation request mentioning a test scenario does not start setup. Do not ask the user to assemble a sample of threads or exports before source discovery. Installation checks should establish that the skill is available; repository development tests are not an end-user setup step.
 
 ## The workflow
 
-One skill guides you through four stages at your own pace. Each saves its results so you can review them or resume in a new conversation.
+One skill guides you through four stages at your own pace. It explains each next stage and waits for you to proceed. Each saves its results so you can review them or resume in a new conversation.
 
 Use these prompts after installation:
 
