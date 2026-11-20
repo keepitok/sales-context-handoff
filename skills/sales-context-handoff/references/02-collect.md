@@ -8,13 +8,15 @@ Locate the user's workspace and read `working/progress.json`. Use the Progress, 
 
 Read [record collection](evidence/records.md) for CRM, files, email and transcripts, [outreach evidence](evidence/outreach.md) for message selection, and [LinkedIn collection](sources/linkedin.md) only when those sources were selected.
 
+Use the saved access routes to find and extract the sample yourself. Do not turn collection into a request for the user to assemble threads that selected sources can supply. If a route fails, use [connection guidance](sources/connections.md) to choose a practical alternative and record the reason for any manual request.
+
 ## Select a useful bounded sample
 
 Use the chosen business, rep/team and dates:
 1. Find up to 10 won and 10 lost opportunities, preferring recent records. Include user-identified best-fit and poor-fit wins when available. Record selection reasons rather than interpreting a win as good fit.
 2. If short, ask once whether to extend the period or continue with a shortfall. Do not block the workflow on unavailable history.
 3. Offer expansion only when useful; never exceed 50 sampled deals without a new scope. Include up to 10 additional reply/meeting outreach successes outside the closed-deal sample.
-4. Use connector filters or export rows to identify candidates before opening conversations. Do not enumerate an entire mailbox. If a source cannot support scoped searching, ask for a narrower export or user-picked threads.
+4. Use connector filters or export rows to identify candidates before opening conversations. Do not enumerate an entire mailbox. If a source cannot support scoped searching, check the other selected access routes before requesting a narrower export or specific user-picked threads.
 
 Keep different opportunities at one company distinct. Preserve original stages and loss reasons alongside normalized outcomes. Silence, a declined meeting, and an unanswered InMail do not establish a lost deal. Conflicting outcome sources remain unresolved until clarified.
 

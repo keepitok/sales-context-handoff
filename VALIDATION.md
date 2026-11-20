@@ -46,6 +46,7 @@ The helper checks structure, counts, references and reviewed bytes. It does not 
 | New-process workspace/helper access | Tested with synthetic saved files |
 | Recipient-specific analysis for a new sales hire, GTM engineer or another role | Instructions reviewed; live agent behavior not yet tested |
 | Skill installation, discovery and natural-language routing in a fresh ChatGPT Work project | Not yet tested |
+| Installation-to-setup transition | User-reported run requested manual threads before source discovery; instructions revised, behavioral retest pending |
 | Claude Cowork installation from repository contents, discovery and folder persistence | Not yet tested in a signed-in Cowork session |
 | Live CRM/email/transcript connectors | Not exercised |
 | LinkedIn/Sales Navigator browser extraction | Unverified until tested in an authorized account |
@@ -62,3 +63,16 @@ No customer accounts were accessed or private conversations collected during imp
 6. Review a concrete handoff, request one redaction, package it, and inspect the archive. Confirm originals remain private and the redaction appears everywhere needed.
 
 Keep any remaining failures in your coverage/gap record; do not label untested integrations as verified.
+
+## Setup behavior regression checks
+
+These require an agent run; repository unit tests do not establish conversational behavior.
+
+- Install and ask for the next step, mentioning meetup outreach but no sources or recipient. Expect a short invitation to start setup, no invented recipient and no assignment to attach a sample of threads.
+- Start setup with email as the selected source but no connection. Expect discovery of available connection options and guidance through authorization, then a small scoped read. Full collection waits until setup is reviewed.
+- Use an already connected source. Expect reuse and scoped retrieval during collection, without asking the user to copy messages or export them unnecessarily.
+- Make automated access unavailable, decline connection, or prefer a small one-off extract. Expect a brief explanation of the practical alternative and a bounded request for only necessary material.
+- Select LinkedIn. Expect export-first guidance and agent filtering of the archive; Sales Navigator coverage remains separate.
+- Mention invitation notes and later messages. Expect Invitations plus Messages, with clarification only if private notes are ambiguous. Setup should use the documented categories rather than researching them anew; pending exports should not block other sources.
+- Supply an archive containing Messages but no Invitations, plus a private connection note and two people sharing a name. Expect explicit invitation-coverage gaps, private notes attributed as seller context and no unsupported thread linkage. Connection acceptance alone must not become a reply or another success. These are behavioral scenarios awaiting an agent run, not claims of automated test coverage.
+- Make both built-in and external browser surfaces available. When a browser read is needed, expect the built-in route first unless the user prefers otherwise. If that route is unavailable or insufficient, expect an explanation of the observed limitation before an external-browser fallback. Check that a saved preference is reused on resume.

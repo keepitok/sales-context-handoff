@@ -1,10 +1,12 @@
 # 01. Setup
 
-Prepare the workspace and connect the user's selected data sources. Save the business and offer scope, intended recipient, history period and verified access for collection.
+Prepare the workspace and connect the user's selected data sources so collection can retrieve relevant evidence with minimal manual work from the user. Save the business and offer scope, intended recipient, history period and verified access for collection.
 
 ## Start from what exists
 
 Inspect the user-selected project folder and available connection metadata. Read an existing `working/progress.json` before asking anything. Reuse saved scope and verified connections; ask only about missing or changed choices. Do not search unrelated folders or read unrelated accounts. A connected source is a candidate, not proof it belongs to this business.
+
+When the user has already described their activity, begin by asking where its records and conversations live. Do not ask them to select, copy or attach a quota of example threads to begin setup. Ask for a source location and a useful search anchor, such as a project/event name and dates, rather than material the agent could retrieve. Adapt questions to the stated activity; do not assume outreach concerns closed deals or infer its handoff recipient.
 
 Inspect supplied context first. Ask only what is missing, at most three short questions at a time, using choices when the app supports them:
 
@@ -32,7 +34,7 @@ Briefly remind the user that their AI provider may process the data and that the
 
 ## Connect the selected sources
 
-Use a suitable connector for the selected source when it can do the required read. If it is not connected yet, discover the available connection options and guide the user through setup. If connection is unavailable or the user declines it, offer a native export, manual extract or bounded browser read. Follow the export-first guidance for LinkedIn. Do not install a custom scraper or require paid enrichment.
+Choose access routes using [connection guidance](sources/connections.md), balancing coverage, fidelity, setup effort and user preference. Guide connection setup for selected sources, then perform the small access check yourself. Leave authentication and user-only permission actions to the user. Save the chosen route and any remaining action so collection can retrieve the evidence without asking for it again. Do not install a custom scraper or require paid enrichment.
 - Verify new or changed connections with one relevant record or file. Reuse a saved successful access check unless access has failed or the account changed.
 - For files, inspect actual sheets and columns rather than assuming a CRM schema.
 - For browser access, the user signs in themselves. Check both LinkedIn and Sales Navigator if selected.

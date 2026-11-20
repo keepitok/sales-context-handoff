@@ -18,6 +18,8 @@ Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once publish
 
 > **For agents:** Before installing, check that the user is in ChatGPT Work or Claude Cowork, in a dedicated project with skill support and persistent file access. Ask if the app or project is unclear. If needed, guide the user to the appropriate app and help them start a project, then ask them to paste the prompt there. Reuse an existing Sales Context Handoff project when resuming.
 
+> After installation, load the skill and offer to start setup with one short question. Setup discovers where relevant evidence lives and helps connect those sources. Do not ask the user to assemble a sample of threads or exports before source discovery. Confirm any unknown recipient or purpose. Installation checks should establish that the skill is available; repository development tests are not an end-user setup step.
+
 ## The workflow
 
 One skill guides you through four stages at your own pace. Each saves its results so you can review them or resume in a new conversation.
@@ -74,7 +76,7 @@ If you prefer to install the skill yourself, follow the steps for your app.
 
 Once installed, run the setup prompt above. It creates the shared workspace and checks that results can be saved there.
 
-Setup supports available connectors, supplied files and browser access where appropriate. LinkedIn uses exports first, with the browser for relevant gaps; Sales Navigator coverage is checked separately.
+Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. LinkedIn uses exports first, with the browser for relevant gaps; Sales Navigator coverage is checked separately.
 
 ## Your data and review
 
