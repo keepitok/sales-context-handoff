@@ -47,8 +47,8 @@ Collection starts with your website and offer material, saving separate offer an
 
 | File | What it contains |
 | --- | --- |
-| `working/reports/offer.md` | Initial offer description and evidence-backed refinements: problem, promise, delivery, terms and observed buyer value. |
-| `working/reports/icp.md` | Initial intended audience and working ICP, with supported fit criteria, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
+| `working/reports/offer.md` | Evidence-backed offer description, refined throughout collection and analysis: problem, promise, delivery, terms and observed buyer value. |
+| `working/reports/icp.md` | Evidence-backed working ICP, refined throughout collection and analysis, with fit criteria, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
 | `working/reports/sales-context.md` | Your sales process, qualification rules and operational constraints. |
 | `working/reports/customer-context.md` | Customers' and prospects' goals, problems, workflows, alternatives and decision criteria. |
 | `working/reports/outcome-analysis.md` | Outcome comparisons, patterns, objections and counterexamples. |
