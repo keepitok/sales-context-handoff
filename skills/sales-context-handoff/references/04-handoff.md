@@ -4,6 +4,8 @@ Prepare a portable copy of the results the user chooses to share, apply correcti
 
 Read `working/progress.json`, the handoff and helper guidance in `working/data-guide.md`, and [review guidance](review.md).
 
+Check [outcome coverage and readiness](evidence/coverage.md) before preparing the package. Require readiness ready or accepted_limited and a recorded findings review. If unresolved, return to the findings/coverage discussion instead of offering packaging. An explicitly requested evidence-only handoff still requires the user to review and accept its stated limits.
+
 Use the existing evidence and draft reports. If reports are missing, offer the analysis milestone or an evidence-only handoff, making omissions clear. If no evidence exists, direct the user to collection, or setup if the workspace is missing. Do not repeat source setup, collection or analysis here. On resume, preserve reviewed copies and redactions; apply only requested corrections and relevant source updates, then review changed contents again.
 
 ## Prepare a concrete review copy
@@ -12,7 +14,7 @@ Copy selected draft reports, filtered CSV tables and relevant extracts into `han
 
 Create `handoff/README.md` titled "Sales context handoff: [business]," with a short reading order, offer/date scope, coverage limitations and a list of included files. Start with sales context, then findings and outreach examples, followed by gaps and the supporting tables/extracts. Explain that original source links may require account access; the included extracts should still allow evidence review.
 
-Retain stable identifiers. If a deal or outreach example is omitted, prune unused evidence and unneeded personal data from the shareable tables. Preserve the full mapping in working files.
+Retain stable identifiers and account/contact/outcome links. Include the six standard tables, with headers only for those containing no selected records. If an example is omitted, prune unused evidence and unneeded personal data from the shareable tables. Preserve the full mapping in working files. Keep identifiable example links unless the user requests their redaction; check redactions across reports, tables and extracts.
 
 Show the actual proposed contents and sensitive excerpts needing attention. Ask for corrections, exclusions or redactions, unless the user has already supplied explicit review instructions sufficient for these exact contents. Do not treat silence or a generic earlier request to package as completed review.
 

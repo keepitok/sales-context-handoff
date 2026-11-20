@@ -10,6 +10,8 @@ Read `working/progress.json`, tables, relevant extracts and existing draft repor
 
 Use [the report guide](report-guide.md) for output structure. Read [win/loss interpretation](evidence/win-loss.md), [buyer roles](evidence/buyers.md), [lightweight hypotheses](evidence/hypotheses.md) and [the deal walkthrough](evidence/deal-walkthrough.md) for the corresponding sections.
 
+Assess [outcome coverage and readiness](evidence/coverage.md). With partial evidence, label the reports preliminary and state which comparisons cannot be supported. Interpret noncommercial outcomes using the saved definitions rather than treating replies or registrations as won deals.
+
 ## Evidence rules
 
 - Do not turn an aspiration into a customer fact.
@@ -26,9 +28,9 @@ Use the report guide to cover business context, observed patterns, conversation 
 
 Capture what is sold, the buyer's problem, sales motion and stages, existing qualification rules, constraints and recorded buying roles. Distinguish current practice from a recommended change.
 
-Explain supported patterns with counts, counterexamples and limits. Include one best-documented deal walkthrough in findings. Include lightweight ICP/signal hypotheses when supported by collected evidence; name missing inputs needed to evaluate them. Preserve existing scoring rules as current practice without endorsing or recalibrating them.
+Explain supported patterns with counts, counterexamples and limits. Include one best-documented deal or noncommercial journey walkthrough in findings. Assess ICP/audience-fit evidence explicitly; include lightweight hypotheses only when supported and name missing inputs needed to evaluate them. Preserve existing scoring rules as current practice without endorsing or recalibrating them.
 
-Outreach examples must show exact source wording and the observed response/outcome. Do not rewrite examples into improved copy or imply the initial outreach caused a later sale.
+Outreach examples must identify the contact/account and show observed profile/record links, exact source wording, conversation evidence and separately verified response/conversion outcomes. Put these links beside the named example, not only inside a distant extract. If a profile link is unavailable, say so and retain the exact source-record link. Do not rewrite examples into improved copy or imply the initial outreach caused a later sale.
 
 Omit empty narrative sections. For a missing deliverable, write one clear sentence explaining which evidence was unavailable. Keep important questions and enrichment requests together in gaps.
 
@@ -36,6 +38,6 @@ Omit empty narrative sections. For a missing deliverable, write one clear senten
 
 Run the workspace helper's validate command and resolve structural errors. If a compatible runtime is unavailable, use the guide to check identifiers and references and state that the helper was not run. Manually check that each material finding's cited extract supports the claim; the script cannot judge this.
 
-Save the milestone state. Summarize the strongest findings, limitations and only material clarification questions. Do not block the handoff because evidence is incomplete.
+Save draft reports with analysis partial and findings_review pending. Present the strongest findings, the outcome comparison, ICP/audience-fit evidence and material limitations for substantive review. Saving four reports is not analysis completion. If readiness is needs_collection, propose targeted additional collection or ask whether the user accepts a limited handoff; do not present packaging as the default next step.
 
-Offer review and handoff: "Next we'll review the contents you want to share, apply corrections or redactions, and package the reviewed results. Shall we proceed?" Wait for the user's answer.
+After the user reviews the findings and readiness is ready or accepted_limited, record their decision and mark analysis complete. Only then offer the separate review/share stage: selecting contents, redacting and packaging. This may be combined with an explicit user request to proceed after review, without a redundant confirmation. Keep the later review of exact shareable contents intact.

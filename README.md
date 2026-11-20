@@ -39,12 +39,14 @@ To resume, point the assistant to your workspace and say: “Resume my sales-con
 
 The default starting point is the last 12 months, aiming for 10 wins and 10 losses where available. You can expand the sample to 50 deals and include up to 10 additional outreach examples that led to a reply or meeting. Missing history stays visible as a gap.
 
+For noncommercial outreach, such as event invitations, setup establishes what success means. Collection compares confirmed positive and negative cases where available, keeping replies, registrations, attendance and unknown outcomes distinct.
+
 ## What you get
 
 - **Sales context:** your offer, customer problems, sales process, qualification definitions and constraints.
-- **Deal evidence:** reusable CSV tables with account, opportunity and source references.
+- **Case evidence:** reusable CSV tables with identifiable accounts or contacts, observed profile/source links, deals and outcome records.
 - **Outreach examples:** exact messages and replies, with their observed outcomes.
-- **Findings:** supported win/loss patterns, buyer roles and one deal walkthrough.
+- **Findings:** outcome comparisons, buyer or audience roles, ICP/audience-fit evidence, tentative hypotheses and one documented journey.
 - **Gaps:** missing information, contradictions and open questions for follow-up.
 - **A reviewed ZIP:** concise Markdown reports, CSV tables and relevant evidence extracts with a reading-order index.
 
@@ -78,7 +80,7 @@ Your workspace separates original captures (`raw/`), analysis and source mapping
 
 Intermediate tables, extracts and drafts are saved directly in your local project folder. The assistant points you to those files for review; you do not need to download or reattach them between stages.
 
-The workflow checks for duplicate records and missing evidence links. You review whether the findings reflect your sales history and whether anything should be excluded before sharing.
+The workflow checks for duplicate records and missing evidence links. You review the findings before moving to packaging. If important outcomes, comparisons or audience attributes are missing, it proposes targeted collection or asks whether you want a limited handoff with those gaps stated. You then choose what to include or redact.
 
 Your data may be shared with your AI provider (OpenAI or Anthropic). Check your AI app's settings for your current privacy options.
 

@@ -12,6 +12,10 @@ Begin with an inexpensive filtered candidate query in the chosen period. For lar
 
 Use account IDs or a verified domain to link companies, and opportunity IDs for deals. Company names alone are insufficient. Distinct opportunities at one company remain distinct.
 
+Use separate contact IDs for people. A contact does not need a known company; never omit a person or invent an account to satisfy a table. Capture observed profile or CRM-record URLs, roles and company associations with evidence. Distinguish verified attributes from sender descriptions. Identical names do not establish identity; preserve unresolved matches as gaps.
+
+For noncommercial cases, use the saved outcome definitions and record observations in outcomes.csv, linked to the contact or account and the relevant event/campaign scope_key. Include every sampled case, including unknown outcomes. Registration, attendance, cancellation and outreach engagement are separate observations; preserve their dates and evidence. A failed name search leaves the outcome unknown. A no-show requires a matched registration and sufficiently complete attendance evidence. Do not create fictitious won/lost deals.
+
 A source key includes source, object type and stable record ID, for example crm-a:opportunity:184. For files without IDs, use original filename, sheet and original row. Keep original raw files unchanged so those locators stay meaningful. Multiple verified aliases can share a row's source_keys; record the reconciliation basis in evidence. Never reuse a row number from a newly sorted export as though it were the same source record.
 
 Check existing source keys before inserting. Save extracts and table updates before recording the batch as complete in progress. On resume, reconcile an unfinished batch against rows already saved. Do not increment counters or allocate new IDs for already captured records.

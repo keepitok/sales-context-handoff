@@ -4,15 +4,27 @@
     "business": "",
     "website": "",
     "offers": [],
-    "product": "",
+    "motion": "",
     "people": "",
     "start_date": "",
     "end_date": ""
+  },
+  "outcome_definitions": [],
+  "readiness": {
+    "status": "not_reviewed",
+    "summary": "",
+    "material_gaps": [],
+    "user_decision": ""
+  },
+  "findings_review": {
+    "status": "pending",
+    "user_decision": ""
   },
   "limits": {
     "won_target": 10,
     "lost_target": 10,
     "deal_cap": 50,
+    "case_cap": 50,
     "additional_success_cap": 10
   },
   "milestones": {

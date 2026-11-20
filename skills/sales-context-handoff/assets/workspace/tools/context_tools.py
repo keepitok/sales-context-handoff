@@ -17,18 +17,23 @@ from urllib.parse import unquote, urlsplit
 import zipfile
 
 HEADERS = {
-    "accounts.csv": "account_id,company,domain,industry,employee_band,revenue_band,geography,evidence_ids".split(","),
-    "deals.csv": "deal_id,account_id,source_keys,outcome,original_stage,closed_date,amount,currency,origin,fit_note,selection_reason,evidence_ids".split(","),
-    "outreach.csv": "outreach_id,account_id,deal_id,source_keys,channel,outcome,additional_success,extract_path,evidence_ids".split(","),
+    "accounts.csv": "account_id,company,domain,industry,employee_band,revenue_band,geography,profile_url,evidence_ids".split(","),
+    "contacts.csv": "contact_id,name,profile_url,email,role,account_id,source_keys,evidence_ids".split(","),
+    "deals.csv": "deal_id,account_id,contact_id,source_keys,outcome,original_stage,closed_date,amount,currency,origin,fit_note,selection_reason,evidence_ids".split(","),
+    "outreach.csv": "outreach_id,account_id,contact_id,deal_id,source_keys,channel,outcome,additional_success,extract_path,evidence_ids".split(","),
+    "outcomes.csv": "outcome_id,contact_id,account_id,deal_id,outreach_id,scope_key,outcome,event_date,source_keys,evidence_ids".split(","),
     "evidence.csv": "evidence_id,source_id,source_key,source_locator,event_date,observed_at,kind,coverage,extract_path".split(","),
 }
 REQUIRED = {
     "accounts.csv": "account_id company evidence_ids".split(),
-    "deals.csv": "deal_id account_id source_keys selection_reason evidence_ids".split(),
-    "outreach.csv": "outreach_id account_id source_keys channel additional_success extract_path evidence_ids".split(),
+    "contacts.csv": "contact_id name source_keys evidence_ids".split(),
+    "deals.csv": "deal_id source_keys selection_reason evidence_ids".split(),
+    "outreach.csv": "outreach_id source_keys channel additional_success extract_path evidence_ids".split(),
+    "outcomes.csv": "outcome_id scope_key source_keys evidence_ids".split(),
     "evidence.csv": "evidence_id source_id source_key source_locator observed_at kind coverage extract_path".split(),
 }
 ID_FIELDS = {"accounts.csv": ("account_id", "a"), "deals.csv": ("deal_id", "d"),
+             "contacts.csv": ("contact_id", "c"), "outcomes.csv": ("outcome_id", "r"),
              "outreach.csv": ("outreach_id", "o"), "evidence.csv": ("evidence_id", "ev")}
 LINK = re.compile(r"\[([^\]]*)\]\(([^\s)]+)\)")
 EVIDENCE_ID = re.compile(r"\bev-\d{4,}\b")
@@ -79,6 +84,39 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
     root = safe_path(workspace, area)
     errors, warnings, tables = [], [], {}
     progress = read_progress(workspace)
+    definitions = progress.get("outcome_definitions", [])
+    if not isinstance(definitions, list) or any(not isinstance(d, dict) for d in definitions):
+        raise ValueError("outcome_definitions must be a list of objects")
+    outcome_keys = [d.get("key") for d in definitions]
+    if any(not isinstance(k, str) or not k for k in outcome_keys) or len(set(outcome_keys)) != len(outcome_keys):
+        errors.append("Outcome definition keys must be nonempty and unique")
+    for definition in definitions:
+        if definition.get("category") not in {"positive", "negative", "intermediate", "unknown"} or not definition.get("meaning") or not definition.get("evidence_required"):
+            errors.append("Outcome definitions need meaning, category and evidence_required")
+    readiness = progress.get("readiness", {})
+    if readiness.get("status") not in {"not_reviewed", "needs_collection", "ready", "accepted_limited"}:
+        errors.append("Invalid readiness status")
+    if readiness.get("status") == "accepted_limited" and not readiness.get("user_decision", "").strip():
+        errors.append("Limited handoff requires the user's recorded acceptance of gaps")
+    if readiness.get("status") in {"ready", "accepted_limited"} and not readiness.get("summary", "").strip():
+        errors.append("Readiness decision needs a coverage summary")
+    if readiness.get("status") == "ready" and readiness.get("material_gaps"):
+        errors.append("Ready status conflicts with unresolved material gaps")
+    review = progress.get("findings_review", {})
+    if review.get("status") not in {"pending", "reviewed"}:
+        errors.append("Invalid findings review status")
+    if review.get("status") == "reviewed" and not review.get("user_decision", "").strip():
+        errors.append("Findings review needs the user's recorded decision")
+    milestones = progress.get("milestones", {})
+    if milestones.get("collect") == "complete" and readiness.get("status") not in {"ready", "accepted_limited"}:
+        errors.append("Collection marked complete before coverage review")
+    if milestones.get("analyze") == "complete" and (review.get("status") != "reviewed" or readiness.get("status") not in {"ready", "accepted_limited"}):
+        errors.append("Analysis marked complete before findings and coverage review")
+    if area == "handoff":
+        if readiness.get("status") not in {"ready", "accepted_limited"}:
+            errors.append("Handoff readiness unresolved; review coverage before packaging")
+        if review.get("status") != "reviewed" or not review.get("user_decision", "").strip():
+            errors.append("Findings review is incomplete")
     sources = progress.get("sources", [])
     if not isinstance(sources, list) or any(not isinstance(s, dict) for s in sources):
         raise ValueError("progress.sources must be a list of source objects")
@@ -149,14 +187,18 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
                 source_keys.add(key)
 
     accounts = {r["account_id"]: r for r in tables["accounts.csv"]}
+    contacts = {r["contact_id"]: r for r in tables["contacts.csv"]}
     deals = {r["deal_id"]: r for r in tables["deals.csv"]}
+    outreach = {r["outreach_id"]: r for r in tables["outreach.csv"]}
     evidence = {r["evidence_id"]: r for r in tables["evidence.csv"]}
     for row in tables["accounts.csv"]:
         for key in ("domain", "company"):
             value = row[key].strip().casefold()
             if value and sum(r[key].strip().casefold() == value for r in accounts.values()) > 1:
                 warnings.append(f"Possible duplicate account {key}: {row[key]}; inspect, do not auto-merge")
-    for name in ("accounts.csv", "deals.csv", "outreach.csv"):
+    for name in HEADERS:
+        if name == "evidence.csv":
+            continue
         for row in tables[name]:
             refs = split_ids(row["evidence_ids"])
             if len(refs) != len(set(refs)):
@@ -164,8 +206,28 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
             for ref in refs:
                 if ref not in evidence:
                     errors.append(f"{name}: unknown evidence ID {ref}")
-            if name != "accounts.csv" and row["account_id"] not in accounts:
+            if name != "accounts.csv" and row.get("account_id") and row["account_id"] not in accounts:
                 errors.append(f"{name}: unknown account {row['account_id']}")
+            if name not in {"contacts.csv", "accounts.csv"}:
+                if not row.get("account_id") and not row.get("contact_id"):
+                    errors.append(f"{name}: requires an identifiable account or contact")
+                if row.get("contact_id") and row["contact_id"] not in contacts:
+                    errors.append(f"{name}: unknown contact {row['contact_id']}")
+                contact = contacts.get(row.get("contact_id"), {})
+                if row.get("account_id") and contact.get("account_id") and row["account_id"] != contact["account_id"]:
+                    errors.append(f"{name}: contact/account mismatch")
+    for contact in contacts.values():
+        if not contact["profile_url"]:
+            warnings.append(f"{contact['contact_id']}: profile link missing or redacted; explain coverage")
+        for field in ("profile_url", "email"):
+            value = contact[field].strip().casefold()
+            if value and sum(r[field].strip().casefold() == value for r in contacts.values()) > 1:
+                warnings.append(f"Possible duplicate contact {field}: {value}; inspect, do not auto-merge")
+    for name in ("contacts.csv", "accounts.csv"):
+        for row in tables[name]:
+            url = row.get("profile_url", "")
+            if url and (urlsplit(url).scheme not in {"http", "https"} or not urlsplit(url).netloc):
+                errors.append(f"{name}: invalid profile_url")
     for row in deals.values():
         if row["outcome"] not in {"", "won", "lost", "no_decision", "disqualified", "open"}:
             errors.append(f"{row['deal_id']}: invalid outcome")
@@ -178,8 +240,12 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
         deal = deals.get(row["deal_id"])
         if row["deal_id"] and not deal:
             errors.append(f"{row['outreach_id']}: unknown deal")
-        if deal and deal["account_id"] != row["account_id"]:
-            errors.append(f"{row['outreach_id']}: deal/account mismatch")
+        if deal:
+            for field in ("account_id", "contact_id"):
+                if deal.get(field) and row.get(field) and deal[field] != row[field]:
+                    errors.append(f"{row['outreach_id']}: deal/{field} mismatch")
+            if not any(row.get(f) and row.get(f) == deal.get(f) for f in ("account_id", "contact_id")):
+                errors.append(f"{row['outreach_id']}: deal has no matching subject")
         if row["outcome"] not in {"", "reply", "meeting", "associated_closed_won", "no_reply"}:
             errors.append(f"{row['outreach_id']}: invalid outreach outcome")
         if row["outcome"] == "associated_closed_won" and (not deal or deal["outcome"] != "won"):
@@ -192,11 +258,33 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
         if row["extract_path"] not in cited_extracts:
             errors.append(f"{row['outreach_id']}: sequence extract must be backed by its evidence IDs")
         check_file(row["extract_path"])
+    for row in tables["outcomes.csv"]:
+        if row["outcome"] and row["outcome"] not in outcome_keys:
+            errors.append(f"{row['outcome_id']}: undefined outcome")
+        if row["event_date"]:
+            try:
+                date.fromisoformat(row["event_date"])
+            except ValueError:
+                errors.append(f"{row['outcome_id']}: invalid event_date")
+        for field, records in (("deal_id", deals), ("outreach_id", outreach)):
+            if not row[field]:
+                continue
+            linked = records.get(row[field])
+            if not linked:
+                errors.append(f"{row['outcome_id']}: unknown {field}")
+                continue
+            for subject in ("account_id", "contact_id"):
+                if row.get(subject) and linked.get(subject) and row[subject] != linked[subject]:
+                    errors.append(f"{row['outcome_id']}: {field} subject mismatch")
+            if not any(row.get(f) and row.get(f) == linked.get(f) for f in ("account_id", "contact_id")):
+                errors.append(f"{row['outcome_id']}: {field} has no matching subject")
+        linked_outreach = outreach.get(row["outreach_id"], {})
+        if row["deal_id"] and linked_outreach.get("deal_id") and row["deal_id"] != linked_outreach["deal_id"]:
+            errors.append(f"{row['outcome_id']}: outreach/deal mismatch")
     for row in evidence.values():
         if row["source_id"] not in source_ids:
             errors.append(f"{row['evidence_id']}: unknown source")
-        # Retain the earlier identifier for already-saved evidence; new rows use user_clarification.
-        if row["kind"] not in {"recorded_fact", "buyer_statement", "seller_explanation", "user_clarification", "client_clarification"}:
+        if row["kind"] not in {"recorded_fact", "buyer_statement", "seller_explanation", "user_clarification"}:
             errors.append(f"{row['evidence_id']}: invalid evidence kind")
         if row["coverage"] not in {"complete", "partial", "excerpt"}:
             errors.append(f"{row['evidence_id']}: invalid coverage")
@@ -211,15 +299,19 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
                     errors.append(f"{row['evidence_id']}: invalid {field}")
         check_file(row["extract_path"])
 
-    counts = {"accounts": len(accounts), "deals": len(deals), "won": sum(r["outcome"] == "won" for r in deals.values()),
+    outcome_cases = {(r["scope_key"], r["contact_id"] or r["account_id"]) for r in tables["outcomes.csv"]}
+    counts = {"accounts": len(accounts), "contacts": len(contacts), "outcomes": len(tables["outcomes.csv"]), "outcome_cases": len(outcome_cases),
+              "deals": len(deals), "won": sum(r["outcome"] == "won" for r in deals.values()),
               "lost": sum(r["outcome"] == "lost" for r in deals.values()), "outreach": len(tables["outreach.csv"]),
               "additional_successes": sum(r["additional_success"] == "true" for r in tables["outreach.csv"]), "evidence": len(evidence)}
     limits = progress.get("limits", {})
     if counts["deals"] > limits.get("deal_cap", 50):
         errors.append("Deal sample exceeds configured cap")
+    if counts["outcome_cases"] > limits.get("case_cap", 50):
+        errors.append("Outcome case sample exceeds configured cap")
     if counts["additional_successes"] > limits.get("additional_success_cap", 10):
         errors.append("Additional outreach successes exceed configured cap")
-    for outcome in ("won", "lost"):
+    for outcome in (() if progress.get("scope", {}).get("motion") == "noncommercial" else ("won", "lost")):
         if counts[outcome] < limits.get(outcome + "_target", 10):
             warnings.append(f"Sample shortfall: {counts[outcome]} {outcome}; report the limitation")
 

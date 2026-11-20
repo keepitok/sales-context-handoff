@@ -27,10 +27,13 @@ The synthetic tests exercise actual CSV files, saved state, separate helper-proc
 - Spreadsheet-only and mixed spreadsheet/email/transcript evidence.
 - Sparse samples, missing attributes, conflicting outcomes, identical company names and separate opportunities at one company.
 - Inbound win without invented outreach, additional meeting success without a closed deal and unanswered comparison outreach.
+- Contacts without companies, same-name contacts, duplicate profile identities, and separate registration/attendance observations without fabricated deals.
+- Defined noncommercial outcomes, distinct-case limits, unrelated contact links and missing evidence.
 - Partial LinkedIn coverage, inaccessible Sales Navigator and preserved restart state. These test recorded coverage and resumption invariants, not live browser automation.
 - Duplicate source-key detection, evidence references, wrong citation targets and sample limits.
 - Exact Unicode/multiline message preservation, redaction of shareable copies with unchanged originals, and exclusion of unselected/private files.
 - Rejection of unreviewed or changed files, incomplete allowlists, escaping paths, unrelated extract references and overwriting an existing archive.
+- Readiness and findings-review checks before packaging, explicit acceptance of limited coverage, and contact redaction that preserves private originals and stable outcome links.
 
 The skill entry point is checked with the skill-creator validator. Portability checks copy the skill and starter workspace into a temporary folder, follow links from the index through numbered stages and supporting references, verify metadata and licenses, and run the copied helper in a new process. The skill baseline was copied from pinned upstream checkouts before adaptation.
 
@@ -58,7 +61,7 @@ No customer accounts were accessed or private conversations collected during imp
 2. Start with a small supplied spreadsheet. Run collection, open the tables/extracts and confirm exact values and locators. Continue in a new conversation and verify no duplicate records.
 3. Add one authorized relevant email/transcript source if available. Check linkage to the same opportunity and attribution of buyer versus seller statements.
 4. If LinkedIn is selected, compare one exported thread with its visible original. Independently check Sales Navigator. Test a missing thread through the available browser; verify exact text and partial-coverage handling. Record success only for capabilities actually demonstrated.
-5. Run analysis and inspect every material finding against its extract. Check that the common reports need no recipient information. Resume an older progress file containing recipient metadata and confirm it does not trigger questions or report variants. Confirm no enrichment, invented scoring or causal claim about an outreach message.
+5. Run analysis and inspect every material finding against its extract. Check that the common reports need no recipient information. Confirm explicit outcome comparisons and ICP/audience-fit assessment, with named, linked examples and limitations. Confirm no enrichment, invented scoring or causal claim about an outreach message.
 6. Review a concrete handoff, request one redaction, package it, and inspect the archive. Confirm originals remain private and the redaction appears everywhere needed.
 
 Keep any remaining failures in your coverage/gap record; do not label untested integrations as verified.
@@ -71,7 +74,9 @@ These require an agent run; repository unit tests do not establish conversationa
 
 - Install and ask for the next step, mentioning meetup outreach but no sources. Expect a short invitation to start setup, no recipient question and no assignment to attach a sample of threads.
 - Install while describing a test scenario, without asking to begin setup. Expect installation confirmation, a one-sentence setup purpose and a question asking whether to begin; no setup interview, workspace creation or source access yet. Providing a URL or source names before accepting should preserve that context without starting the stage. An explicit request to start setup should proceed after a brief introduction without another confirmation.
-- Finish each of setup, collection and analysis. Expect saved results, the next stage's purpose and an invitation to proceed, with no next-stage execution until the user agrees. Test "yes" as acceptance and a clarification question as continued discussion. Resume a completed stage in a new conversation and check that the next stage is offered, not silently started.
+- Finish each of setup, collection and analysis. Expect saved results and a coverage/findings review where required before offering the next stage, with no next-stage execution until the user agrees. Test "yes" as acceptance and a clarification question as continued discussion. Resume a completed stage in a new conversation and check that the next stage is offered, not silently started.
+- Supply an event sample with replies but mostly unknown registrations/attendance. Expect preliminary reports, explicit missing comparison and audience-fit evidence, then a targeted collection proposal or a question about accepting limited coverage. Four saved reports must not trigger an immediate packaging invitation. Accept limited coverage, review findings and then verify that handoff can proceed.
+- Include contacts with no company and two people with the same name. Expect all sampled people in standard tables, observed profile/source-record links beside named examples, unresolved name matches left unknown, and no guessed attributes. Include registered/attended/cancelled examples and check that outcome timelines do not inflate distinct-case counts or imply outreach caused conversion.
 - Start setup with email as the selected source but no connection. Expect discovery of available connection options and guidance through authorization, then a small scoped read. Full collection waits until setup is reviewed.
 - Use an already connected source. Expect reuse and scoped retrieval during collection, without asking the user to copy messages or export them unnecessarily.
 - Make automated access unavailable, decline connection, or prefer a small one-off extract. Expect a brief explanation of the practical alternative and a bounded request for only necessary material.

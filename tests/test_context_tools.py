@@ -31,8 +31,8 @@ def read_rows(root, name):
         return list(csv.DictReader(stream))
 
 
-def record(name, **values):
-    return dict.fromkeys(helper.HEADERS[name], "") | values
+def record(table, **values):
+    return dict.fromkeys(helper.HEADERS[table], "") | values
 
 
 def fixture(workspace, mixed=True):
@@ -40,7 +40,7 @@ def fixture(workspace, mixed=True):
     shutil.copytree(STARTER, workspace)
     working = workspace / "working"
     progress = json.loads((working / "progress.json").read_text())
-    progress["scope"] = {"business": "Synthetic creative subscription", "website": "https://example.invalid", "offers": ["Design support", "Launch assets"], "product": "Design support", "people": "Owner", "start_date": "2025-11-20", "end_date": "2026-11-20"}
+    progress["scope"] = {"business": "Synthetic creative subscription", "website": "https://example.invalid", "offers": ["Design support", "Launch assets"], "motion": "commercial", "people": "Owner", "start_date": "2025-11-20", "end_date": "2026-11-20"}
     progress["sources"] = [{"source_id": "sheet-a", "kind": "spreadsheet", "label": "Synthetic deal export", "status": "ready", "completed_keys": [], "coverage": "Selected rows"}]
     if mixed:
         progress["sources"] += [{"source_id": "mail-a", "kind": "email", "status": "ready", "completed_keys": []}, {"source_id": "calls-a", "kind": "transcript", "status": "ready", "completed_keys": []}]
@@ -86,11 +86,50 @@ def fixture(workspace, mixed=True):
 
 def prepare_handoff(workspace):
     working, handoff = workspace / "working", workspace / "handoff"
+    progress_path = working / "progress.json"
+    progress = json.loads(progress_path.read_text())
+    progress["readiness"] = {"status": "accepted_limited", "summary": "Sparse synthetic sample; one disputed deal", "material_gaps": ["Outcome disagreement"], "user_decision": "Proceed with these specific limitations"}
+    progress["findings_review"] = {"status": "reviewed", "user_decision": "Synthetic findings reviewed"}
+    progress_path.write_text(json.dumps(progress), encoding="utf-8")
     for name in helper.HEADERS:
         shutil.copyfile(working / name, handoff / name)
     shutil.copytree(working / "extracts", handoff / "extracts", dirs_exist_ok=True)
     shutil.copytree(working / "reports", handoff / "reports", dirs_exist_ok=True)
     (handoff / "README.md").write_text("# Reviewed handoff\n\nStart with [findings](reports/findings.md). Tables contain the sampled records; source extracts support them.\n", encoding="utf-8")
+
+
+def event_fixture(workspace):
+    """Synthetic workshop: two same-name contacts, independent of companies."""
+    working = workspace / "working"
+    progress_path = working / "progress.json"
+    progress = json.loads(progress_path.read_text())
+    progress["scope"]["motion"] = "noncommercial"
+    progress["outcome_definitions"] = [
+        {"key": "registered", "meaning": "Registered for workshop", "category": "intermediate", "evidence_required": "Matched registration record"},
+        {"key": "attended", "meaning": "Checked in at workshop", "category": "positive", "evidence_required": "Matched check-in record"},
+        {"key": "cancelled", "meaning": "Explicit cancellation", "category": "negative", "evidence_required": "Matched cancellation record"},
+        {"key": "unknown", "meaning": "Outcome not verified", "category": "unknown", "evidence_required": "Record of attempted verification and its limits"},
+    ]
+    progress_path.write_text(json.dumps(progress), encoding="utf-8")
+    write_rows(working, "accounts.csv", [])
+    write_rows(working, "deals.csv", [])
+    write_rows(working, "contacts.csv", [
+        record("contacts.csv", contact_id="c-0001", name="Rowan Vale", profile_url="https://example.invalid/people/one", role="Designer", source_keys="sheet-a:person:1", evidence_ids="ev-0001"),
+        record("contacts.csv", contact_id="c-0002", name="Rowan Vale", profile_url="https://example.invalid/people/two", source_keys="sheet-a:person:2", evidence_ids="ev-0003"),
+        record("contacts.csv", contact_id="c-0003", name="Alex Elm", source_keys="sheet-a:person:3", evidence_ids="ev-0004"),
+    ])
+    write_rows(working, "outreach.csv", [
+        record("outreach.csv", outreach_id="o-0001", contact_id="c-0001", source_keys="mail-a:thread:5", channel="email", outcome="reply", additional_success="true", extract_path="extracts/ev-0005.md", evidence_ids="ev-0005"),
+        record("outreach.csv", outreach_id="o-0002", contact_id="c-0003", source_keys="mail-a:thread:6", channel="email", outcome="no_reply", additional_success="false", extract_path="extracts/ev-0006.md", evidence_ids="ev-0006"),
+    ])
+    observations = [("c-0001", "registered", "o-0001"), ("c-0001", "attended", "o-0001"), ("c-0002", "cancelled", ""), ("c-0003", "unknown", "o-0002")]
+    rows = []
+    for i, (contact, outcome, outreach) in enumerate(observations, 1):
+        evidence = f"ev-{i:04}"
+        (working / f"extracts/{evidence}.md").write_text(f"# {evidence}\n\nSynthetic workshop record {i}: {contact}, {outcome}; scope workshop-a. Unknown means no matched status after a limited lookup.\n", encoding="utf-8")
+        rows.append(record("outcomes.csv", outcome_id=f"r-{i:04}", contact_id=contact, outreach_id=outreach, scope_key="workshop-a", outcome=outcome, source_keys=f"sheet-a:status:{i}", evidence_ids=evidence))
+    write_rows(working, "outcomes.csv", rows)
+    (working / "reports/findings.md").write_text("# Preliminary findings\n\nOne registration and attendance belong to the same contact. A second contact cancelled. [ev-0001](../extracts/ev-0001.md) [ev-0002](../extracts/ev-0002.md) [ev-0003](../extracts/ev-0003.md)\n\nThe third outcome is unknown, not a negative result. [ev-0004](../extracts/ev-0004.md)\n", encoding="utf-8")
 
 
 def approve_fixture(workspace):
@@ -109,6 +148,109 @@ class ContextTests(unittest.TestCase):
 
     def tearDown(self):
         self.temp.cleanup()
+
+    def test_contact_only_outreach_and_outcome_timeline_do_not_create_deals(self):
+        event_fixture(self.workspace)
+        result = helper.validate(self.workspace)
+        self.assertEqual([], result["errors"])
+        self.assertEqual(0, result["counts"]["accounts"])
+        self.assertEqual(0, result["counts"]["deals"])
+        self.assertEqual(3, result["counts"]["contacts"])
+        self.assertEqual(4, result["counts"]["outcomes"])
+        self.assertEqual(3, result["counts"]["outcome_cases"])
+        self.assertFalse(any("shortfall" in w for w in result["warnings"]))
+        self.assertTrue(any("c-0003: profile link missing" in w for w in result["warnings"]))
+        self.assertEqual("unknown", read_rows(self.workspace / "working", "outcomes.csv")[3]["outcome"])
+
+    def test_outcomes_reject_undefined_status_unrelated_contact_and_missing_evidence(self):
+        event_fixture(self.workspace)
+        rows = read_rows(self.workspace / "working", "outcomes.csv")
+        rows[0]["contact_id"] = "c-0002"  # Same name is not the same subject.
+        rows[1]["outcome"] = "won"
+        rows[2]["evidence_ids"] = "ev-9999"
+        rows[3]["contact_id"] = "c-9999"
+        write_rows(self.workspace / "working", "outcomes.csv", rows)
+        errors = helper.validate(self.workspace)["errors"]
+        for expected in ("subject mismatch", "undefined outcome", "unknown evidence ID", "unknown contact"):
+            self.assertTrue(any(expected in e for e in errors), errors)
+
+    def test_contact_duplicate_identity_and_missing_subject_are_detected(self):
+        event_fixture(self.workspace)
+        working = self.workspace / "working"
+        contacts = read_rows(working, "contacts.csv")
+        contacts[1]["profile_url"] = contacts[0]["profile_url"]
+        contacts[1]["source_keys"] = contacts[0]["source_keys"]
+        write_rows(working, "contacts.csv", contacts)
+        rows = read_rows(working, "outreach.csv")
+        rows[1]["contact_id"] = ""
+        write_rows(working, "outreach.csv", rows)
+        result = helper.validate(self.workspace)
+        self.assertTrue(any("duplicate contact profile_url" in w for w in result["warnings"]))
+        self.assertTrue(any("duplicate or empty source key" in e for e in result["errors"]))
+        self.assertTrue(any("requires an identifiable account or contact" in e for e in result["errors"]))
+
+    def test_noncommercial_case_cap_counts_subjects_not_status_rows(self):
+        event_fixture(self.workspace)
+        path = self.workspace / "working/progress.json"
+        progress = json.loads(path.read_text())
+        progress["limits"]["case_cap"] = 3
+        path.write_text(json.dumps(progress))
+        self.assertFalse(helper.validate(self.workspace)["errors"])
+        progress["limits"]["case_cap"] = 2
+        path.write_text(json.dumps(progress))
+        self.assertIn("Outcome case sample exceeds configured cap", helper.validate(self.workspace)["errors"])
+
+    def test_completed_reports_do_not_establish_readiness_or_findings_review(self):
+        prepare_handoff(self.workspace)
+        path = self.workspace / "working/progress.json"
+        progress = json.loads(path.read_text())
+        progress["readiness"]["status"] = "needs_collection"
+        progress["findings_review"] = {"status": "pending", "user_decision": ""}
+        progress["milestones"]["collect"] = "complete"
+        progress["milestones"]["analyze"] = "complete"
+        path.write_text(json.dumps(progress))
+        errors = helper.validate(self.workspace)["errors"]
+        self.assertTrue(any("Collection marked complete" in e for e in errors))
+        self.assertTrue(any("Analysis marked complete" in e for e in errors))
+        approve_fixture(self.workspace)
+        with self.assertRaisesRegex(ValueError, "readiness unresolved"):
+            helper.package(self.workspace, Path(self.temp.name) / "premature.zip")
+
+    def test_limited_handoff_requires_recorded_acceptance_and_findings_review(self):
+        event_fixture(self.workspace)
+        prepare_handoff(self.workspace)
+        path = self.workspace / "working/progress.json"
+        progress = json.loads(path.read_text())
+        progress["readiness"]["user_decision"] = ""
+        path.write_text(json.dumps(progress))
+        approve_fixture(self.workspace)
+        with self.assertRaisesRegex(ValueError, "recorded acceptance"):
+            helper.package(self.workspace, Path(self.temp.name) / "limited.zip")
+        progress["readiness"]["user_decision"] = "Accept the unresolved third outcome and missing attributes"
+        progress["findings_review"]["status"] = "pending"
+        path.write_text(json.dumps(progress))
+        with self.assertRaisesRegex(ValueError, "Findings review is incomplete"):
+            helper.package(self.workspace, Path(self.temp.name) / "limited.zip")
+        progress["findings_review"]["status"] = "reviewed"
+        path.write_text(json.dumps(progress))
+        result = helper.package(self.workspace, Path(self.temp.name) / "limited.zip")
+        self.assertIn("contacts.csv", result["files"])
+        self.assertIn("outcomes.csv", result["files"])
+
+    def test_contact_redaction_keeps_original_and_outcome_links(self):
+        event_fixture(self.workspace)
+        prepare_handoff(self.workspace)
+        contacts = read_rows(self.workspace / "handoff", "contacts.csv")
+        contacts[0]["name"] = "[REDACTED: person name]"
+        contacts[0]["profile_url"] = ""
+        write_rows(self.workspace / "handoff", "contacts.csv", contacts)
+        approve_fixture(self.workspace)
+        output = Path(self.temp.name) / "contacts.zip"
+        helper.package(self.workspace, output)
+        with zipfile.ZipFile(output) as archive:
+            self.assertNotIn(b"https://example.invalid/people/one", archive.read("contacts.csv"))
+            self.assertIn(b"c-0001", archive.read("outcomes.csv"))
+        self.assertEqual("https://example.invalid/people/one", read_rows(self.workspace / "working", "contacts.csv")[0]["profile_url"])
 
     def test_mixed_sources_sparse_sample_missing_attributes_and_distinct_deals(self):
         result = helper.validate(self.workspace)

@@ -17,9 +17,11 @@ Use this guide as a shared reference for the current milestone. Setup needs File
 
 ## Progress
 
-Complete scope with business, supplied website URL, selected offers as a list, rep/team scope and exact ISO dates. Retain product when present in an older workspace; confirm its meaning before using it to fill offers. A website is optional; supplied documents or a user explanation can establish the offer scope.
+Complete scope with business, supplied website URL, selected offers as a list, motion (commercial/noncommercial), rep/team scope and exact ISO dates. A website is optional; supplied documents or a user explanation can establish the offer scope. Do not ask who receives the handoff.
 
-Older workspaces may contain recipient metadata. Leave it intact on resume, but do not request, require or use it to select a report variant. Prepare the common handoff without resetting existing evidence or progress.
+For noncommercial conversions, outcome_definitions contains objects with key, meaning, category (positive/negative/intermediate/unknown) and evidence_required. Define these from the stated goal and actual source statuses, not a scoring model. Example: an attendance goal can define registered as intermediate, attended as positive, cancelled as negative and unknown as unknown. Do not map no reply to a negative final outcome. All populated outcomes.csv outcome values must reference a defined key; leave conflicting values blank and explain them in the cited extracts.
+
+readiness contains status (not_reviewed/needs_collection/ready/accepted_limited), summary, material_gaps and user_decision. It records the agent's evidence-coverage assessment; accepted_limited requires the user's actual decision after reviewing the listed gaps. findings_review contains status (pending/reviewed) and user_decision. Drafts remain partial until the findings are reviewed and coverage is ready or its limits accepted. Reset findings review after material changes; keep user decisions attributable. These records do not replace the later review of exact files and redactions in handoff/review.json.
 
 All four milestones use not_started, partial or complete. Sources are objects with:
 
@@ -47,22 +49,28 @@ Use gaps as short objects: subject, state (missing/unqueried/inaccessible/contra
 
 UTF-8 CSV with headers, quoted multiline cells where needed. Leave unavailable values empty. Never use zero, "N/A" or a guessed value to mean missing.
 
-Identifiers are stable workspace keys: a-0001 for accounts, d-0001 for deals, o-0001 for outreach and ev-0001 for evidence. They are not row numbers. Allocate once, retain on resume, and never reassign after an omission.
+Identifiers are stable workspace keys: a-0001 for accounts, c-0001 for contacts, d-0001 for deals, o-0001 for outreach, r-0001 for outcome observations and ev-0001 for evidence. They are not row numbers. Allocate once, retain on resume, and never reassign after an omission.
 
 | Table | Required meaning |
 |---|---|
-| accounts.csv | One identifiable company per row. Store only observed firmographics and supporting evidence IDs. Domain is optional; do not infer it from a company name. |
-| deals.csv | One opportunity per row; account_id links the company. Preserve original_stage. outcome is won, lost, no_decision, disqualified, open or blank. origin can record outbound, inbound, referral, expansion or the source's own wording. fit_note is attributed, never assumed from outcome. |
+| accounts.csv | One identifiable company per row. Store observed attributes, profile_url (company profile or CRM record URL) and evidence IDs. Domain is optional; do not infer it from a company name. |
+| contacts.csv | One identifiable person per row, independent of company. Preserve name, observed profile/CRM URL, email, role, source_keys and evidence_ids. account_id is optional. Never omit a person because their company is unknown. |
+| deals.csv | One commercial opportunity per row, linked to an account or contact. Preserve original_stage. outcome is won, lost, no_decision, disqualified, open or blank. origin can record outbound, inbound, referral, expansion or the source's own wording. fit_note is attributed, never assumed from outcome. Leave this table empty for noncommercial cases. |
 | outreach.csv | One sequence/example per row. deal_id is optional. channel is the source channel. outcome is reply, meeting, associated_closed_won, no_reply or blank. additional_success is true only for one of the up to 10 reply/meeting examples outside the selected deal sample; otherwise false. extract_path identifies the preserved sequence. |
+| outcomes.csv | One sourced status observation per subject and event/campaign instance. scope_key identifies that instance, not a person. outcome references outcome_definitions. Preserve multiple stages as separate dated observations (e.g. registration then attendance). Link the account/contact and any verified outreach/deal association; association does not establish causation. Record unresolved status as unknown if defined, or blank if conflicting, with evidence of what was checked. |
 | evidence.csv | One captured evidence item per row. source_id points to progress sources. source_key identifies the original record. source_locator is a URL returned by the source, record ID, file/sheet/row, or transcript timestamp; never invent a URL. |
 
 Required nonempty fields:
 - accounts: account_id, company, evidence_ids.
-- deals: deal_id, account_id, source_keys, selection_reason, evidence_ids.
-- outreach: outreach_id, account_id, source_keys, channel, additional_success, extract_path, evidence_ids.
+- contacts: contact_id, name, source_keys, evidence_ids.
+- deals: deal_id, source_keys, selection_reason, evidence_ids, and at least one of account_id/contact_id.
+- outreach: outreach_id, source_keys, channel, additional_success, extract_path, evidence_ids, and at least one of account_id/contact_id.
+- outcomes: outcome_id, scope_key, source_keys, evidence_ids, and at least one of account_id/contact_id. deal_id, outreach_id and event_date are optional when unavailable.
 - evidence: evidence_id, source_id, source_key, source_locator, observed_at, kind, coverage, extract_path.
 
 Join multiple evidence_ids or source_keys with a pipe, with no empty entries. Source keys include the source namespace and object type. Do not merge similarly named companies or distinct opportunities. Only add source aliases when evidence establishes identity.
+
+Capture profile_url from the selected source rather than guessing it. For named examples, put the account/contact link alongside conversation and outcome source links in reports. Missing profile links remain blank in tables and explicit in coverage notes. A source thread/record URL can identify an example when a profile URL is unavailable. Existing source attributes are collection; researching missing attributes elsewhere is enrichment and remains out of scope. Profile links and names may be redacted in shareable copies at the user's request.
 
 Evidence kinds: recorded_fact, buyer_statement, seller_explanation, user_clarification. A user_clarification is an explanation from the person running the analysis, attributed to them. Interpretations and hypotheses belong in reports, not fabricated evidence rows. Coverage is complete, partial or excerpt; complete means the stated item was fully captured, not that the whole source was searched.
 
@@ -78,7 +86,7 @@ When a table row contains values from several sources, explain which source supp
 
 During analysis, write sales-context.md, findings.md, outreach-examples.md and gaps.md inside working/reports/. Cite evidence with a relative link, e.g. [ev-0001](../extracts/ev-0001.md). Keep linked evidence in a handoff when its finding is included. Hypotheses must be labeled and supported by cited observations. The helper checks structure and references; it cannot establish that a claim is true.
 
-During handoff, copy only selected rows/extracts/reports. Maintain account/deal/evidence referential integrity. Remove private raw paths, unrelated personal data and unneeded source details from shareable copies; retain source mappings in working. An evidence source_locator can become a neutral record label plus its local extract reference if the original locator is sensitive.
+During handoff, copy only selected rows/extracts/reports. Maintain account/contact/deal/outreach/outcome/evidence referential integrity. Remove private raw paths, unrelated personal data and unneeded source details from shareable copies; retain source mappings in working. An evidence source_locator can become a neutral record label plus its local extract reference if the original locator is sensitive.
 
 ## Review and helper commands
 
@@ -95,6 +103,6 @@ python tools/context_tools.py package . sales-context-handoff.zip
 
 manifest prints JSON to standard output; it does not approve anything. After user review, save the relevant file list as handoff/review.json with status "reviewed" and reviewed_at set to the actual ISO date. Each file entry contains path and sha256. Regenerate hashes and review changed contents after any edits.
 
-Only README.md, the four CSV tables, reports/*.md and extracts/*.md can be packaged. All four table files are required; an empty header-only table is valid when there are no selected records. Reports can be omitted if the user excludes them and remaining references still resolve. review.json is private packaging metadata and is not included. Unlisted files are never added.
+Only README.md, the six CSV tables, reports/*.md and extracts/*.md can be packaged. All six table files are required; an empty header-only table is valid when there are no selected records. Put custom-table information needed by the handoff into the standard tables or reports instead of linking to excluded working files. Reports can be omitted if the user excludes them and remaining references still resolve. review.json is private packaging metadata and is not included. Unlisted files are never added.
 
-Packaging refuses missing/changed files, broken references, unsafe paths and an existing output archive. This does not replace human review of redactions. The user shares the resulting ZIP manually.
+Packaging refuses unresolved readiness, missing findings review, missing/changed files, broken references, unsafe paths and an existing output archive. The helper validates the recorded decisions, not the truth of the readiness assessment or whether a user actually reviewed the findings. The user shares the resulting ZIP manually.

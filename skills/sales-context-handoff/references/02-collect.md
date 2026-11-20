@@ -8,6 +8,8 @@ Locate the user's workspace and read `working/progress.json`. Use the Progress, 
 
 Read [record collection](evidence/records.md) for CRM, files, email and transcripts, [outreach evidence](evidence/outreach.md) for message selection, and [LinkedIn collection](sources/linkedin.md) only when those sources were selected.
 
+Use [outcome coverage and readiness](evidence/coverage.md) to apply the saved outcome definitions and decide whether the collected sample is sufficient or preliminary.
+
 Use the saved access routes to find and extract the sample yourself. Do not turn collection into a request for the user to assemble threads that selected sources can supply. If a route fails, use [connection guidance](sources/connections.md) to choose a practical alternative and record the reason for any manual request.
 
 ## Select a useful bounded sample
@@ -20,11 +22,13 @@ Use the chosen business, rep/team and dates:
 
 Keep different opportunities at one company distinct. Preserve original stages and loss reasons alongside normalized outcomes. Silence, a declined meeting, and an unanswered InMail do not establish a lost deal. Conflicting outcome sources remain unresolved until clarified.
 
+For noncommercial work, replace the won/lost sample with up to 10 confirmed positive and 10 confirmed negative cases under the agreed definitions, where available, within a 50-case collection budget. Keep unknown cases separate and report shortfalls. Use outcome-bearing sources to find examples on both sides, then link conversations; do not select solely by replies or successful-link searches. Save the selection rule and denominators. Do not create fictional commercial deals for registrations or attendance.
+
 ## Capture evidence
 
 Read the relevant records and conversations. Keep raw source captures in `raw/`; create concise, exact extracts in `working/extracts/` with source locators and dates. Do not invent message text or expand ellipses.
 
-Populate accounts, deals, outreach and evidence tables according to the workspace guide. Preserve known attributes as supplied; leave unknown fields empty. Do not research missing firmographics or start enrichment.
+Populate accounts, contacts, deals, outreach, outcomes and evidence tables according to the workspace guide. Each example must have an identifiable account or contact. Capture observed profile/CRM record links, role and organization from the selected sources; keep source conversation and outcome-record links as well. Do not omit a contact because their company is unknown. Report missing identity links as gaps, never manufacture URLs. Preserve known attributes as supplied; leave unknown fields empty. Do not research missing firmographics or start enrichment.
 
 Also capture relevant passages from the selected website/offer pages and supplied business documents: offer, existing ICP/personas, qualification or scoring rules, sales stages, selling guidance and commercial constraints. Preserve document dates/versions and current or historical status when known. Treat documented strategy and published claims as attributed context, not proof of actual buyer behavior or sales effectiveness; retain discrepancies with deal evidence for analysis. For multiple offers, identify the associated offer in deal extracts when known; leave unclear associations unresolved. Save evidence for analysis rather than drafting reports here.
 
@@ -36,6 +40,6 @@ After each small batch, save rows and extracts in the local project workspace an
 
 Run `python tools/context_tools.py validate .` from the workspace when Python is available. Otherwise perform the same identifier, duplicate and reference checks using the data guide and state that the helper was not run. Inspect plausible duplicate warnings; never merge on company name alone.
 
-Show deal and outreach counts, coverage, missing inputs and two or three evidence examples. Point to the saved project files and briefly identify what each contains and which sources it draws from. Additional task-specific tables, if useful, also belong in `working/` and must retain evidence references; they do not replace the standard tables or source mapping. Do not offer intermediate files as downloads. Mark collection complete or partial honestly. Do not run synthesis automatically.
+Show distinct case counts by confirmed outcome and unknown status, coverage, missing identity links and two or three named, linked examples. Assess readiness using the coverage reference. Point to the saved project files and briefly identify what each contains and which sources it draws from. Additional task-specific tables, if useful, also belong in `working/` and must retain evidence references; they do not replace the standard tables or source mapping. Do not offer intermediate files as downloads. Mark collection complete or partial honestly. Do not run synthesis automatically.
 
-Offer analysis: "Next is analysis: I'll turn the collected evidence into supported findings and gaps for handoff. Shall we proceed?" Wait for the user's answer.
+If coverage is sufficient, offer analysis and explain its purpose. If material gaps remain, propose the specific additional collection needed and let the user choose further collection or preliminary analysis with those limits. Wait for their answer; a completed batch alone is not a reason to advance.
