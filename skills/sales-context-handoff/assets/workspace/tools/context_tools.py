@@ -217,6 +217,8 @@ def validate(workspace: Path, area: str = "working", selected: set[str] | None =
                 if row.get("account_id") and contact.get("account_id") and row["account_id"] != contact["account_id"]:
                     errors.append(f"{name}: contact/account mismatch")
     for contact in contacts.values():
+        if area == "handoff" and contact["email"]:
+            errors.append(f"{contact['contact_id']}: remove email from handoff contact record")
         if not contact["profile_url"]:
             warnings.append(f"{contact['contact_id']}: profile link missing or redacted; explain coverage")
         for field in ("profile_url", "email"):

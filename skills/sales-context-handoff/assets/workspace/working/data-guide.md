@@ -54,7 +54,7 @@ Identifiers are stable workspace keys: a-0001 for accounts, c-0001 for contacts,
 | Table | Required meaning |
 |---|---|
 | accounts.csv | One identifiable company per row. Store observed attributes, profile_url (company profile or CRM record URL) and evidence IDs. Domain is optional; do not infer it from a company name. |
-| contacts.csv | One identifiable person per row, independent of company. Preserve name, observed profile/CRM URL, email, role, source_keys and evidence_ids. account_id is optional. Never omit a person because their company is unknown. |
+| contacts.csv | One identifiable person per row, independent of company. Preserve name, observed profile/CRM URL, role, source_keys and evidence_ids. Email is optional private matching data: retain it in working only and leave the column empty in handoff. account_id is optional. Never omit a person because their company is unknown. |
 | deals.csv | One commercial opportunity per row, linked to an account or contact. Preserve original_stage. outcome is won, lost, no_decision, disqualified, open or blank. origin can record outbound, inbound, referral, expansion or the source's own wording. fit_note is attributed, never assumed from outcome. Leave this table empty for noncommercial cases. |
 | outreach.csv | One sequence/example per row. deal_id is optional. channel is the source channel. outcome is reply, meeting, associated_closed_won, no_reply or blank. additional_success is true only for one of the up to 10 reply/meeting examples outside the selected deal sample; otherwise false. extract_path identifies the preserved sequence. |
 | outcomes.csv | One sourced status observation per subject and event/campaign instance. scope_key identifies that instance, not a person. outcome references outcome_definitions. Preserve multiple stages as separate dated observations (e.g. registration then attendance). Link the account/contact and any verified outreach/deal association; association does not establish causation. Record unresolved status as unknown if defined, or blank if conflicting, with evidence of what was checked. |
@@ -87,6 +87,8 @@ When a table row contains values from several sources, explain which source supp
 During analysis, write sales-context.md, findings.md, outreach-examples.md and gaps.md inside working/reports/. Cite evidence with a relative link, e.g. [ev-0001](../extracts/ev-0001.md). Keep linked evidence in a handoff when its finding is included. Hypotheses must be labeled and supported by cited observations. The helper checks structure and references; it cannot establish that a claim is true.
 
 During handoff, copy only selected rows/extracts/reports. Maintain account/contact/deal/outreach/outcome/evidence referential integrity. Remove private raw paths, unrelated personal data and unneeded source details from shareable copies; retain source mappings in working. An evidence source_locator can become a neutral record label plus its local extract reference if the original locator is sensitive.
+
+Exclude email addresses from all handoff contents, including quoted text, source identifiers and links. Blank contacts.csv email cells and visibly mark redactions in excerpts. Keep names, websites and LinkedIn profiles unless the user excludes them separately. Private originals retain addresses for source matching.
 
 ## Review and helper commands
 

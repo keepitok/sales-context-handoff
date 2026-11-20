@@ -34,6 +34,7 @@ The synthetic tests exercise actual CSV files, saved state, separate helper-proc
 - Exact Unicode/multiline message preservation, redaction of shareable copies with unchanged originals, and exclusion of unselected/private files.
 - Rejection of unreviewed or changed files, incomplete allowlists, escaping paths, unrelated extract references and overwriting an existing archive.
 - Readiness and findings-review checks before packaging, explicit acceptance of limited coverage, and contact redaction that preserves private originals and stable outcome links.
+- Rejection of populated contact email fields in handoff copies, with private addresses preserved. Email addresses embedded elsewhere still require manual cross-file redaction review.
 
 The skill entry point is checked with the skill-creator validator. Portability checks copy the skill and starter workspace into a temporary folder, follow links from the index through numbered stages and supporting references, verify metadata and licenses, and run the copied helper in a new process. The skill baseline was copied from pinned upstream checkouts before adaptation.
 

@@ -16,6 +16,8 @@ Create `handoff/README.md` titled "Sales context handoff: [business]," with a sh
 
 Retain stable identifiers and account/contact/outcome links. Include the six standard tables, with headers only for those containing no selected records. If an example is omitted, prune unused evidence and unneeded personal data from the shareable tables. Preserve the full mapping in working files. Keep identifiable example links unless the user requests their redaction; check redactions across reports, tables and extracts.
 
+Remove email addresses from the proposed handoff before review. Keep the contacts.csv email column empty; redact addresses in excerpts, reports, source keys, locators, links and filenames with visible markers where appropriate. Preserve names, company websites and LinkedIn profiles unless separately excluded. Keep original addresses in private working/raw evidence for matching; do not remove the email conversations themselves.
+
 Show the actual proposed contents and sensitive excerpts needing attention. Ask for corrections, exclusions or redactions, unless the user has already supplied explicit review instructions sufficient for these exact contents. Do not treat silence or a generic earlier request to package as completed review.
 
 ## Apply review

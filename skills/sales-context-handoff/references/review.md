@@ -4,6 +4,8 @@ Prepare the proposed copies before asking the user to review them. Show what is 
 
 Keep originals in raw and working. Redact only handoff copies. Search the whole handoff for the original strings after redaction, including filenames, CSV cells, evidence locators and Markdown links. A local raw path can reveal a person's name even if the quote was redacted.
 
+Email addresses are excluded from the handoff. Blank the structured email field and mark addresses in quoted text as [REDACTED: email address]. Inspect message headers, signatures, mailto links and source identifiers too. The helper rejects a populated contact email field in handoff copies; it does not detect every address embedded in other content, so the cross-file review is still required.
+
 Use visible markers. Redaction is not permission to paraphrase inside quotation marks. If an entire supporting passage is removed, narrow or remove the associated finding. If a source link itself discloses excluded information, replace it with the local evidence reference and a neutral source description; retain the private mapping only in working.
 
 The helper verifies paths, references and content hashes, not confidentiality or factual accuracy. Manually inspect the actual contents. Keep an exact allowlist in review.json; status is reviewed only after the user reviewed those contents. If an existing archive has the requested name, choose a new name rather than overwrite it.

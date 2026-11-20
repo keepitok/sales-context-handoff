@@ -78,6 +78,8 @@ Setup helps connect your selected sources so the assistant can find and collect 
 
 Your workspace separates original captures (`raw/`), analysis and source mappings (`working/`), and selected shareable copies (`handoff/`). Review and redaction apply to the handoff copies. The ZIP includes only selected, reviewed files; the workflow does not send it automatically.
 
+Email addresses can be kept privately for matching records and are removed from the handoff. Names, company websites and LinkedIn profiles remain unless you choose to redact them.
+
 Intermediate tables, extracts and drafts are saved directly in your local project folder. The assistant points you to those files for review; you do not need to download or reattach them between stages.
 
 The workflow checks for duplicate records and missing evidence links. You review the findings before moving to packaging. If important outcomes, comparisons or audience attributes are missing, it proposes targeted collection or asks whether you want a limited handoff with those gaps stated. You then choose what to include or redact.

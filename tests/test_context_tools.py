@@ -237,6 +237,25 @@ class ContextTests(unittest.TestCase):
         self.assertIn("contacts.csv", result["files"])
         self.assertIn("outcomes.csv", result["files"])
 
+    def test_handoff_rejects_contact_email_and_preserves_private_address(self):
+        event_fixture(self.workspace)
+        contacts = read_rows(self.workspace / "working", "contacts.csv")
+        contacts[0]["email"] = "rowan@example.invalid"
+        write_rows(self.workspace / "working", "contacts.csv", contacts)
+        self.assertFalse(helper.validate(self.workspace)["errors"])
+        prepare_handoff(self.workspace)
+        approve_fixture(self.workspace)
+        output = Path(self.temp.name) / "email-redacted.zip"
+        with self.assertRaisesRegex(ValueError, "remove email from handoff"):
+            helper.package(self.workspace, output)
+        contacts[0]["email"] = ""
+        write_rows(self.workspace / "handoff", "contacts.csv", contacts)
+        approve_fixture(self.workspace)
+        helper.package(self.workspace, output)
+        with zipfile.ZipFile(output) as archive:
+            self.assertNotIn(b"rowan@example.invalid", archive.read("contacts.csv"))
+        self.assertEqual("rowan@example.invalid", read_rows(self.workspace / "working", "contacts.csv")[0]["email"])
+
     def test_contact_redaction_keeps_original_and_outcome_links(self):
         event_fixture(self.workspace)
         prepare_handoff(self.workspace)
