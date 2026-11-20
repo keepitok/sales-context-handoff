@@ -11,9 +11,11 @@ Keep this skill and its workspace project-local; do not move or register it in p
 
 ## Choose the current stage
 
-Locate the user-selected workspace and read `working/progress.json` if it exists. Use the user's request to choose the stage; use saved progress to resume when they have not named one. For a new workspace, propose setup. If the request and saved state leave the next step unclear, ask one short question.
+Use the current conversation to identify the requested or already accepted stage. If resuming without enough context, locate the user-selected workspace and read `working/progress.json` if it exists. For a new workspace with no accepted stage, propose setup. If the request and saved state leave the next step unclear, ask one short question.
 
 Installation alone, including an installation request that mentions a test scenario, does not start setup. After installing, say the skill is installed, introduce setup's purpose in one sentence and ask whether to begin. Wait for the answer before setup questions, workspace creation or source access. Do not require the user to paste another prompt or assemble evidence first. Reuse stated context.
+
+After the user accepts setup, follow [01-setup.md](references/01-setup.md) and ask the first unanswered scope/source question. A "continue" after an interruption resumes that accepted stage without another invitation or installation check. Keep any necessary saved-state read narrow; do not substitute a generic project-status announcement for the next question or concrete action. This preserves workflow agreement, not an expired tool permission; handle any still-required tool authorization separately.
 
 | Stage | Input | Saved result | Instructions |
 | --- | --- | --- | --- |

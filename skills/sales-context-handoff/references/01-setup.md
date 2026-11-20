@@ -4,11 +4,11 @@ Prepare the workspace and connect the user's selected data sources so collection
 
 ## Start from what exists
 
-Inspect the user-selected project folder and available connection metadata. Read an existing `working/progress.json` before asking anything. Reuse saved scope and verified connections; ask only about missing or changed choices. Do not search unrelated folders or read unrelated accounts. A connected source is a candidate, not proof it belongs to this business.
+Start with the context already supplied in chat. On a fresh setup, the first substantive response should ask the missing business/offer or source question below, rather than announce a general project inspection. If resuming and saved answers are needed, read the existing `working/progress.json` first, then ask only about missing or changed choices. Reuse verified connections. Do not repeat installation checks, run the helper or inventory connections before asking for missing scope. If scope and source choices are already sufficient, proceed to the next concrete setup action without asking redundant questions.
 
 When the user has already described their activity, begin by asking where its records and conversations live. Do not ask them to select, copy or attach a quota of example threads to begin setup. Ask for a source location and a useful search anchor, such as a project/event name and dates, rather than material the agent could retrieve. Adapt questions to the stated activity; do not assume outreach concerns closed deals.
 
-Inspect supplied context first. Ask only what is missing, at most three short questions at a time, using choices when the app supports them:
+Ask only what is missing, one or two short questions at a time, using choices when the app supports them:
 
 - What is your business website, and which offer or offers should this handoff cover? Offer pages, sales decks or a short explanation can substitute for a website.
 - Where do you keep the relevant sales records and conversations: CRM or spreadsheets, email, existing transcripts, LinkedIn, Sales Navigator? Each source can be skipped.
@@ -36,6 +36,8 @@ Confirm the actual local project path with the user in the setup summary. The pe
 Fill `working/progress.json` with scope, website, selected offers, dates, source choices, access status and the current milestone. Keep credentials and session cookies out of files. In a new workspace, leave collection tables empty for the collection milestone. Preserve existing records and milestone progress when repairing setup.
 
 ## Connect the selected sources
+
+Inspect available connection metadata for the selected sources and reuse existing access where appropriate. A connected source is a candidate, not proof it belongs to this business. Do not search unrelated folders or read unrelated accounts.
 
 Choose access routes using [connection guidance](sources/connections.md), balancing coverage, fidelity, setup effort and user preference. Guide connection setup for selected sources, then perform the small access check yourself. Leave authentication and user-only permission actions to the user. Save the chosen route and any remaining action so collection can retrieve the evidence without asking for it again. Do not install a custom scraper or require paid enrichment.
 - Verify new or changed connections with one relevant record or file. Reuse a saved successful access check unless access has failed or the account changed.
