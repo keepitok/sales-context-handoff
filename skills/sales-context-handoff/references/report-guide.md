@@ -8,21 +8,27 @@ Use the business name and clear factual descriptions. Include only supported, us
 |---|---|
 | offer.md | Initial website/document-based offer and current evidence-backed description: problem, promise, scope, terms, buyer value and observed outcomes, kept distinct |
 | icp.md | Initial intended audience and refined working ICP/audience profile, with supported criteria, named examples, counterexamples, hypotheses and unknowns |
-| sales-context.md | Sales motion, stages, qualification/scoring definitions, operational constraints and documented practices; link to offer and ICP files, and distinguish current from historical material |
-| findings.md | Sample/coverage, outcome comparison with counts and counterexamples, observed roles, one deal or noncommercial journey walkthrough and implications for the linked offer/ICP definitions |
+| sales-context.md | Seller's sales motion, stages, qualification/scoring definitions, operational constraints and documented practices; distinguish current from historical material |
+| customer-context.md | Customers'/prospects' observed goals, problems, current workflows, alternatives, constraints and decision criteria, with buyer language and named cases |
+| outcome-analysis.md | Sample/coverage, positive/negative/unknown outcome comparison, counts, counterexamples, objections and supported explanations |
+| buyer-roles.md | Observed participants, decision roles and interactions; distinguish job titles, seller designations and demonstrated roles |
+| signals-and-triggers.md | Observed conditions and events that may indicate fit, need or timing, with chronology, availability before outreach, counterexamples and untested hypotheses |
+| case-study.md | One well-documented deal or noncommercial contact journey: context, timeline, participants, exchanges, decision/outcome and gaps |
 | outreach-examples.md | Curated examples with channel, context, exact message excerpts, observed reply/meeting/won association and source links |
 | gaps.md | Missing data, contradictions, inaccessible/unqueried sources and next inputs needed to resolve open questions; enrichment only where relevant |
 
 The CSV tables hold identifiable accounts, contacts, deals, outreach, outcome observations and evidence. Do not duplicate every row in prose. If a report has no supporting evidence, say what was unavailable in one sentence rather than filling a template with unknowns.
 
-In findings, make these two comparisons explicit:
+In outcome-analysis, make these two comparisons explicit:
 
 - **Outcomes:** use the agreed success definition. For sales, compare won/lost cases; for noncommercial outreach, compare the defined positive and negative outcomes, keeping intermediate and unknown outcomes separate. Report distinct cases, available conversation coverage and unresolved identities. A reply is not a registration, and registration is not attendance. Show named, linked examples on each available side; explain when a comparison cannot yet be made.
 - **ICP or audience fit:** summarize how observed outcomes support or challenge the working definition in `icp.md`, linking to its criteria and evidence rather than duplicating it. If the data supports only engagement patterns, say that it cannot yet establish conversion or audience fit. Do not omit this assessment simply because the evidence is sparse.
 
 Beside each featured example, include the observed contact/account profile or source-record link and links to the relevant conversation and outcome evidence. A name or internal ID alone is not a usable external reference. If a profile link is unavailable, keep the source-record link and identify the missing profile; never guess one.
 
-Label reports **Preliminary** when material coverage gaps remain. End findings with the next useful collection step or the limits the user would need to accept. Writing the reports does not complete analysis: follow the [coverage and findings review](evidence/coverage.md) before offering packaging.
+Each report owns its topic. Keep fit criteria and their hypotheses in icp, timing/detection candidates in signals-and-triggers, and the detailed journey in case-study. Cross-link relevant reports rather than repeating their full contents or producing a catch-all findings file. For customer-context and signals-and-triggers, use [the dedicated guidance](evidence/customer-context-and-signals.md).
+
+Label reports **Preliminary** when material coverage gaps remain. Put the next useful collection steps or limits to accept in gaps. Writing the reports does not complete analysis: follow the [coverage and findings review](evidence/coverage.md) before offering packaging.
 
 Every material factual statement cites one or more evidence IDs, for example [ev-0001](../extracts/ev-0001.md). Keep working and handoff relative layouts identical. Inferred patterns cite their underlying evidence and explain the inference. Seller statements remain attributed.
 

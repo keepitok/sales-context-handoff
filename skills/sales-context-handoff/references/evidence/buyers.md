@@ -8,4 +8,4 @@ A friendly contact is not necessarily a champion. Look for observed advocacy suc
 
 Cite the message, call passage or recorded role behind each statement. Where only a seller's designation exists, retain that attribution. Leave role or stance blank when unsupported rather than guessing.
 
-Summarize roles across the sampled deals without asserting a universal buying committee. Mention missing role evidence that matters to later targeting. Do not create contacts, research new people, propose access paths or initiate relationship actions.
+Write buyer-roles.md with named, linked examples and summarize roles across the sampled deals without asserting a universal buying committee. For noncommercial outreach, describe observed participant or organizer roles without imposing a purchasing committee. Mention missing role evidence that matters to later targeting. Do not invent contacts, research new people, propose access paths or initiate relationship actions.

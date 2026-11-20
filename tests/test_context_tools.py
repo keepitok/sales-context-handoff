@@ -79,7 +79,7 @@ def fixture(workspace, mixed=True):
         record("outreach.csv", outreach_id="o-0001", account_id="a-0003", source_keys="mail-a:thread:5" if mixed else "sheet-a:thread:5", channel="email", outcome="meeting", additional_success="true", extract_path="extracts/ev-0005.md", evidence_ids="ev-0005"),
         record("outreach.csv", outreach_id="o-0002", account_id="a-0002", deal_id="d-0004", source_keys="mail-a:thread:6" if mixed else "sheet-a:thread:6", channel="email", outcome="no_reply", additional_success="false", extract_path="extracts/ev-0006.md", evidence_ids="ev-0006"),
     ])
-    (working / "reports/findings.md").write_text("# Findings\n\nTwo sampled wins are separate opportunities at one company, not two companies. [ev-0001](../extracts/ev-0001.md) [ev-0003](../extracts/ev-0003.md)\n\nOne outcome is contradictory. [ev-0004](../extracts/ev-0004.md)\n\nHypothesis: repeat design demand may matter; delivery quality and retention are unknown. [ev-0003](../extracts/ev-0003.md)\n", encoding="utf-8")
+    (working / "reports/outcome-analysis.md").write_text("# Findings\n\nTwo sampled wins are separate opportunities at one company, not two companies. [ev-0001](../extracts/ev-0001.md) [ev-0003](../extracts/ev-0003.md)\n\nOne outcome is contradictory. [ev-0004](../extracts/ev-0004.md)\n\nHypothesis: repeat design demand may matter; delivery quality and retention are unknown. [ev-0003](../extracts/ev-0003.md)\n", encoding="utf-8")
     (workspace / "raw/private.txt").write_text("PRIVATE ORIGINAL Rowan", encoding="utf-8")
     return message
 
@@ -95,7 +95,7 @@ def prepare_handoff(workspace):
         shutil.copyfile(working / name, handoff / name)
     shutil.copytree(working / "extracts", handoff / "extracts", dirs_exist_ok=True)
     shutil.copytree(working / "reports", handoff / "reports", dirs_exist_ok=True)
-    (handoff / "README.md").write_text("# Reviewed handoff\n\nStart with [findings](reports/findings.md). Tables contain the sampled records; source extracts support them.\n", encoding="utf-8")
+    (handoff / "README.md").write_text("# Reviewed handoff\n\nStart with [findings](reports/outcome-analysis.md). Tables contain the sampled records; source extracts support them.\n", encoding="utf-8")
 
 
 def event_fixture(workspace):
@@ -129,7 +129,7 @@ def event_fixture(workspace):
         (working / f"extracts/{evidence}.md").write_text(f"# {evidence}\n\nSynthetic workshop record {i}: {contact}, {outcome}; scope workshop-a. Unknown means no matched status after a limited lookup.\n", encoding="utf-8")
         rows.append(record("outcomes.csv", outcome_id=f"r-{i:04}", contact_id=contact, outreach_id=outreach, scope_key="workshop-a", outcome=outcome, source_keys=f"sheet-a:status:{i}", evidence_ids=evidence))
     write_rows(working, "outcomes.csv", rows)
-    (working / "reports/findings.md").write_text("# Preliminary findings\n\nOne registration and attendance belong to the same contact. A second contact cancelled. [ev-0001](../extracts/ev-0001.md) [ev-0002](../extracts/ev-0002.md) [ev-0003](../extracts/ev-0003.md)\n\nThe third outcome is unknown, not a negative result. [ev-0004](../extracts/ev-0004.md)\n", encoding="utf-8")
+    (working / "reports/outcome-analysis.md").write_text("# Preliminary findings\n\nOne registration and attendance belong to the same contact. A second contact cancelled. [ev-0001](../extracts/ev-0001.md) [ev-0002](../extracts/ev-0002.md) [ev-0003](../extracts/ev-0003.md)\n\nThe third outcome is unknown, not a negative result. [ev-0004](../extracts/ev-0004.md)\n", encoding="utf-8")
 
 
 def approve_fixture(workspace):
@@ -327,7 +327,7 @@ class ContextTests(unittest.TestCase):
         self.assertIn("Source linkedin-a: partial", result["warnings"])
 
     def test_unknown_evidence_and_wrong_citation_target_fail(self):
-        report = self.workspace / "working/reports/findings.md"
+        report = self.workspace / "working/reports/outcome-analysis.md"
         report.write_text("[ev-9999](../extracts/ev-0001.md) [ev-0001](../extracts/ev-0002.md)")
         errors = helper.validate(self.workspace)["errors"]
         self.assertTrue(any("unknown evidence citation" in e for e in errors))
@@ -399,7 +399,7 @@ class ContextTests(unittest.TestCase):
 
     def test_report_link_cannot_escape_handoff(self):
         prepare_handoff(self.workspace)
-        (self.workspace / "handoff/reports/findings.md").write_text("[private](../../raw/private.txt)")
+        (self.workspace / "handoff/reports/outcome-analysis.md").write_text("[private](../../raw/private.txt)")
         approve_fixture(self.workspace)
         with self.assertRaisesRegex(ValueError, "escapes"):
             helper.package(self.workspace, Path(self.temp.name) / "escape.zip")

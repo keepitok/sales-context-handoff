@@ -36,6 +36,8 @@ Populate accounts, contacts, deals, outreach, outcomes and evidence tables accor
 
 Capture any further relevant passages from business documents, including qualification/scoring rules, sales stages, selling guidance and constraints. Preserve document dates/versions and current or historical status when known. For multiple offers, identify the associated offer in deal extracts when known; leave unclear associations unresolved.
 
+Use [customer context, signals and triggers guidance](evidence/customer-context-and-signals.md) to capture the situation behind each case: needs, current workflow, alternatives, constraints, decision criteria and dated changes relevant to timing. Record when a fact became knowable and whether it was public or private. Preserve counterexamples as well as successes; do not invent predictive signals or enrich missing context.
+
 Capture exact opening messages, follow-ups and relevant replies when available. Label reply, meeting and associated-closed-won outcomes with their actual evidence. A reply can be negative; label sentiment only when the wording supports it. Keep unanswered comparison examples distinct from additional successes.
 
 After each small batch, save rows and extracts in the local project workspace and read them back, then mark its source keys complete in progress. Record partial threads, failed searches, unavailable sources and the next cursor/action. Stop browser work at login challenges, restrictions or unavailable pages; keep collected evidence and offer manual extracts.

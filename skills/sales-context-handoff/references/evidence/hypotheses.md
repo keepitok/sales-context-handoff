@@ -13,7 +13,7 @@ For each useful hypothesis, write:
 - A named, linked counterexample when present, or a limitation when no comparison is available.
 - Which missing attribute, evidence or enrichment would be needed to evaluate it.
 
-Distinguish an externally observable signal from a private fact known only after a conversation. Do not imply that every observed buying trigger is available for prospecting.
+Keep fit criteria in icp.md. Put signal and trigger candidates in signals-and-triggers.md using [the dedicated guidance](customer-context-and-signals.md), and cross-link where a signal relates to a fit hypothesis. Distinguish an externally observable signal from a private fact known only after a conversation. Do not imply that every observed buying trigger is available for prospecting.
 
 Preserve existing qualification/scoring rules as current practice, with attribution. Do not invent numerical weights, thresholds, tiers, hard exclusions or a validated ICP. If the user has no recorded rule, leave the corresponding data empty and put the question in gaps.
 

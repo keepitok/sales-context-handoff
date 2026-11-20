@@ -22,13 +22,15 @@ Assess [outcome coverage and readiness](evidence/coverage.md). With partial evid
 
 ## Draft the findings
 
-Produce six concise reports in `working/reports/`: `offer.md`, `icp.md`, `sales-context.md`, `findings.md`, `outreach-examples.md` and `gaps.md`. Refine the existing offer and ICP drafts using [their lifecycle guidance](evidence/offer-and-icp.md); if missing, build them from already collected context and evidence, noting any missing initial material. Keep the structured tables alongside them.
+Produce the focused reports listed in [the report guide](report-guide.md) under `working/reports/`. Give outcome analysis, buyer roles, customer context, signals/triggers and the case study their own files. Refine the existing offer and ICP drafts using [their lifecycle guidance](evidence/offer-and-icp.md); if missing, build them from already collected context and evidence, noting any missing initial material. Keep the structured tables alongside them.
 
 Use the report guide to cover business context, observed patterns, conversation examples and gaps. Keep drafts in working.
 
-Reconcile the offer and explicit working ICP/audience definition against the collected sample. Preserve the initial source-based understanding, explain evidence-backed revisions and retain uncertainties. In sales-context, describe the sales motion and stages, existing qualification rules, operational constraints and recorded buying roles; link to the offer and ICP files instead of repeating their full contents. Distinguish current practice from a recommended change.
+Reconcile the offer and explicit working ICP/audience definition against the collected sample. Preserve the initial source-based understanding, explain evidence-backed revisions and retain uncertainties. In sales-context, describe the seller's sales motion and stages, existing qualification rules and operational constraints; put observed buying roles in buyer-roles. Link to the offer and ICP files instead of repeating their full contents. Distinguish current practice from a recommended change.
 
-Explain supported patterns with counts, counterexamples and limits. Include one best-documented deal or noncommercial journey walkthrough in findings. Assess ICP/audience-fit evidence explicitly; include lightweight hypotheses only when supported and name missing inputs needed to evaluate them. Preserve existing scoring rules as current practice without endorsing or recalibrating them.
+Explain supported patterns with counts, counterexamples and limits in outcome-analysis. Put one best-documented deal or noncommercial journey walkthrough in case-study. Assess ICP/audience-fit evidence explicitly; include hypotheses only when supported and name missing inputs needed to evaluate them. Preserve existing scoring rules as current practice without endorsing or recalibrating them.
+
+Use [customer context, signals and triggers guidance](evidence/customer-context-and-signals.md) for the two dedicated reports. Distinguish observed needs and situations from candidate predictors. For signals/triggers, preserve chronology, whether each fact was available before outreach or only later/private, supporting and contradictory cases, and the evidence needed to test its future usefulness.
 
 Outreach examples must identify the contact/account and show observed profile/record links, exact source wording, conversation evidence and separately verified response/conversion outcomes. Put these links beside the named example, not only inside a distant extract. If a profile link is unavailable, say so and retain the exact source-record link. Do not rewrite examples into improved copy or imply the initial outreach caused a later sale.
 

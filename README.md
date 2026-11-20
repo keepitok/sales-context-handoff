@@ -49,8 +49,12 @@ Collection starts with your website and offer material, saving separate offer an
 | --- | --- |
 | `working/reports/offer.md` | Initial offer description and evidence-backed refinements: problem, promise, delivery, terms and observed buyer value. |
 | `working/reports/icp.md` | Initial intended audience and working ICP, with supported fit criteria, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
-| `working/reports/sales-context.md` | Sales process, qualification rules, stakeholder roles and operational constraints. |
-| `working/reports/findings.md` | Outcome comparisons, patterns and one documented deal or contact journey. |
+| `working/reports/sales-context.md` | Your sales process, qualification rules and operational constraints. |
+| `working/reports/customer-context.md` | Customers' and prospects' goals, problems, workflows, alternatives and decision criteria. |
+| `working/reports/outcome-analysis.md` | Outcome comparisons, patterns, objections and counterexamples. |
+| `working/reports/buyer-roles.md` | Observed buyer or participant roles, influence and decision involvement. |
+| `working/reports/signals-and-triggers.md` | Conditions and events that may help identify similar future opportunities, with timing, evidence and limits. |
+| `working/reports/case-study.md` | One documented deal or contact journey, from initial context to observed outcome. |
 | `working/reports/outreach-examples.md` | Exact openings, follow-ups and replies, with identifiable examples and observed outcomes. |
 | `working/reports/gaps.md` | Missing information, contradictions and the next inputs needed. |
 | `working/accounts.csv` | Company names, available websites/profile links and attributes already present in the evidence. |

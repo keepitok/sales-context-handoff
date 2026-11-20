@@ -19,6 +19,8 @@ Review the evidence for each question and record a concise summary, counts and c
 | Outcome comparison | Confirmed positive and negative cases where available, unknowns kept separate, reasons and source coverage stated |
 | Conversation evidence | Exact openings, follow-ups, replies, relevant objections and observed outcomes, with omissions visible |
 | ICP/audience fit | Existing targeting definitions distinguished from observed attributes and tentative hypotheses, with named examples and counterexamples |
+| Customer context | Observed needs, current situation, alternatives, constraints and decision criteria, distinguished from seller assumptions |
+| Signals/triggers | Supported conditions or events with timing and source availability; candidate future use distinguished from demonstrated prediction, or explicit lack of evidence |
 | Traceability | Every material finding resolves to evidence; the complete sample lives in standard tables, including people with no known company |
 
 A missing optional attribute is not automatically a material gap. Missing final outcomes for most cases, an absent comparison group, unresolved identity matches or insufficient attributes to examine fit usually limit the intended analysis. Explain which conclusion cannot yet be supported. Do not demand a fixed success rate or invent a calibrated score.
