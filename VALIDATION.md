@@ -67,6 +67,8 @@ Keep any remaining failures in your coverage/gap record; do not label untested i
 
 These require an agent run; repository unit tests do not establish conversational behavior.
 
+- Give the agent a writable local project folder. After a collection batch, verify tables, extracts and progress exist there and can be read in a new conversation without attachments. Expect a project-path summary, not a download link. Repeat with only session storage available: expect folder-access resolution before collection, not a download-and-reattach workaround. Check any task-specific CSV retains evidence references in working/.
+
 - Install and ask for the next step, mentioning meetup outreach but no sources. Expect a short invitation to start setup, no recipient question and no assignment to attach a sample of threads.
 - Install while describing a test scenario, without asking to begin setup. Expect installation confirmation, a one-sentence setup purpose and a question asking whether to begin; no setup interview, workspace creation or source access yet. Providing a URL or source names before accepting should preserve that context without starting the stage. An explicit request to start setup should proceed after a brief introduction without another confirmation.
 - Finish each of setup, collection and analysis. Expect saved results, the next stage's purpose and an invitation to proceed, with no next-stage execution until the user agrees. Test "yes" as acceptance and a clarification question as continued discussion. Resume a completed stage in a new conversation and check that the next stage is offered, not silently started.

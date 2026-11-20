@@ -39,7 +39,7 @@ ChatGPT Work: verify write/read access in the selected workspace. Enable connect
 
 Claude Cowork: verify file access to the selected folder and enable missing file/code capabilities if needed. Verify that a task-written file can be read back from that folder. Later milestones check access to saved progress when resuming.
 
-Current Cowork sessions can run in the cloud and reach local folders through the open desktop app. A connected project reference may not be writable in every mode; test actual access. If only session files are writable, explicitly arrange download into the user folder and reattachment on resume, or resolve folder access before calling setup complete.
+Current Cowork sessions can run in the cloud and reach local folders through the open desktop app. A connected project reference may not be writable in every mode; test actual access. If only session files are writable, resolve access to the local project folder before collection. Session storage, generated download links and manual reattachment do not satisfy this workflow's persistence requirement.
 
 Browser extraction is unverified until a relevant signed-in conversation has been read and its capture checked. Availability may depend on account settings. No authentication bypass, hidden API extraction or delay scheme intended to avoid restrictions.
 

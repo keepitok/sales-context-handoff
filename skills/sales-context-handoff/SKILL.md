@@ -48,6 +48,7 @@ Work one stage at a time. At completion, save progress, show the result, introdu
 - Preserve exact message wording, visibly marking omissions and redactions. A reply, meeting and associated won deal are different outcomes; association alone does not establish causation.
 - Preserve stable identifiers, source locations, dates and user edits. Read existing records before adding new ones; never reset saved progress or overwrite private originals on resume.
 - Keep originals in `raw/`, records and drafts in `working/`, and selected shareable copies in `handoff/`. Do not send or upload the handoff automatically.
+- Save every intermediate artifact directly in the verified local project workspace before reporting it as saved. Read back the written file to verify persistence. In chat, summarize results and point to existing project paths; do not present generated CSVs, extracts or drafts as downloads or ask the user to download and reattach them. Session-only files and chat attachments are not the workspace. If project write access is lost, pause artifact-producing work and resolve it before continuing.
 
 Progress uses the stage keys `setup`, `collect`, `analyze` and `handoff`, each with `not_started`, `partial` or `complete`. Update only the work actually done. Record blockers and next actions so another conversation can resume.
 

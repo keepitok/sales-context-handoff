@@ -11,6 +11,8 @@ This workspace holds sales evidence and findings for handoff. It persists betwee
 
 Setup creates structure; collection fills records; analysis writes reports; handoff makes reviewed copies. Preserve old records and user edits on resume. If the user changes scope, record the change and reconcile the affected rows rather than blindly appending.
 
+All files above live in the verified local project workspace. Save and read back each batch's artifacts there before marking progress. Keep any additional working tables in working/ with evidence references. Chat links should open files already saved in the project; users should not need to download or reattach intermediate results. If only temporary/session storage is available, restore project access before continuing artifact-producing work.
+
 Use this guide as a shared reference for the current milestone. Setup needs Files and Progress; collection needs Progress, Record contract, Extract format and validation; analysis needs Reports and citations and validation; handoff needs the shareable-copy rules and review/package commands. Instructions for later milestones are not tasks to execute early.
 
 ## Progress

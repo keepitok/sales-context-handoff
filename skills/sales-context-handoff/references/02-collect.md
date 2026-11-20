@@ -30,12 +30,12 @@ Also capture relevant passages from the selected website/offer pages and supplie
 
 Capture exact opening messages, follow-ups and relevant replies when available. Label reply, meeting and associated-closed-won outcomes with their actual evidence. A reply can be negative; label sentiment only when the wording supports it. Keep unanswered comparison examples distinct from additional successes.
 
-After each small batch, save rows and extracts first, then mark its source keys complete in progress. Record partial threads, failed searches, unavailable sources and the next cursor/action. Stop browser work at login challenges, restrictions or unavailable pages; keep collected evidence and offer manual extracts.
+After each small batch, save rows and extracts in the local project workspace and read them back, then mark its source keys complete in progress. Record partial threads, failed searches, unavailable sources and the next cursor/action. Stop browser work at login challenges, restrictions or unavailable pages; keep collected evidence and offer manual extracts.
 
 ## Check and finish
 
 Run `python tools/context_tools.py validate .` from the workspace when Python is available. Otherwise perform the same identifier, duplicate and reference checks using the data guide and state that the helper was not run. Inspect plausible duplicate warnings; never merge on company name alone.
 
-Show deal and outreach counts, coverage, missing inputs and two or three evidence examples. Mark collection complete or partial honestly. Do not run synthesis automatically.
+Show deal and outreach counts, coverage, missing inputs and two or three evidence examples. Point to the saved project files and briefly identify what each contains and which sources it draws from. Additional task-specific tables, if useful, also belong in `working/` and must retain evidence references; they do not replace the standard tables or source mapping. Do not offer intermediate files as downloads. Mark collection complete or partial honestly. Do not run synthesis automatically.
 
 Offer analysis: "Next is analysis: I'll turn the collected evidence into supported findings and gaps for handoff. Shall we proceed?" Wait for the user's answer.

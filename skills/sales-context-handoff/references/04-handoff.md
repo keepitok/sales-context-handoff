@@ -27,6 +27,6 @@ Run `python tools/context_tools.py manifest .` to obtain a draft list of paths a
 
 Run `python tools/context_tools.py package . <output.zip>`. The helper validates the allowlist and hashes and excludes raw/working material. Never replace this with a recursive archive of the workspace.
 
-If a compatible Python interpreter is unavailable locally, check whether the app's code execution provides Python 3.10+ and access to the reviewed files, then run the helper there. If neither environment can run it, leave the reviewed folder ready and report that ZIP packaging is incomplete; do not claim a download exists.
+If a compatible Python interpreter is unavailable locally, check whether the app's code execution provides Python 3.10+ and can read the reviewed files and save the resulting ZIP back to the local project workspace. Verify the saved ZIP there. If neither environment can do this, leave the reviewed folder ready and report that ZIP packaging is incomplete; do not substitute a session-only download.
 
 Verify the ZIP member list and report its local path. Save handoff completion in progress. The user shares the package themselves; do not email, upload or publish it.

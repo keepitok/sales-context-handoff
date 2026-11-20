@@ -76,6 +76,8 @@ Setup helps connect your selected sources so the assistant can find and collect 
 
 Your workspace separates original captures (`raw/`), analysis and source mappings (`working/`), and selected shareable copies (`handoff/`). Review and redaction apply to the handoff copies. The ZIP includes only selected, reviewed files; the workflow does not send it automatically.
 
+Intermediate tables, extracts and drafts are saved directly in your local project folder. The assistant points you to those files for review; you do not need to download or reattach them between stages.
+
 The workflow checks for duplicate records and missing evidence links. You review whether the findings reflect your sales history and whether anything should be excluded before sharing.
 
 Your data may be shared with your AI provider (OpenAI or Anthropic). Check your AI app's settings for your current privacy options.

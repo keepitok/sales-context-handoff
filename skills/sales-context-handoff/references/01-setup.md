@@ -27,6 +27,8 @@ Choose file operations and paths for the user's actual operating system and avai
 
 Use a dedicated `sales-context-workspace` folder inside the selected location unless a workspace already exists. Copy the contents of `assets/workspace/` into it, including hidden files, and rename `gitignore.template` to `.gitignore` in the new workspace. Never overwrite an existing workspace with the starter. Preserve the data guide and helper so later stages and new conversations can use them. Create a temporary probe file in `working/`, read it back, then remove that probe to verify persistence. If write access fails, resolve the folder permission before claiming setup is complete.
 
+Confirm the actual local project path with the user in the setup summary. The persistence probe must target that folder, not a temporary execution directory or chat attachment store. If the app exposes only session storage, help connect the local project folder and verify it before collection; do not substitute a download-and-reattach workflow.
+
 Fill `working/progress.json` with scope, website, selected offers, dates, source choices, access status and the current milestone. Keep credentials and session cookies out of files. In a new workspace, leave collection tables empty for the collection milestone. Preserve existing records and milestone progress when repairing setup.
 
 ## Connect the selected sources
