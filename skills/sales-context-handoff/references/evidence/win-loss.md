@@ -8,6 +8,10 @@ Keep buyer evidence, seller interpretation and recorded fields distinct. A CRM r
 
 Reconstruct only what is supported: desired change, alternatives including inaction, decision criteria, stakeholders, decisive events and final outcome. Multiple factors can contribute.
 
+Compare fit explanations with observed handling: assignment, acceptance, response, follow-up and stage progression. A loss alongside delayed follow-up does not establish either poor fit or a follow-up cause. Distinguish evidence for fit, execution and timing; retain competing explanations when the records cannot separate them. Do not turn a loss reason or an unworked prospect into an ICP exclusion.
+
+Revisit the business symptoms and explanations captured at setup. For each material concern, state what the sample supports, challenges or leaves unresolved, with cited cases and coverage limits. Selected cases can illustrate a mechanism but cannot establish a company-wide trend or its root cause without suitable broader evidence. Put the smallest useful check for unresolved explanations in gaps rather than prescribing a new motion or implementation.
+
 Describe patterns with counts, denominator, evidence coverage, counterexamples and alternative explanations. Use "was reported as", "co-occurred with" or "may indicate" where causation is not established. Do not rank individual sellers or infer buyer personality.
 
 Sparse evidence should yield a short set of observations and gaps, not a confident story. No new interviews, competitive research, roadmap promises, discounts or process rollout are part of this milestone.

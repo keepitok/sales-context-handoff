@@ -19,6 +19,8 @@ Establish what counts as the outcome before selecting examples. Use recorded sta
 
 Don't require the user to define an ICP or know qualification terminology. Capture any existing definitions or frameworks they use; otherwise, ask plain-language questions about their customers and sales process.
 
+Reuse any stated reason for this work. If none is clear, ask once: "Is there a particular sales problem you want to understand, or is this a general handoff?" Capture reported symptoms and any explanations already offered by the user or team, with attribution, in progress.selection_notes for collection. Treat explanations as claims to examine, not established causes. A general handoff needs no invented problem or extra diagnostic interview.
+
 Also offer an optional document input: "Do you have existing documents that explain who you sell to, how you qualify deals or how your team sells? You can share files or links, point me to a connected folder, or skip this." Give a few relevant examples if useful: ICP or buyer-persona definitions; qualification/scoring models and pipeline-stage criteria; sales playbooks or objection guides; offer decks and pricing; positioning or competitor notes; previous customer research or win/loss reviews. Reuse documents already supplied. Do not ask the user to create missing documents or complete a checklist. Save selected file/link locations as sources for collection; note known dates or versions and whether the user considers them current.
 
 ## Prepare the workspace

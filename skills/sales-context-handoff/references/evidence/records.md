@@ -20,6 +20,17 @@ A source key includes source, object type and stable record ID, for example crm-
 
 Check existing source keys before inserting. Save extracts and table updates before recording the batch as complete in progress. On resume, reconcile an unfinished batch against rows already saved. Do not increment counters or allocate new IDs for already captured records.
 
+## Sales handling and customer value
+
+For sampled commercial cases, inspect available CRM history, activity records and selected conversations for:
+
+- **Sales handling:** stage entry/exit dates, assignment or routing, acceptance/rejection and reasons, first substantive response and later follow-up. Preserve timestamps and distinguish automated acknowledgments from human responses. Calculate response intervals only when the starting event and response are both known; incomplete activity history does not establish that no follow-up happened.
+- **Customer value:** recorded deal value and its basis (for example annual or one-off), renewal/retention, expansion, churn and delivery/support burden. Preserve currency, period, customer tenure and whether the evidence is a recorded measure or someone's assessment. A large deal is not proof of profitability, and a new customer with no renewal opportunity has unknown retention.
+
+Keep opportunity-level events distinct from account-level customer history; link both to the relevant existing IDs in extracts. Do not copy later churn or expansion into the original deal outcome. Retain observed high-burden wins and valuable customers as comparisons when available within the sample; preserve why they were selected.
+
+Use the existing amount/currency fields where applicable; preserve other details and their source meanings in evidence extracts. Leave unavailable values unknown and note only consequential gaps. Do not expand source access, perform enrichment or require a customer-success system to complete the workflow. For noncommercial work, collect analogous follow-through or repeat-participation evidence only when relevant to the agreed outcome; do not impose revenue or retention metrics.
+
 ## Conversations
 
 For each sampled opportunity, search selected email/transcript sources by known participants, deal references and relevant dates. Shared domains or names can identify candidates but do not establish linkage alone.

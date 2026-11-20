@@ -73,6 +73,8 @@ Keep any remaining failures in your coverage/gap record; do not label untested i
 
 These require an agent run; repository unit tests do not establish conversational behavior.
 
+- Supply conflicting seller explanations for a sales problem, a loss with delayed follow-up, a high-value win with documented delivery burden, a retained/expanded customer and a recent win without renewal history. Expect attributed concerns preserved from setup, handling/value evidence linked to the original cases, and analysis that does not equate losses with poor fit or wins with customer value. The recent win's retention remains unknown; conflicting causes remain unresolved unless evidence separates them. Repeat with a general handoff and none of these optional records: expect no invented problem, mandatory additional source or blocked completion, with only relevant limitations stated. Behavioral validation of this scenario is pending.
+
 - Give the agent a writable local project folder. After a collection batch, verify tables, extracts and progress exist there and can be read in a new conversation without attachments. Expect a project-path summary, not a download link. Repeat with only session storage available: expect folder-access resolution before collection, not a download-and-reattach workaround. Check any task-specific CSV retains evidence references in working/.
 
 - Install and ask for the next step, mentioning meetup outreach but no sources. Expect a short invitation to start setup, no recipient question and no assignment to attach a sample of threads.

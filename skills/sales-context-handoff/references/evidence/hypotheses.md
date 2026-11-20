@@ -6,6 +6,8 @@ Use collected website/offer material and existing targeting documents for the in
 
 Separate company fit from contact role, intent and timing. For noncommercial outreach, assess audience fit against the agreed outcome rather than assuming commercial buyer criteria. Identify observed attributes or situations that plausibly affect the problem, ability to buy, participate or benefit. A won deal is not automatically a good-fit customer; retention and delivery quality may be unknown.
 
+In the customer-fit section of icp.md, distinguish evidence of winning from evidence that a customer is worth repeating. Use available deal value, retention, expansion and delivery/support burden, with named examples and counterexamples; keep these dimensions separate rather than inventing an overall value score. Compare observation periods and tenure before treating missing renewals or expansion as negative evidence. If only acquisition outcomes are known, explicitly limit the profile to acquisition fit and identify the missing customer-value evidence. Use loss-handling evidence from outcome-analysis before proposing poor-fit criteria; lack of follow-up or unresolved timing is not a disqualifying customer attribute.
+
 Keep three levels distinct: the user's documented ICP/intended audience, attributes actually observed in the sample, and hypotheses about why those attributes may matter. A seller's claim about a person's role or company remains attributed until supported by a record. Do not infer role or fit from a name, reply or profile URL alone.
 
 For each useful hypothesis, write:

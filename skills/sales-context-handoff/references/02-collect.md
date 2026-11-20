@@ -12,6 +12,8 @@ Use [outcome coverage and readiness](evidence/coverage.md) to apply the saved ou
 
 Use the saved access routes to find and extract the sample yourself. Do not turn collection into a request for the user to assemble threads that selected sources can supply. If a route fails, use [connection guidance](sources/connections.md) to choose a practical alternative and record the reason for any manual request.
 
+Read the stated business concerns and competing explanations in selection_notes or supplied context. Use them to guide searches for both supporting and challenging evidence within the selected sources and sample budget. Preserve the original statements as attributed evidence, including their dates or periods when known; do not assume the user's explanation is the finding.
+
 ## Start with the offer and intended audience
 
 Before selecting deal or outreach examples, follow [the offer and ICP draft guidance](evidence/offer-and-icp.md). Read the selected website/offer material and supplied business documents, capture evidence and create `working/reports/offer.md` and `working/reports/icp.md`. These are initial source-based drafts, not verified conclusions. If resuming, read and refine the existing drafts rather than restarting them. Use the initial understanding to guide relevant searches while including counterexamples rather than collecting only cases that fit it.
@@ -35,6 +37,8 @@ Read the relevant records and conversations. Keep raw source captures in `raw/`;
 Populate accounts, contacts, deals, outreach, outcomes and evidence tables according to the workspace guide. Each example must have an identifiable account or contact. Capture observed profile/CRM record links, role and organization from the selected sources; keep source conversation and outcome-record links as well. Do not omit a contact because their company is unknown. Report missing identity links as gaps, never manufacture URLs. Preserve known attributes as supplied; leave unknown fields empty. Do not research missing firmographics or start enrichment.
 
 Capture any further relevant passages from business documents, including qualification/scoring rules, sales stages, selling guidance and constraints. Preserve document dates/versions and current or historical status when known. For multiple offers, identify the associated offer in deal extracts when known; leave unclear associations unresolved.
+
+For sampled commercial cases, capture available sales-handling history and customer-value evidence using the corresponding section of [record collection guidance](evidence/records.md). Store details in linked extracts using existing record/evidence IDs; no new required CSV fields or separate report is needed. These inputs are best-effort within selected sources, not prerequisites for collection or a reason to add enrichment.
 
 Use [customer context, signals and triggers guidance](evidence/customer-context-and-signals.md) to capture the situation behind each case: needs, current workflow, alternatives, constraints, decision criteria and dated changes relevant to timing. Record when a fact became knowable and whether it was public or private. Preserve counterexamples as well as successes; do not invent predictive signals or enrich missing context.
 

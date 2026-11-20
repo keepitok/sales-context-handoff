@@ -8,7 +8,7 @@ Use the business name and clear factual descriptions. Include only supported, us
 |---|---|
 | offer.md | Initial website/document-based offer and current evidence-backed description: problem, promise, scope, terms, buyer value and observed outcomes, kept distinct |
 | icp.md | Refined working ICP/audience profile and its initial basis: company/customer fit and buyer/participant roles, with supported criteria, named examples, counterexamples, hypotheses and unknowns |
-| sales-context.md | Seller's sales motion, stages, qualification/scoring definitions, operational constraints and documented practices; distinguish current from historical material |
+| sales-context.md | Reason for this review, reported business symptoms and attributed competing explanations; seller's sales motion, stages, qualification/scoring definitions, operational constraints and documented practices; distinguish current from historical material |
 | customer-context.md | Observed goals, problems, workflows, alternatives, constraints and decision criteria, plus signals/triggers, chronology, availability before outreach, counterexamples and hypotheses |
 | outcome-analysis.md | Sample/coverage, positive/negative/unknown outcome comparison, counts, counterexamples, objections and supported explanations |
 | examples.md | One well-documented deal/contact journey plus curated outreach sequences: context, participants, exact exchanges, timeline, verified outcomes and source links |
@@ -20,6 +20,8 @@ In outcome-analysis, make these two comparisons explicit:
 
 - **Outcomes:** use the agreed success definition. For sales, compare won/lost cases; for noncommercial outreach, compare the defined positive and negative outcomes, keeping intermediate and unknown outcomes separate. Report distinct cases, available conversation coverage and unresolved identities. A reply is not a registration, and registration is not attendance. Show named, linked examples on each available side; explain when a comparison cannot yet be made.
 - **ICP or audience fit:** summarize how observed outcomes support or challenge the working definition in `icp.md`, linking to its criteria and evidence rather than duplicating it. If the data supports only engagement patterns, say that it cannot yet establish conversion or audience fit. Do not omit this assessment simply because the evidence is sparse.
+
+In outcome-analysis, assess the reported business explanations against the collected evidence and distinguish customer fit from sales handling and timing using [win/loss guidance](evidence/win-loss.md). In icp, distinguish acquisition fit from customer value using [ICP guidance](evidence/hypotheses.md). Cross-link the assessments; leave unresolved causes and unavailable value evidence explicit rather than requiring a definitive diagnosis.
 
 Beside each featured example, include the observed contact/account profile or source-record link and links to the relevant conversation and outcome evidence. A name or internal ID alone is not a usable external reference. If a profile link is unavailable, keep the source-record link and identify the missing profile; never guess one.
 

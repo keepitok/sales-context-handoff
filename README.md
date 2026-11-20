@@ -48,10 +48,10 @@ Collection starts with your website and offer material, saving separate offer an
 | File | What it contains |
 | --- | --- |
 | `working/reports/offer.md` | Evidence-backed offer description, refined throughout collection and analysis: problem, promise, delivery, terms and observed buyer value. |
-| `working/reports/icp.md` | Evidence-backed working ICP, refined throughout collection and analysis, with company/customer fit, buyer roles, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
-| `working/reports/sales-context.md` | Your sales process, qualification rules and operational constraints. |
+| `working/reports/icp.md` | Evidence-backed working ICP with customer fit, buyer roles and available evidence of customer value beyond the sale, plus examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
+| `working/reports/sales-context.md` | Your sales process, qualification rules, operational constraints and any business concerns and explanations to examine. |
 | `working/reports/customer-context.md` | Customers' and prospects' situations, needs, workflows, alternatives and constraints, plus signals and triggers that may reveal fit or timing. |
-| `working/reports/outcome-analysis.md` | Outcome comparisons, patterns, objections and counterexamples. |
+| `working/reports/outcome-analysis.md` | Outcome comparisons, objections and counterexamples, considering fit, sales follow-up and timing where evidence permits. |
 | `working/reports/examples.md` | One documented journey plus exact outreach sequences and replies, with identifiable accounts/contacts and verified outcomes. |
 | `working/reports/gaps.md` | Missing information, contradictions and the next inputs needed. |
 | `working/extracts/*.md` | Source excerpts and exact conversations supporting the reports and tables. |
