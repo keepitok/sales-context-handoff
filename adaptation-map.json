@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "e427e38",
+  "baseline_commit_scope": "Original development history before repository extraction; this is not a commit in the standalone repository.",
+  "mapping_root": "skills/",
+  "modified_on": "2026-11-20",
+  "mapping": {
+    "gtm-context/SKILL.md": "sales-context-handoff/references/03-analyze.md",
+    "gtm-context/assets/gtm-context-template.md": "sales-context-handoff/references/report-guide.md",
+    "analyze-win-loss/SKILL.md": "sales-context-handoff/references/evidence/win-loss.md",
+    "define-icp/SKILL.md": "sales-context-handoff/references/evidence/hypotheses.md",
+    "develop-positioning/SKILL.md": "sales-context-handoff/references/evidence/outreach.md",
+    "win-loss-review/SKILL.md": "sales-context-handoff/references/evidence/records.md",
+    "stakeholder-map/SKILL.md": "sales-context-handoff/references/evidence/buyers.md",
+    "deal-qualification-review/SKILL.md": "sales-context-handoff/references/evidence/deal-walkthrough.md"
+  },
+  "removed": "Unused upstream templates, numerical scoring methods and UI metadata. Unchanged sources are identified by upstream.json and retained locally in ignored tmp/upstream-baseline-e427e38.zip."
+}

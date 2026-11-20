@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Context Handoff"
+  short_description: "Prepare sales evidence for your chosen recipient"
+  default_prompt: "Use $sales-context-handoff to help me prepare a sales-context handoff for my chosen recipient, starting from my saved progress if available."

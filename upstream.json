@@ -1,0 +1,149 @@
+{
+  "imported_on": "2026-11-20",
+  "baseline_note": "Baseline paths describe the original import before extraction into this standalone repository. Pinned upstream revisions and hashes below identify the unchanged sources. A local snapshot is retained in ignored tmp/upstream-baseline-e427e38.zip.",
+  "sources": [
+    {
+      "repository": "https://github.com/zarif3624/gtm-skills",
+      "revision": "920c5ac06ac58b49d40b81eede960b2cb5635c7f",
+      "files": [
+        {
+          "upstream": "skills/gtm-context/agents/openai.yaml",
+          "baseline": ".agents/skills/gtm-context/agents/openai.yaml",
+          "sha256": "a576471b63bff451abb0d8afdaaff696391efb12ca17938cb41e7992c69ecf12"
+        },
+        {
+          "upstream": "skills/gtm-context/assets/gtm-context-template.md",
+          "baseline": ".agents/skills/gtm-context/assets/gtm-context-template.md",
+          "sha256": "8796232d49c8df589f94fac094a3ce1fbd3d137656219d4dacef5ca64472e5f0"
+        },
+        {
+          "upstream": "LICENSE",
+          "baseline": ".agents/skills/gtm-context/LICENSE",
+          "sha256": "9e60f5ad1423b7d587f08f2772c2a8445f5bdd70c258761c30b2d821c05cb2a6"
+        },
+        {
+          "upstream": "skills/gtm-context/SKILL.md",
+          "baseline": ".agents/skills/gtm-context/SKILL.md",
+          "sha256": "ae159ec987ab54d67d1954b7878382c4ef0f81ef04c23fcd5b7c2eedd468d6d8"
+        },
+        {
+          "upstream": "skills/define-icp/agents/openai.yaml",
+          "baseline": ".agents/skills/define-icp/agents/openai.yaml",
+          "sha256": "ed6bc735cb19780ef9b2fba1c20c28bdc0353e01daef91f86cc929c18c66fa46"
+        },
+        {
+          "upstream": "skills/define-icp/assets/icp.md",
+          "baseline": ".agents/skills/define-icp/assets/icp.md",
+          "sha256": "8840680676665197fcf1936fe879f03f158adbbfff38cf0edef560010d2f4116"
+        },
+        {
+          "upstream": "LICENSE",
+          "baseline": ".agents/skills/define-icp/LICENSE",
+          "sha256": "9e60f5ad1423b7d587f08f2772c2a8445f5bdd70c258761c30b2d821c05cb2a6"
+        },
+        {
+          "upstream": "skills/define-icp/references/scoring.md",
+          "baseline": ".agents/skills/define-icp/references/scoring.md",
+          "sha256": "ec74b84c0feb745d0f60e4966e0df61e115feb3b1a4b4ef93104b0feef78ca52"
+        },
+        {
+          "upstream": "skills/define-icp/SKILL.md",
+          "baseline": ".agents/skills/define-icp/SKILL.md",
+          "sha256": "6562fa6e8198255ae114399daf76ff90447724a50aa2bd8faa35bc0796623744"
+        },
+        {
+          "upstream": "skills/analyze-win-loss/agents/openai.yaml",
+          "baseline": ".agents/skills/analyze-win-loss/agents/openai.yaml",
+          "sha256": "61a88014b053698ee2ab397b2952d51997c1e5ddcaf98b8dbd4637bbcd14fd15"
+        },
+        {
+          "upstream": "skills/analyze-win-loss/assets/win-loss-analysis.md",
+          "baseline": ".agents/skills/analyze-win-loss/assets/win-loss-analysis.md",
+          "sha256": "2139c6c2fc36e8902d28c006bb2dc47f16acf1c1c362ed60afb8a936263a9ebe"
+        },
+        {
+          "upstream": "LICENSE",
+          "baseline": ".agents/skills/analyze-win-loss/LICENSE",
+          "sha256": "9e60f5ad1423b7d587f08f2772c2a8445f5bdd70c258761c30b2d821c05cb2a6"
+        },
+        {
+          "upstream": "skills/analyze-win-loss/references/methods.md",
+          "baseline": ".agents/skills/analyze-win-loss/references/methods.md",
+          "sha256": "dfa6c90ae090b5182080f5404dd65bb8c7a13d53a5c0a94704ce7ea06835b2a8"
+        },
+        {
+          "upstream": "skills/analyze-win-loss/SKILL.md",
+          "baseline": ".agents/skills/analyze-win-loss/SKILL.md",
+          "sha256": "e91e45df122ecd76c4abc4788a9dede6fc4b5804a28d33448cac872b46a4143c"
+        },
+        {
+          "upstream": "skills/develop-positioning/agents/openai.yaml",
+          "baseline": ".agents/skills/develop-positioning/agents/openai.yaml",
+          "sha256": "70b2099c745f6a2e457d68dea2151c8f597aa638ef49d4248bb602539665537c"
+        },
+        {
+          "upstream": "skills/develop-positioning/assets/positioning-brief.md",
+          "baseline": ".agents/skills/develop-positioning/assets/positioning-brief.md",
+          "sha256": "d8bcbcdca8de733ead98626bff07513cbbea8efe7a02c217060b2bc7c80b2676"
+        },
+        {
+          "upstream": "LICENSE",
+          "baseline": ".agents/skills/develop-positioning/LICENSE",
+          "sha256": "9e60f5ad1423b7d587f08f2772c2a8445f5bdd70c258761c30b2d821c05cb2a6"
+        },
+        {
+          "upstream": "skills/develop-positioning/references/methods.md",
+          "baseline": ".agents/skills/develop-positioning/references/methods.md",
+          "sha256": "a8af2a4689c120ab387d779804b12203be33960e29d85b6bb6ade524745c4e19"
+        },
+        {
+          "upstream": "skills/develop-positioning/SKILL.md",
+          "baseline": ".agents/skills/develop-positioning/SKILL.md",
+          "sha256": "878dd0a535456a73124e622dc4099b7db4e039bd8639de185e8132cd00d99d2b"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/anthropics/knowledge-work-plugins",
+      "revision": "0e0fcacddcc892eb92a1b7873ff9d68159c47571",
+      "files": [
+        {
+          "upstream": "sales/LICENSE",
+          "baseline": ".agents/skills/win-loss-review/LICENSE",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        },
+        {
+          "upstream": "sales/skills/win-loss-review/SKILL.md",
+          "baseline": ".agents/skills/win-loss-review/SKILL.md",
+          "sha256": "393f5f472d746ac4c837a8a35408a99e606a1ae0389a1d2badebcd5d8c2e4951"
+        },
+        {
+          "upstream": "sales/LICENSE",
+          "baseline": ".agents/skills/stakeholder-map/LICENSE",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        },
+        {
+          "upstream": "sales/skills/stakeholder-map/SKILL.md",
+          "baseline": ".agents/skills/stakeholder-map/SKILL.md",
+          "sha256": "85dc84b2ea4bccdeb6eebe1a18b325ec278790190684317a141fb17bb455188b"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/noahatcheckpoint/gtm-skills",
+      "revision": "dcf0f35ddbdf48e25a72710ccf359ae0a800f0f3",
+      "files": [
+        {
+          "upstream": "LICENSE",
+          "baseline": ".agents/skills/deal-qualification-review/LICENSE",
+          "sha256": "4d3194af952586283e0e338ec73405d03773b1ace323388b0de447cafd16449d"
+        },
+        {
+          "upstream": "skills/deal-qualification-review/SKILL.md",
+          "baseline": ".agents/skills/deal-qualification-review/SKILL.md",
+          "sha256": "815d1695299afe740bc0a290655104ef3c22d684ef070db49e02c1db57015586"
+        }
+      ]
+    }
+  ]
+}

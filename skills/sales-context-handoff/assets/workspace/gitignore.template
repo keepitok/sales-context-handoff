@@ -1,0 +1,5 @@
+raw/
+working/
+handoff/
+*.zip
+__pycache__/

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "scope": {
+    "business": "",
+    "website": "",
+    "offers": [],
+    "product": "",
+    "people": "",
+    "start_date": "",
+    "end_date": ""
+  },
+  "recipient": {
+    "role": "",
+    "needs": ""
+  },
+  "limits": {
+    "won_target": 10,
+    "lost_target": 10,
+    "deal_cap": 50,
+    "additional_success_cap": 10
+  },
+  "milestones": {
+    "setup": "not_started",
+    "collect": "not_started",
+    "analyze": "not_started",
+    "handoff": "not_started"
+  },
+  "sources": [],
+  "selection_notes": [],
+  "gaps": [],
+  "last_batch": {
+    "status": "not_started",
+    "source_id": "",
+    "next_action": ""
+  },
+  "updated_at": ""
+}
