@@ -19,7 +19,7 @@ For a native export, guide the user only through steps the agent cannot perform;
 | Spreadsheets | Read sheets, headers and a few relevant rows | User-provided CSV; preserve sheet/row locators |
 | Email | One scoped search by known account/person or deal reference | Selected thread export, EML, copied text or PDF |
 | Transcripts | One existing call transcript within the selected business scope | Existing text, document or meeting notes; distinguish notes from verbatim transcript |
-| LinkedIn | One scoped browser read or readable export; see [route and export guidance](linkedin-export.md) | Switch between browser and export according to coverage and delay; manual extracts when practical |
+| LinkedIn | Export request/status plus a small browser access check; reuse a ready archive | Browser samples while the archive prepares, then specific gaps; manual extracts when practical |
 | Sales Navigator | Check its own inbox and known thread independently | Relevant browser read or manual extract |
 | Website and business documents | One selected page or file; verify readable content and available date/version | Selected file upload, document export, pasted excerpt or user's short explanation, explicitly attributed |
 
@@ -27,7 +27,7 @@ Record the selected route and why any manual input is needed in source coverage/
 
 ## LinkedIn access
 
-When LinkedIn is selected, read [LinkedIn routes, export capabilities and setup](linkedin-export.md). It explains when to browse or export, documented waiting times, categories for invitation text versus private notes, and what to verify and save. Collection uses [LinkedIn collection guidance](linkedin.md) for either route.
+When LinkedIn is selected, read [LinkedIn routes, export capabilities and setup](linkedin-export.md). Request the relevant export and use browser samples while it prepares, respecting the setup-to-collection transition. The reference covers documented waiting times, categories for invitation text versus private notes, and what to save. Collection uses [LinkedIn collection guidance](linkedin.md) to reconcile the two routes.
 
 ## Workspace and source access
 

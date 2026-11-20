@@ -70,7 +70,7 @@ If you prefer to install the skill yourself, follow the steps for your app.
 
 Once installed, run the setup prompt above. It creates the shared workspace and checks that results can be saved there.
 
-Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. For LinkedIn, it chooses between a bounded browser read and an export based on coverage, effort and waiting time; Sales Navigator coverage is checked separately.
+Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. For LinkedIn, it requests an export and collects a few browser examples while the archive prepares, then uses the archive for broader collection. Sales Navigator coverage is checked separately.
 
 ## Your data and review
 
