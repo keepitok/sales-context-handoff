@@ -11,11 +11,11 @@ Keep this skill and its workspace project-local; do not move or register it in p
 
 ## Choose the current stage
 
-Use the current conversation to identify the requested or already accepted stage. If resuming without enough context, locate the user-selected workspace and read `working/progress.json` if it exists. For a new workspace with no accepted stage, propose setup. If the request and saved state leave the next step unclear, ask one short question.
+Use the current conversation to identify the requested or already accepted stage. If resuming without enough context, locate the user-selected workspace and read `working/progress.json` if it exists. For a new workflow, start with setup questions. If the request and saved state leave the next step unclear, ask one short question.
 
-Installation alone, including an installation request that mentions a test scenario, does not start setup. After installing, say the skill is installed, introduce setup's purpose in one sentence and ask whether to begin. Wait for the answer before setup questions, workspace creation or source access. Do not require the user to paste another prompt or assemble evidence first. Reuse stated context.
+After installing, report actual availability, introduce setup's purpose in one sentence, show the privacy note below and immediately ask the first unanswered setup question. Do not ask "Ready to begin?" or require another prompt. Usually ask for the business website and offer; if the activity is already clear, ask where its records and conversations live. Reuse stated context and respect an explicit request to install only and stop. Start with the conversation, then follow setup as answers arrive; installation does not authorize collection.
 
-After the user accepts setup, follow [01-setup.md](references/01-setup.md) and ask the first unanswered scope/source question. A "continue" after an interruption resumes that accepted stage without another invitation or installation check. Keep any necessary saved-state read narrow; do not substitute a generic project-status announcement for the next question or concrete action. This preserves workflow agreement, not an expired tool permission; handle any still-required tool authorization separately.
+Follow [01-setup.md](references/01-setup.md) for the setup conversation. A "continue" after an interruption resumes the current stage without another invitation or installation check. Keep any necessary saved-state read narrow; do not substitute a generic project-status announcement for the next question or concrete action. Workflow continuation does not renew an expired tool permission; handle any still-required tool authorization separately.
 
 | Stage | Input | Saved result | Instructions |
 | --- | --- | --- | --- |
@@ -28,11 +28,11 @@ Read only the current stage's instructions. Load its linked references when need
 
 ## Stage transitions
 
-When first offering or starting setup, show this short note as a separate, prominent paragraph in chat before the setup question or source access. Show it once, not at every stage:
+When starting setup, show this short note as a separate, prominent paragraph in chat before the setup question or source access. Show it once, not at every stage:
 
 > **Privacy:** Collected files are saved in your workspace; your AI provider may process their contents. At the final stage, you choose what to share—nothing is sent automatically.
 
-Before beginning a stage, name it and explain its purpose in one short sentence. If the user explicitly requested that stage or agreed to the proposed transition, proceed without asking again. Otherwise ask whether to begin and wait. Supplying background, a URL or source names does not by itself accept a stage transition; retain that information for when the user proceeds.
+Before beginning a stage, name it and explain its purpose in one short sentence. Setup questions start directly after installation. For later stages, if the user explicitly requested that stage or agreed to the proposed transition, proceed without asking again; otherwise ask whether to begin and wait. Supplying background, a URL or source names answers setup questions but does not by itself authorize moving to collection or another later stage.
 
 Use these purposes in natural wording:
 - Setup: confirm scope, connect selected sources and verify access with small reads.

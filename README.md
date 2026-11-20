@@ -24,13 +24,13 @@ Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once publish
 
 > Verify the copied entrypoint and supporting files through file reads or available skill metadata. Do not open desktop settings, inspect the screen or request computer-control access to check installation or the picker. If project write access is unavailable, explain the specific folder-access issue and guide the user through connecting the project folder or copying the skill there; do not switch to a personal install or a desktop-control workaround. Distinguish files saved, instructions loaded and automatic discovery verified. Repository development tests are not an end-user setup step.
 
-> Once the project copy is readable, load the skill, report its actual availability and introduce setup: it confirms scope, connects selected sources and verifies access. Show the skill's short privacy note prominently in chat, then ask whether to begin and wait before setup questions or source access. An installation request mentioning a test scenario does not start setup. Do not ask the user to assemble a sample of threads or exports before source discovery.
+> Once the project copy is readable, load the skill, report its actual availability and introduce setup: it confirms scope, connects selected sources and verifies access. Show the skill's short privacy note prominently in chat, then immediately ask the first unanswered setup question, usually the business website and offer in scope. Do not ask "Ready to begin?" or require another prompt. Reuse supplied context; if the activity is already clear, ask where its records and conversations live. Follow the setup instructions as answers arrive, without asking the user to assemble a sample of threads or exports. Respect an explicit request to install only and stop.
 
 ## The workflow
 
-One skill guides you through four stages at your own pace. It explains each next stage and waits for you to proceed. Each saves its results so you can review them or resume in a new conversation.
+One skill guides you through four stages at your own pace. After installation, it starts with the setup questions. Between later stages, it explains the next step and waits for you to proceed. Each stage saves its results so you can review them or resume in a new conversation.
 
-Use these prompts after installation:
+Use these prompts to start or resume a stage:
 
 | Stage | Prompt |
 | --- | --- |
@@ -76,7 +76,7 @@ The starting prompt keeps the skill inside your selected project. If you prefer 
 
 Installation uses project file access. For web sources, the workflow uses suitable connections or the app's built-in browser by default. It does not require full computer control. If a user-only action is needed, the assistant explains the steps for you to perform.
 
-Once the instructions are available, run the setup prompt above. It creates the shared workspace and checks that results can be saved there.
+Once the instructions are available, the assistant starts the setup questions. Setup creates the shared workspace and checks that results can be saved there.
 
 Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. For LinkedIn, it requests an export and collects a few browser examples while the archive prepares, then uses the archive for broader collection. Sales Navigator coverage is checked separately.
 
