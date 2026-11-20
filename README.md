@@ -11,14 +11,18 @@ Use the data you already have: CRM records or spreadsheets, email, existing call
 Start a new project in **ChatGPT Work** (desktop app) or **Claude Cowork**, then paste this prompt:
 
 ```text
-Install the sales-context-handoff skill from <PUBLIC_REPOSITORY_URL> and tell me the next step. If installation requires an action from me, guide me through it.
+Read the README at <PUBLIC_REPOSITORY_URL> and install sales-context-handoff in this project only. Use project file tools for installation and the app's built-in browser when browsing is needed; do not use full computer control. Tell me the next step. If an action is needed from me, guide me through it.
 ```
 
 Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once published.
 
 > **For agents:** Before installing, check that the user is in ChatGPT Work or Claude Cowork, in a dedicated project with skill support and persistent file access. Ask if the app or project is unclear. If needed, guide the user to the appropriate app and help them start a project, then ask them to paste the prompt there. Reuse an existing Sales Context Handoff project when resuming.
 
-> After installation, load the skill, confirm it is installed and introduce setup: it confirms scope, connects selected sources and verifies access. Show the skill's short privacy note prominently in chat, then ask whether to begin and wait before setup questions or source access. An installation request mentioning a test scenario does not start setup. Do not ask the user to assemble a sample of threads or exports before source discovery. Installation checks should establish that the skill is available; repository development tests are not an end-user setup step.
+> Install only inside the selected project. For Codex, copy the complete `skills/sales-context-handoff/` folder to `<project>/.agents/skills/sales-context-handoff/` using file tools; see the [documented repository scope](https://learn.chatgpt.com/docs/build-skills). Do not use personal/account-wide skill folders or account-level uploads. Check an installer helper's destination before using it; its default must not override project scope. For other hosts, verify their project-local mechanism rather than assuming the Codex path is automatically discovered. If automatic discovery is unavailable, keep the complete folder in the project and explicitly read its `SKILL.md` as project instructions, reporting that discovery is unverified.
+
+> Verify the copied entrypoint and supporting files through file reads or available skill metadata. Do not open desktop settings, inspect the screen or request computer-control access to check installation or the picker. If project write access is unavailable, explain the specific folder-access issue and guide the user through connecting the project folder or copying the skill there; do not switch to a personal install or a desktop-control workaround. Distinguish files saved, instructions loaded and automatic discovery verified. Repository development tests are not an end-user setup step.
+
+> Once the project copy is readable, load the skill, report its actual availability and introduce setup: it confirms scope, connects selected sources and verifies access. Show the skill's short privacy note prominently in chat, then ask whether to begin and wait before setup questions or source access. An installation request mentioning a test scenario does not start setup. Do not ask the user to assemble a sample of threads or exports before source discovery.
 
 ## The workflow
 
@@ -33,7 +37,7 @@ Use these prompts after installation:
 | **Analyze** | Analyze my sales context and prepare findings for handoff. |
 | **Review and hand off** | Help me review and redact my sales-context handoff, then package the results I choose to share. |
 
-In ChatGPT Work, type `@` and select `sales-context-handoff`. The skill uses your request and saved progress to choose the current stage.
+If the skill appears in ChatGPT Work's `@` picker, you can select it there. Otherwise, ask the assistant to read the project's `sales-context-handoff/SKILL.md` at the saved installation path and follow it. The skill uses your request and saved progress to choose the current stage.
 
 To resume, point the assistant to your workspace and say: “Resume my sales-context analysis from the saved progress.”
 
@@ -64,23 +68,13 @@ Setup asks for your business website, the offers in scope and where relevant evi
 
 The workflow explains existing evidence; it does not run enrichment, create campaigns or implement a GTM engine. A reply, a booked meeting and an outreach sequence associated with a won deal remain distinct outcomes; association is not treated as proof of causation.
 
-## Manual installation
+## Project-only installation
 
-If you prefer to install the skill yourself, follow the steps for your app.
+The starting prompt keeps the skill inside your selected project. If you prefer to copy files yourself, copy the complete `skills/sales-context-handoff/` folder into that project's skill location and tell the assistant where it is. For Codex, this is `.agents/skills/sales-context-handoff/` inside the project. If your app does not discover project skills, the assistant can read the saved instructions directly; this does not register an account-wide skill.
 
-### ChatGPT Work
+Installation uses project file access. For web sources, the workflow uses suitable connections or the app's built-in browser by default. It does not require full computer control. If a user-only action is needed, the assistant explains the steps for you to perform.
 
-1. Open the ChatGPT desktop app, switch to Work and start a dedicated project.
-2. Use the starting prompt above to install the `skills/sales-context-handoff/` folder, following the [current skill installation guidance](https://learn.chatgpt.com/docs/build-skills).
-3. Confirm `sales-context-handoff` is available in the skill picker.
-
-### Claude Cowork
-
-1. Give Claude this repository's URL using the starting prompt above.
-2. Ask it to guide you through the [current skill installation steps](https://support.claude.com/en/articles/12512180-use-skills-in-claude), preparing any required upload from `skills/sales-context-handoff/`.
-3. Enable file/code capabilities and connect a dedicated folder for your sales context.
-
-Once installed, run the setup prompt above. It creates the shared workspace and checks that results can be saved there.
+Once the instructions are available, run the setup prompt above. It creates the shared workspace and checks that results can be saved there.
 
 Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. For LinkedIn, it requests an export and collects a few browser examples while the archive prepares, then uses the archive for broader collection. Sales Navigator coverage is checked separately.
 

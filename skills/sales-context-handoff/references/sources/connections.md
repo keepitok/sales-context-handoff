@@ -31,9 +31,9 @@ When LinkedIn is selected, read [LinkedIn routes, export capabilities and setup]
 
 ## Workspace and source access
 
-When browser access is needed, prefer the AI app's built-in browser. Discover the browser surfaces the session actually exposes and check that route first. If sign-in is needed, let the user sign in there, then continue the scoped read. An existing Chrome session alone is not a reason to choose Chrome over the built-in browser.
+When browser access is needed, use the AI app's built-in browser by default. Inspect browser tool capabilities without a desktop screenshot or whole-computer inventory. If sign-in is needed, let the user sign in there, then continue the scoped read. An existing Chrome session alone is not a reason to choose Chrome over the built-in browser.
 
-Use an external browser such as Chrome when the user explicitly prefers it, or when the built-in route is unavailable or cannot perform the required read. Explain the observed limitation before proposing that fallback; do not default to asking the user to open or control Chrome. Save any expressed browser preference with the source's access notes so it persists on resume. This browser preference does not replace suitable connectors or a ready export that covers the scope.
+If built-in browser access is unavailable or insufficient, explain the limitation and use a suitable connector, native export or bounded manual extract. Use an external browser such as Chrome only when the user explicitly chooses it. Browser permission does not authorize full desktop control: do not invoke native-app control to open settings, complete authentication or repair access unless the user explicitly requests that route. Guide user-only actions in text instead. Save the user's browser preference with the source's access notes so it persists on resume. These rules do not replace suitable connectors or a ready export that covers the scope.
 
 ChatGPT Work: verify write/read access in the selected workspace. Enable connectors or browser access only as needed for the selected sources.
 

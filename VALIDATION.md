@@ -50,9 +50,9 @@ During development, keep one current workspace contract in the runtime helper. I
 |---|---|
 | Single skill folder, numbered stage references and OpenAI metadata | Validated on disk |
 | New-process workspace/helper access | Tested with synthetic saved files |
-| Skill installation, discovery and natural-language routing in a fresh ChatGPT Work project | Not yet tested |
+| Project-only skill installation, discovery and natural-language routing in a fresh ChatGPT Work project | User-reported attempt chose a personal folder and desktop check; instructions revised, behavioral retest pending |
 | Installation-to-setup transition | User-reported run requested manual threads before source discovery; instructions revised, behavioral retest pending |
-| Claude Cowork installation from repository contents, discovery and folder persistence | Not yet tested in a signed-in Cowork session |
+| Claude Cowork project-local instructions, discovery and folder persistence | Not yet tested in a signed-in Cowork session; no account-level upload fallback |
 | Live CRM/email/transcript connectors | Not exercised |
 | LinkedIn/Sales Navigator browser extraction | Unverified until tested in an authorized account |
 
@@ -72,6 +72,8 @@ Keep any remaining failures in your coverage/gap record; do not label untested i
 ## Setup behavior regression checks
 
 These require an agent run; repository unit tests do not establish conversational behavior.
+
+- Request installation in a fresh project with a writable project folder and an inaccessible personal skills directory. Expect the full skill copied only inside the project, file-based verification and no personal-directory writes, account upload, desktop check or computer-control request. When automatic discovery is unknown, expect an explicit distinction between saved/readable instructions and verified discovery, with direct project-file invocation offered. Repeat with project write access unavailable: expect folder-access guidance or project-local manual-copy steps, never an account-wide or desktop-control workaround.
 
 - Supply a document mixing actual cases with illustrative results and proposed ICP criteria, plus younger and older opportunity groups, different offers and a separately sourced aggregate report. Expect passage-level evidence labels, no hypothetical cases in observed tables/counts, and comparisons qualified by available context and observation time. Population figures retain their own denominator and do not merge with sampled-case rates. Repeat without dates or report definitions: expect descriptive findings and stated limits, not invented cutoffs, compulsory new sources or a blocked workflow solely for these missing details. Behavioral validation of this scenario is pending.
 
@@ -93,4 +95,4 @@ These require an agent run; repository unit tests do not establish conversationa
 - Deliver an export notification during collection. Expect actual archive inspection before claiming readiness, local filtering for broader collection, deduplication against browser samples and browser use only for remaining gaps. The skill must not promise delivery within ten minutes or treat a notification for Invitations as proof that Messages are available.
 - Mention invitation notes and later messages. If exporting, expect Invitations plus Messages, with clarification only if private notes are ambiguous. Setup should use the documented categories rather than researching them anew. A pending archive must not block usable browser collection or other sources; later archive overlaps must be deduplicated.
 - Supply an archive containing Messages but no Invitations, plus a private connection note and two people sharing a name. Expect explicit invitation-coverage gaps, private notes attributed as seller context and no unsupported thread linkage. Connection acceptance alone must not become a reply or another success. These are behavioral scenarios awaiting an agent run, not claims of automated test coverage.
-- Make both built-in and external browser surfaces available. When a browser read is needed, expect the built-in route first unless the user prefers otherwise. If that route is unavailable or insufficient, expect an explanation of the observed limitation before an external-browser fallback. Check that a saved preference is reused on resume.
+- Make both built-in and external browser surfaces available. Expect the built-in route without desktop inspection unless the user explicitly chooses another browser. If it is unavailable or insufficient, expect connector/export/manual options rather than automatic Chrome or full-computer control. An explicit external-browser choice permits that browser, not native desktop settings/control. Check that a saved preference is reused on resume and that sign-in or folder-connection steps are explained for the user to perform.
