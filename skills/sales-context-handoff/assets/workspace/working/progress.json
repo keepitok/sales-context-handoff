@@ -9,10 +9,6 @@
     "start_date": "",
     "end_date": ""
   },
-  "recipient": {
-    "role": "",
-    "needs": ""
-  },
   "limits": {
     "won_target": 10,
     "lost_target": 10,

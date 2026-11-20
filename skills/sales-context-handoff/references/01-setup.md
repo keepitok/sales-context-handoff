@@ -1,17 +1,16 @@
 # 01. Setup
 
-Prepare the workspace and connect the user's selected data sources so collection can retrieve relevant evidence with minimal manual work from the user. Save the business and offer scope, intended recipient, history period and verified access for collection.
+Prepare the workspace and connect the user's selected data sources so collection can retrieve relevant evidence with minimal manual work from the user. Save the business and offer scope, history period and verified access for collection.
 
 ## Start from what exists
 
 Inspect the user-selected project folder and available connection metadata. Read an existing `working/progress.json` before asking anything. Reuse saved scope and verified connections; ask only about missing or changed choices. Do not search unrelated folders or read unrelated accounts. A connected source is a candidate, not proof it belongs to this business.
 
-When the user has already described their activity, begin by asking where its records and conversations live. Do not ask them to select, copy or attach a quota of example threads to begin setup. Ask for a source location and a useful search anchor, such as a project/event name and dates, rather than material the agent could retrieve. Adapt questions to the stated activity; do not assume outreach concerns closed deals or infer its handoff recipient.
+When the user has already described their activity, begin by asking where its records and conversations live. Do not ask them to select, copy or attach a quota of example threads to begin setup. Ask for a source location and a useful search anchor, such as a project/event name and dates, rather than material the agent could retrieve. Adapt questions to the stated activity; do not assume outreach concerns closed deals.
 
 Inspect supplied context first. Ask only what is missing, at most three short questions at a time, using choices when the app supports them:
 
 - What is your business website, and which offer or offers should this handoff cover? Offer pages, sales decks or a short explanation can substitute for a website.
-- Who is the handoff for: a new sales hire, a GTM engineer or someone else? Capture what they need to understand or accomplish; a role is enough if no person is named.
 - Where do you keep the relevant sales records and conversations: CRM or spreadsheets, email, existing transcripts, LinkedIn, Sales Navigator? Each source can be skipped.
 
 Read the supplied website's relevant offer pages or supplied documents only far enough to confirm the selected offers. Summarize that understanding for correction before collection; record the URLs or file locations for later evidence capture. Ask about sales-team scope if needed. Propose the last 12 calendar months ending on the user's current date, showing exact dates, and offer a different period for historical exports. Save the agreed dates; do not silently shift them to fit an old file.
@@ -28,9 +27,7 @@ Choose file operations and paths for the user's actual operating system and avai
 
 Use a dedicated `sales-context-workspace` folder inside the selected location unless a workspace already exists. Copy the contents of `assets/workspace/` into it, including hidden files, and rename `gitignore.template` to `.gitignore` in the new workspace. Never overwrite an existing workspace with the starter. Preserve the data guide and helper so later stages and new conversations can use them. Create a temporary probe file in `working/`, read it back, then remove that probe to verify persistence. If write access fails, resolve the folder permission before claiming setup is complete.
 
-Fill `working/progress.json` with scope, website, selected offers, recipient role and needs, dates, source choices, access status and the current milestone. Keep credentials and session cookies out of files. In a new workspace, leave collection tables empty for the collection milestone. Preserve existing records and milestone progress when repairing setup.
-
-Briefly remind the user that their AI provider may process the data and that their app settings control privacy options.
+Fill `working/progress.json` with scope, website, selected offers, dates, source choices, access status and the current milestone. Keep credentials and session cookies out of files. In a new workspace, leave collection tables empty for the collection milestone. Preserve existing records and milestone progress when repairing setup.
 
 ## Connect the selected sources
 
@@ -39,10 +36,10 @@ Choose access routes using [connection guidance](sources/connections.md), balanc
 - For files, inspect actual sheets and columns rather than assuming a CRM schema.
 - For browser access, the user signs in themselves. Check both LinkedIn and Sales Navigator if selected.
 - Record source states: ready, partial, skipped, inaccessible or awaiting_export. Use partial with a next action while connection setup is pending; an unconnected source is not automatically inaccessible. Proceed with usable sources; do not repeatedly ask for a skipped source.
-- If LinkedIn export is pending, record the next action; the collection milestone can use the other ready sources.
+- If a LinkedIn export is pending, record its status and whether a bounded browser route is usable in the meantime; collection need not wait for the archive.
 
 ## Finish
 
-Save setup as complete, or partial with the actual blocker. Show the selected offers, recipient and purpose, workspace location, ready/skipped/pending sources and agreed dates in a few lines. Do not begin collecting the full sample automatically.
+Save setup as complete, or partial with the actual blocker. Show the selected offers, workspace location, ready/skipped/pending sources and agreed dates in a few lines. Do not begin collecting the full sample automatically.
 
 Offer collection: "Next is collection: I'll retrieve the agreed evidence from your selected sources and save traceable records and exact messages. Shall we proceed?" Wait for the user's answer.

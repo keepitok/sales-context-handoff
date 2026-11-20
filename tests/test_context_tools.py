@@ -41,7 +41,6 @@ def fixture(workspace, mixed=True):
     working = workspace / "working"
     progress = json.loads((working / "progress.json").read_text())
     progress["scope"] = {"business": "Synthetic creative subscription", "website": "https://example.invalid", "offers": ["Design support", "Launch assets"], "product": "Design support", "people": "Owner", "start_date": "2025-11-20", "end_date": "2026-11-20"}
-    progress["recipient"] = {"role": "new sales hire", "needs": "Understand our offers, objections and qualification practices"}
     progress["sources"] = [{"source_id": "sheet-a", "kind": "spreadsheet", "label": "Synthetic deal export", "status": "ready", "completed_keys": [], "coverage": "Selected rows"}]
     if mixed:
         progress["sources"] += [{"source_id": "mail-a", "kind": "email", "status": "ready", "completed_keys": []}, {"source_id": "calls-a", "kind": "transcript", "status": "ready", "completed_keys": []}]

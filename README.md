@@ -18,7 +18,7 @@ Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once publish
 
 > **For agents:** Before installing, check that the user is in ChatGPT Work or Claude Cowork, in a dedicated project with skill support and persistent file access. Ask if the app or project is unclear. If needed, guide the user to the appropriate app and help them start a project, then ask them to paste the prompt there. Reuse an existing Sales Context Handoff project when resuming.
 
-> After installation, load the skill, confirm it is installed and introduce setup: it confirms scope and recipient, connects selected sources and verifies access. Ask whether to begin, then wait before setup questions or source access. An installation request mentioning a test scenario does not start setup. Do not ask the user to assemble a sample of threads or exports before source discovery. Installation checks should establish that the skill is available; repository development tests are not an end-user setup step.
+> After installation, load the skill, confirm it is installed and introduce setup: it confirms scope, connects selected sources and verifies access. Show the skill's short privacy note prominently in chat, then ask whether to begin and wait before setup questions or source access. An installation request mentioning a test scenario does not start setup. Do not ask the user to assemble a sample of threads or exports before source discovery. Installation checks should establish that the skill is available; repository development tests are not an end-user setup step.
 
 ## The workflow
 
@@ -28,9 +28,9 @@ Use these prompts after installation:
 
 | Stage | Prompt |
 | --- | --- |
-| **Set up** | Help me set up a sales-context handoff: confirm my business, offers, intended recipient and data sources. |
+| **Set up** | Help me set up a sales-context handoff: confirm my business, offers and data sources. |
 | **Collect** | Collect my deal evidence and successful outreach examples from my selected sources. |
-| **Analyze** | Analyze my sales context and prepare findings for my chosen recipient. |
+| **Analyze** | Analyze my sales context and prepare findings for handoff. |
 | **Review and hand off** | Help me review and redact my sales-context handoff, then package the results I choose to share. |
 
 In ChatGPT Work, type `@` and select `sales-context-handoff`. The skill uses your request and saved progress to choose the current stage.
@@ -44,17 +44,11 @@ The default starting point is the last 12 months, aiming for 10 wins and 10 loss
 - **Sales context:** your offer, customer problems, sales process, qualification definitions and constraints.
 - **Deal evidence:** reusable CSV tables with account, opportunity and source references.
 - **Outreach examples:** exact messages and replies, with their observed outcomes.
-- **Findings:** supported win/loss patterns, buyer roles and one deal walkthrough, organized around what the recipient needs to understand.
-- **Gaps:** missing information and open questions that affect the recipient's work.
+- **Findings:** supported win/loss patterns, buyer roles and one deal walkthrough.
+- **Gaps:** missing information, contradictions and open questions for follow-up.
 - **A reviewed ZIP:** concise Markdown reports, CSV tables and relevant evidence extracts with a reading-order index.
 
-Setup asks for your business website, the offers in scope and who will receive the handoff. The same evidence supports different needs:
-
-| Recipient | Emphasis |
-| --- | --- |
-| New sales hire | Offers, buyer problems, sales process, useful conversation examples, objections and current qualification practices |
-| GTM engineer | Supported patterns, targeting hypotheses, source coverage and gaps affecting architecture, data models and decision logic |
-| Someone else | The context and open questions needed for their stated role and purpose |
+Setup asks for your business website, the offers in scope and where relevant evidence lives.
 
 The workflow explains existing evidence; it does not run enrichment, create campaigns or implement a GTM engine. A reply, a booked meeting and an outreach sequence associated with a won deal remain distinct outcomes; association is not treated as proof of causation.
 
@@ -76,7 +70,7 @@ If you prefer to install the skill yourself, follow the steps for your app.
 
 Once installed, run the setup prompt above. It creates the shared workspace and checks that results can be saved there.
 
-Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. LinkedIn uses exports first, with the browser for relevant gaps; Sales Navigator coverage is checked separately.
+Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. For LinkedIn, it chooses between a bounded browser read and an export based on coverage, effort and waiting time; Sales Navigator coverage is checked separately.
 
 ## Your data and review
 

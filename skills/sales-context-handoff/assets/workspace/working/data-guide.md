@@ -1,6 +1,6 @@
 # Workspace data guide
 
-This workspace holds sales evidence and findings for a handoff tailored to the chosen recipient. It persists between the four workflow stages and between conversations. Read progress.json first.
+This workspace holds sales evidence and findings for handoff. It persists between the four workflow stages and between conversations. Read progress.json first.
 
 ## Files
 
@@ -17,7 +17,7 @@ Use this guide as a shared reference for the current milestone. Setup needs File
 
 Complete scope with business, supplied website URL, selected offers as a list, rep/team scope and exact ISO dates. Retain product when present in an older workspace; confirm its meaning before using it to fill offers. A website is optional; supplied documents or a user explanation can establish the offer scope.
 
-Save recipient.role (for example, "new sales hire" or "GTM engineer") and recipient.needs (what they need to understand or accomplish). Use the user's wording for other roles. If these fields are absent in an existing workspace, ask only for the missing context and add it without resetting evidence or progress. A recipient change calls for report and shareable-copy review, not automatic recollection; re-review changed handoff files before packaging.
+Older workspaces may contain recipient metadata. Leave it intact on resume, but do not request, require or use it to select a report variant. Prepare the common handoff without resetting existing evidence or progress.
 
 All four milestones use not_started, partial or complete. Sources are objects with:
 

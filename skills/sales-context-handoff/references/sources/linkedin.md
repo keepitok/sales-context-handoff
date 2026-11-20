@@ -1,20 +1,22 @@
 # LinkedIn and Sales Navigator collection
 
-## Export first
+## Use the selected route
 
-Use [the documented export categories](linkedin-export.md) to interpret the archive. Invitation messages and private connection notes are different evidence; do not treat private notes as messages sent to a prospect.
+When using an archive, use [the documented export categories](linkedin-export.md) to interpret it. Invitation messages and private connection notes are different evidence; do not treat private notes as messages sent to a prospect.
 
-Use the export location or pending request saved during setup. Do not request another export if the existing one covers the scope. While an export is pending, collect from other ready sources. Inspect actual filenames/columns rather than assuming an export schema. Filter to selected companies, people and the approved period. Preserve relevant original captures in raw without copying unrelated archive categories into the workspace. Preserve participant identifiers, dates and thread identifiers when supplied.
+Reuse the access route saved during setup. For a small identifiable sample without a ready archive, a bounded browser read can be the primary route; no export is a prerequisite. If an export is pending, continue through verified browser access and other ready sources. Reconsider the route if coverage or waiting time changes, following the [route guidance](linkedin-export.md).
 
-Check each requested category separately: present/readable, relevant date coverage, available text and participant identifiers, and any truncation or missing fields. Check a known relevant invitation and follow-up thread when available. A Messages file alone does not establish invitation coverage. An absent file means that category is unavailable in this archive, not proof that no such activity happened. Record consequential gaps and distinguish an unqueried source from a failed or incomplete read.
+When using an export, inspect actual filenames/columns rather than assuming a schema. Do not request another export if the existing one covers the scope. Filter to selected companies, people and the approved period. Preserve relevant original captures in raw without copying unrelated archive categories into the workspace. Preserve participant identifiers, dates and thread identifiers when supplied.
+
+For an archive, check each requested category separately: present/readable, relevant date coverage, available text and participant identifiers, and any truncation or missing fields. Check a known relevant invitation and follow-up thread when available. A Messages file alone does not establish invitation coverage. An absent file means that category is unavailable in this archive, not proof that no such activity happened. Record consequential gaps and distinguish an unqueried source from a failed or incomplete read.
 
 Match invitation text to later messages using profile identifiers and supporting dates/context; names alone are insufficient. Keep uncertain matches separate and deduplicate overlapping text without losing its source references. Preserve exact invitation wording as the opening message when linkage is supported. A sent invitation or connection acceptance does not establish a reply, meeting, registration, attendance or won deal; those need their own evidence. Keep private notes attributed as seller context.
 
 If Sales Navigator is selected, independently check a known Sales Navigator thread. Record the result for each source; the personal export does not establish complete Sales Navigator coverage.
 
-## Browser gaps
+## Browser collection
 
-Use browser access only for missing relevant threads, following the built-in-browser preference and fallback guidance in [connection guidance](connections.md):
+Use browser access for the agreed bounded sample or specific export gaps, following the built-in-browser preference and fallback guidance in [connection guidance](connections.md):
 1. Reuse the selected account's signed-in session. If it is unavailable, save the access issue for the user to resolve before continuing this source.
 2. Open the correct inbox and search a known person/company or selected conversation.
 3. Read and expand enough messages to capture the relevant sequence. Wait for the UI to load; do not use stealth, randomized delay or restriction-evasion schemes.

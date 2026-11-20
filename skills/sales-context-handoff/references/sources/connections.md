@@ -8,7 +8,7 @@ Aim for usable evidence with the least manual effort from the user. Inspect avai
 
 - Reuse selected files and working connections. With a suitable connector, the agent searches and extracts relevant records during collection.
 - For an unconnected source, discover the supported connection option, explain the user-only authorization steps and verify a small relevant read afterward.
-- If a connector is unavailable or unsuitable, compare a native export with a bounded browser read. Choose based on coverage, exact wording, setup effort and user preference. Keep LinkedIn's export-first route below.
+- If a connector is unavailable or unsuitable, compare a native export with a bounded browser read. Choose based on coverage, exact wording, setup effort, waiting time and user preference. For LinkedIn, use the route guidance below.
 - Suggest manual extracts when automated access is blocked, the user prefers not to connect, or a small one-off extract is more practical than setting up access. Briefly explain why and request only the specific missing material. Manual copying is not the default merely because setup has not happened yet.
 
 For a native export, guide the user only through steps the agent cannot perform; the agent handles filtering and extraction from the supplied file. Optional business documents can be located in a selected connected folder as well as supplied directly.
@@ -19,21 +19,21 @@ For a native export, guide the user only through steps the agent cannot perform;
 | Spreadsheets | Read sheets, headers and a few relevant rows | User-provided CSV; preserve sheet/row locators |
 | Email | One scoped search by known account/person or deal reference | Selected thread export, EML, copied text or PDF |
 | Transcripts | One existing call transcript within the selected business scope | Existing text, document or meeting notes; distinguish notes from verbatim transcript |
-| LinkedIn | Relevant export categories and request/download status; see [export guidance](linkedin-export.md) | Built-in browser for relevant gaps; manual extracts when practical |
+| LinkedIn | One scoped browser read or readable export; see [route and export guidance](linkedin-export.md) | Switch between browser and export according to coverage and delay; manual extracts when practical |
 | Sales Navigator | Check its own inbox and known thread independently | Relevant browser read or manual extract |
 | Website and business documents | One selected page or file; verify readable content and available date/version | Selected file upload, document export, pasted excerpt or user's short explanation, explicitly attributed |
 
 Record the selected route and why any manual input is needed in source coverage/next_action. Record a coverage gap only when evidence remains unavailable. Do not require the user to adopt a different service. Never ask the user to paste credentials into chat or files.
 
-## LinkedIn export
+## LinkedIn access
 
-When LinkedIn is selected, read [LinkedIn export capabilities and setup](linkedin-export.md). It identifies the categories for invitation text, conversations and private notes, and explains what to verify and save during setup. Collection uses [LinkedIn collection guidance](linkedin.md) to check coverage and fill relevant gaps.
+When LinkedIn is selected, read [LinkedIn routes, export capabilities and setup](linkedin-export.md). It explains when to browse or export, documented waiting times, categories for invitation text versus private notes, and what to verify and save. Collection uses [LinkedIn collection guidance](linkedin.md) for either route.
 
 ## Workspace and source access
 
 When browser access is needed, prefer the AI app's built-in browser. Discover the browser surfaces the session actually exposes and check that route first. If sign-in is needed, let the user sign in there, then continue the scoped read. An existing Chrome session alone is not a reason to choose Chrome over the built-in browser.
 
-Use an external browser such as Chrome when the user explicitly prefers it, or when the built-in route is unavailable or cannot perform the required read. Explain the observed limitation before proposing that fallback; do not default to asking the user to open or control Chrome. Save any expressed browser preference with the source's access notes so it persists on resume. This browser preference does not replace suitable connectors or LinkedIn's export-first route.
+Use an external browser such as Chrome when the user explicitly prefers it, or when the built-in route is unavailable or cannot perform the required read. Explain the observed limitation before proposing that fallback; do not default to asking the user to open or control Chrome. Save any expressed browser preference with the source's access notes so it persists on resume. This browser preference does not replace suitable connectors or a ready export that covers the scope.
 
 ChatGPT Work: verify write/read access in the selected workspace. Enable connectors or browser access only as needed for the selected sources.
 

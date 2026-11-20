@@ -10,7 +10,7 @@ Use the existing evidence and draft reports. If reports are missing, offer the a
 
 Copy selected draft reports, filtered CSV tables and relevant extracts into `handoff/`. Preserve the parallel reports/extracts layout so relative citations work. Never copy `raw/`, the progress manifest, credentials, the helper or a full user folder into the handoff.
 
-Create `handoff/README.md` titled "Sales context for [business]: handoff for [recipient role]," with the intended use, a short reading order, offer/date scope, coverage limitations and a list of included files. Put business context and conversation examples first for a new sales hire; prioritize findings, evidence and design gaps for a GTM engineer. For another recipient, follow their saved needs. Explain that original source links may require account access; the included extracts should still let the recipient inspect the evidence.
+Create `handoff/README.md` titled "Sales context handoff: [business]," with a short reading order, offer/date scope, coverage limitations and a list of included files. Start with sales context, then findings and outreach examples, followed by gaps and the supporting tables/extracts. Explain that original source links may require account access; the included extracts should still allow evidence review.
 
 Retain stable identifiers. If a deal or outreach example is omitted, prune unused evidence and unneeded personal data from the shareable tables. Preserve the full mapping in working files.
 
