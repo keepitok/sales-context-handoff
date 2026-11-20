@@ -11,12 +11,14 @@ Use the data you already have: CRM records or spreadsheets, email, existing call
 Start a new project in **ChatGPT Work** (desktop app) or **Claude Cowork**, then paste this prompt:
 
 ```text
-Read the README at <PUBLIC_REPOSITORY_URL> and install sales-context-handoff in this project only. Use project file tools for installation and the app's built-in browser when browsing is needed; do not use full computer control. Tell me the next step. If an action is needed from me, guide me through it.
+Read the README at <PUBLIC_REPOSITORY_URL>, install sales-context-handoff in this project only, and tell me the next step.
 ```
 
 Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once published.
 
 > **For agents:** Before installing, check that the user is in ChatGPT Work or Claude Cowork, in a dedicated project with skill support and persistent file access. Ask if the app or project is unclear. If needed, guide the user to the appropriate app and help them start a project, then ask them to paste the prompt there. Reuse an existing Sales Context Handoff project when resuming.
+
+> Use project file tools for installation and the app's built-in browser when browsing is needed; do not use full computer control. Guide the user through any action they need to perform themselves.
 
 > Install only inside the selected project. For Codex, copy the complete `skills/sales-context-handoff/` folder to `<project>/.agents/skills/sales-context-handoff/` using file tools; see the [documented repository scope](https://learn.chatgpt.com/docs/build-skills). Do not use personal/account-wide skill folders or account-level uploads. Check an installer helper's destination before using it; its default must not override project scope. For other hosts, verify their project-local mechanism rather than assuming the Codex path is automatically discovered. If automatic discovery is unavailable, keep the complete folder in the project and explicitly read its `SKILL.md` as project instructions, reporting that discovery is unverified.
 
