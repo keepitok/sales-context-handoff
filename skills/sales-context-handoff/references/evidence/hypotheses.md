@@ -1,8 +1,8 @@
-# Lightweight ICP and signal hypotheses
+# Working ICP definition and signal hypotheses
 
 Modified 2026-11-20 from zarif3624/define-icp; see [NOTICE.md](../../NOTICE.md).
 
-Use only collected customer, deal, loss and conversation evidence. State sample size and limitations.
+Use collected website/offer material and existing targeting documents for the initial stated or inferred audience, then customer, deal, loss and conversation evidence to refine the working definition in `icp.md`. Follow [the draft lifecycle](offer-and-icp.md). State sample size and limitations; published targeting claims alone do not establish fit.
 
 Separate company fit from contact role, intent and timing. For noncommercial outreach, assess audience fit against the agreed outcome rather than assuming commercial buyer criteria. Identify observed attributes or situations that plausibly affect the problem, ability to buy, participate or benefit. A won deal is not automatically a good-fit customer; retention and delivery quality may be unknown.
 
@@ -19,4 +19,4 @@ Preserve existing qualification/scoring rules as current practice, with attribut
 
 No company enrichment, account scoring, market sizing or calibration. Record relevant missing inputs as gaps.
 
-Always state what the evidence permits for ICP/audience-fit interpretation, even if the answer is that attributes or verified outcomes are insufficient. Do not invent a hypothesis to fill a section; identify the smallest useful next collection step instead.
+Always produce the clearest working ICP/audience definition the evidence permits, explicitly distinguishing supported criteria from hypotheses and unknowns. If attributes or verified outcomes are insufficient, retain the initial audience as untested and identify the smallest useful next collection step. Do not invent criteria to fill a section.

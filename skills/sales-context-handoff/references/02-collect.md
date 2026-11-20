@@ -12,6 +12,10 @@ Use [outcome coverage and readiness](evidence/coverage.md) to apply the saved ou
 
 Use the saved access routes to find and extract the sample yourself. Do not turn collection into a request for the user to assemble threads that selected sources can supply. If a route fails, use [connection guidance](sources/connections.md) to choose a practical alternative and record the reason for any manual request.
 
+## Start with the offer and intended audience
+
+Before selecting deal or outreach examples, follow [the offer and ICP draft guidance](evidence/offer-and-icp.md). Read the selected website/offer material and supplied business documents, capture evidence and create `working/reports/offer.md` and `working/reports/icp.md`. These are initial source-based drafts, not verified conclusions. If resuming, read and refine the existing drafts rather than restarting them. Use the initial understanding to guide relevant searches while including counterexamples rather than collecting only cases that fit it.
+
 ## Select a useful bounded sample
 
 Use the chosen business, rep/team and dates:
@@ -30,16 +34,18 @@ Read the relevant records and conversations. Keep raw source captures in `raw/`;
 
 Populate accounts, contacts, deals, outreach, outcomes and evidence tables according to the workspace guide. Each example must have an identifiable account or contact. Capture observed profile/CRM record links, role and organization from the selected sources; keep source conversation and outcome-record links as well. Do not omit a contact because their company is unknown. Report missing identity links as gaps, never manufacture URLs. Preserve known attributes as supplied; leave unknown fields empty. Do not research missing firmographics or start enrichment.
 
-Also capture relevant passages from the selected website/offer pages and supplied business documents: offer, existing ICP/personas, qualification or scoring rules, sales stages, selling guidance and commercial constraints. Preserve document dates/versions and current or historical status when known. Treat documented strategy and published claims as attributed context, not proof of actual buyer behavior or sales effectiveness; retain discrepancies with deal evidence for analysis. For multiple offers, identify the associated offer in deal extracts when known; leave unclear associations unresolved. Save evidence for analysis rather than drafting reports here.
+Capture any further relevant passages from business documents, including qualification/scoring rules, sales stages, selling guidance and constraints. Preserve document dates/versions and current or historical status when known. For multiple offers, identify the associated offer in deal extracts when known; leave unclear associations unresolved.
 
 Capture exact opening messages, follow-ups and relevant replies when available. Label reply, meeting and associated-closed-won outcomes with their actual evidence. A reply can be negative; label sentiment only when the wording supports it. Keep unanswered comparison examples distinct from additional successes.
 
 After each small batch, save rows and extracts in the local project workspace and read them back, then mark its source keys complete in progress. Record partial threads, failed searches, unavailable sources and the next cursor/action. Stop browser work at login challenges, restrictions or unavailable pages; keep collected evidence and offer manual extracts.
 
+Refine `offer.md` and `icp.md` with the batch's supporting and contradictory evidence, following the linked draft guidance. Keep the initial source-based descriptions visible and record material changes with citations. These two living drafts are part of collection; the remaining reports and overall synthesis belong to Analyze.
+
 ## Check and finish
 
 Run `python tools/context_tools.py validate .` from the workspace when Python is available. Otherwise perform the same identifier, duplicate and reference checks using the data guide and state that the helper was not run. Inspect plausible duplicate warnings; never merge on company name alone.
 
-Show distinct case counts by confirmed outcome and unknown status, coverage, missing identity links and two or three named, linked examples. Assess readiness using the coverage reference. Point to the saved project files and briefly identify what each contains and which sources it draws from. Additional task-specific tables, if useful, also belong in `working/` and must retain evidence references; they do not replace the standard tables or source mapping. Do not offer intermediate files as downloads. Mark collection complete or partial honestly. Do not run synthesis automatically.
+Show distinct case counts by confirmed outcome and unknown status, coverage, missing identity links and two or three named, linked examples. Briefly show how the offer and ICP drafts changed or remain uncertain. Assess readiness using the coverage reference. Point to the saved project files and briefly identify what each contains and which sources it draws from. Additional task-specific tables, if useful, also belong in `working/` and must retain evidence references; they do not replace the standard tables or source mapping. Do not offer intermediate files as downloads. Mark collection complete or partial honestly. Do not start the Analyze stage automatically.
 
 If coverage is sufficient, offer analysis and explain its purpose. If material gaps remain, propose the specific additional collection needed and let the user choose further collection or preliminary analysis with those limits. Wait for their answer; a completed batch alone is not a reason to advance.

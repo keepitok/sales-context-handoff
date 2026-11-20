@@ -16,8 +16,8 @@ Installation alone, including an installation request that mentions a test scena
 | Stage | Input | Saved result | Instructions |
 | --- | --- | --- | --- |
 | 01. Setup | Business, offers and candidate sources | Workspace, scope, source access and progress | [01-setup.md](references/01-setup.md) |
-| 02. Collect | Saved scope and selected sources | Identifiable cases, outcome records, exact extracts and coverage notes | [02-collect.md](references/02-collect.md) |
-| 03. Analyze | Collected tables and extracts | Context, findings, outreach examples and gaps | [03-analyze.md](references/03-analyze.md) |
+| 02. Collect | Saved scope and selected sources | Offer/ICP drafts refined from evidence, identifiable cases, outcome records and extracts | [02-collect.md](references/02-collect.md) |
+| 03. Analyze | Collected tables, extracts and living drafts | Reconciled offer and working ICP, sales context, findings, outreach examples and gaps | [03-analyze.md](references/03-analyze.md) |
 | 04. Handoff | Reviewed findings, accepted coverage and selected evidence | Reviewed copies, reading-order index and ZIP | [04-handoff.md](references/04-handoff.md) |
 
 Read only the current stage's instructions. Load its linked references when needed for the selected sources or output. Other stage files are not prerequisites to load. If an input is missing, use the stage table to identify the required earlier stage; do not silently execute the whole workflow.
@@ -32,7 +32,7 @@ Before beginning a stage, name it and explain its purpose in one short sentence.
 
 Use these purposes in natural wording:
 - Setup: confirm scope, connect selected sources and verify access with small reads.
-- Collect: retrieve the agreed evidence and preserve traceable records and exact messages.
+- Collect: start offer and ICP drafts from your website/offer material, then refine them while gathering records and exact messages.
 - Analyze: turn collected evidence into supported findings and gaps for handoff.
 - Review and hand off: review selected contents, apply redactions and package the reviewed results.
 

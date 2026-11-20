@@ -46,4 +46,4 @@ Choose access routes using [connection guidance](sources/connections.md), balanc
 
 Save setup as complete, or partial with the actual blocker. Show the selected offers, workspace location, ready/skipped/pending sources and agreed dates in a few lines. Do not begin collecting the full sample automatically.
 
-Offer collection: "Next is collection: I'll retrieve the agreed evidence from your selected sources and save traceable records and exact messages. Shall we proceed?" Wait for the user's answer.
+Offer collection: "Next is collection: I'll draft your offer and intended audience from the website or supplied material, then refine them with evidence from your selected sources. Shall we proceed?" Wait for the user's answer.

@@ -9,7 +9,7 @@ This workspace holds sales evidence and findings for handoff. It persists betwee
 - handoff/: selected, reviewed copies only. Portable folder layout mirrors working.
 - tools/context_tools.py: standard-library validation, review-manifest preview and ZIP packaging. Python 3.10+; no network or packages required.
 
-Setup creates structure; collection fills records; analysis writes reports; handoff makes reviewed copies. Preserve old records and user edits on resume. If the user changes scope, record the change and reconcile the affected rows rather than blindly appending.
+Setup creates structure; collection starts offer/ICP drafts and refines them while filling records; analysis reconciles those drafts and writes the remaining reports; handoff makes reviewed copies. Preserve old records and user edits on resume. If the user changes scope, record the change and reconcile the affected rows rather than blindly appending.
 
 All files above live in the verified local project workspace. Save and read back each batch's artifacts there before marking progress. Keep any additional working tables in working/ with evidence references. Chat links should open files already saved in the project; users should not need to download or reattach intermediate results. If only temporary/session storage is available, restore project access before continuing artifact-producing work.
 
@@ -84,7 +84,7 @@ When a table row contains values from several sources, explain which source supp
 
 ## Reports and citations
 
-During analysis, write sales-context.md, findings.md, outreach-examples.md and gaps.md inside working/reports/. Cite evidence with a relative link, e.g. [ev-0001](../extracts/ev-0001.md). Keep linked evidence in a handoff when its finding is included. Hypotheses must be labeled and supported by cited observations. The helper checks structure and references; it cannot establish that a claim is true.
+At the start of collection, create offer.md and icp.md inside working/reports/ from selected website/offer material, supplied documents or attributed user context. Preserve the initial source-based drafts and refine current working definitions as evidence arrives. During analysis, reconcile these two files and write sales-context.md, findings.md, outreach-examples.md and gaps.md in the same folder. Cite evidence with a relative link, e.g. [ev-0001](../extracts/ev-0001.md). Keep linked evidence in a handoff when its finding is included. Hypotheses must be labeled and supported by cited observations. The helper checks structure and references; it cannot establish that a claim is true.
 
 During handoff, copy only selected rows/extracts/reports. Maintain account/contact/deal/outreach/outcome/evidence referential integrity. Remove private raw paths, unrelated personal data and unneeded source details from shareable copies; retain source mappings in working. An evidence source_locator can become a neutral record label plus its local extract reference if the original locator is sensitive.
 

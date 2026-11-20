@@ -43,12 +43,25 @@ For noncommercial outreach, such as event invitations, setup establishes what su
 
 ## What you get
 
-- **Sales context:** your offer, customer problems, sales process, qualification definitions and constraints.
-- **Case evidence:** reusable CSV tables with identifiable accounts or contacts, observed profile/source links, deals and outcome records.
-- **Outreach examples:** exact messages and replies, with their observed outcomes.
-- **Findings:** outcome comparisons, buyer or audience roles, ICP/audience-fit evidence, tentative hypotheses and one documented journey.
-- **Gaps:** missing information, contradictions and open questions for follow-up.
-- **A reviewed ZIP:** concise Markdown reports, CSV tables and relevant evidence extracts with a reading-order index.
+Collection starts with your website and offer material, saving separate offer and ICP drafts. As records and conversations are collected, those drafts are refined with supporting evidence and counterexamples. Analyze reconciles the working definitions and prepares these files:
+
+| File | What it contains |
+| --- | --- |
+| `working/reports/offer.md` | Initial offer description and evidence-backed refinements: problem, promise, delivery, terms and observed buyer value. |
+| `working/reports/icp.md` | Initial intended audience and working ICP, with supported fit criteria, examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
+| `working/reports/sales-context.md` | Sales process, qualification rules, stakeholder roles and operational constraints. |
+| `working/reports/findings.md` | Outcome comparisons, patterns and one documented deal or contact journey. |
+| `working/reports/outreach-examples.md` | Exact openings, follow-ups and replies, with identifiable examples and observed outcomes. |
+| `working/reports/gaps.md` | Missing information, contradictions and the next inputs needed. |
+| `working/accounts.csv` | Company names, available websites/profile links and attributes already present in the evidence. |
+| `working/contacts.csv` | Contact names, available LinkedIn/profile links, roles and company associations. |
+| `working/deals.csv` | Commercial opportunities, outcomes and sampling reasons; empty for noncommercial work. |
+| `working/outreach.csv` | Outreach sequences linked to contacts/accounts, conversations and response outcomes. |
+| `working/outcomes.csv` | Separately verified status observations, such as registration or attendance, with unknowns preserved. |
+| `working/evidence.csv` | Source locations, dates and identifiers connecting records to extracts. |
+| `working/extracts/*.md` | Source excerpts and exact conversations supporting the reports and tables. |
+
+`working/progress.json` saves scope, coverage and review status so you can resume. Reports remain preliminary where evidence is insufficient. The later handoff stage creates selected, redacted copies, a reading-order index and a reviewed ZIP.
 
 Setup asks for your business website, the offers in scope and where relevant evidence lives.
 
