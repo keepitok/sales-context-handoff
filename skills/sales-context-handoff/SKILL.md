@@ -44,6 +44,7 @@ Work one stage at a time. At completion, save progress, show the result, introdu
 
 ## Shared working rules
 
+- When asking multiple questions in one message, number them (1, 2, 3) so the user can answer by number. A single question needs no number.
 - Use the agreed business scope and source choices. Every source is skippable.
 - Use project file tools for local work and suitable connectors for sources. When browsing is needed, use the app's built-in browser by default. Do not inspect or control the desktop, open native settings or request full computer-control access for installation, discovery or source setup. Guide user-only actions with short instructions. External-browser or desktop control requires an explicit user request for that route; unavailable built-in access alone is not authorization.
 - Minimize manual collection: setup establishes practical access, then collection finds and extracts evidence from selected sources. Request manual extracts only when they are the most practical route or the user's preference; see setup's source guidance.
