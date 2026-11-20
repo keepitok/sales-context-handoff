@@ -15,6 +15,7 @@ Assess [outcome coverage and readiness](evidence/coverage.md). With partial evid
 ## Evidence rules
 
 - Do not turn an aspiration into a customer fact.
+- Keep illustrative results, forecasts and proposed criteria distinct from observed evidence, including when a supplied document mixes them. Unverified figures cannot establish an outcome, trend or ICP criterion.
 - Keep contradictory evidence visible. Repetition does not verify an explanation.
 - Treat frameworks as optional language, not evidence.
 - Label unsupported process definitions and proposed targeting criteria as hypotheses.

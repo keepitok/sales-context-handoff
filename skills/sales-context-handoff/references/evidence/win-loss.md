@@ -14,4 +14,8 @@ Revisit the business symptoms and explanations captured at setup. For each mater
 
 Describe patterns with counts, denominator, evidence coverage, counterexamples and alternative explanations. Use "was reported as", "co-occurred with" or "may indicate" where causation is not established. Do not rank individual sellers or infer buyer personality.
 
+Make comparisons as comparable as the available evidence permits. Consider differences in offer, source, segment, period, sales handling and time allowed to reach the outcome before interpreting a contrast. Prefer similar cases or groups with similar observation time when readily available; do not split a small sample into unsupported segment claims. Recent open opportunities are not losses, and a younger group with fewer conversions is not necessarily weaker. If dates or context are missing, retain descriptive observations and state the limitation rather than inventing a maturity cutoff or requiring more collection.
+
+Keep population-level report figures distinct from the intentionally selected examples. Attribute reported rates with their known definitions, period and denominator; do not recompute a company win rate from sampled wins/losses or combine mismatched report populations. These are best-effort checks during interpretation, not a requirement to build a funnel report or conduct a statistical study.
+
 Sparse evidence should yield a short set of observations and gaps, not a confident story. No new interviews, competitive research, roadmap promises, discounts or process rollout are part of this milestone.

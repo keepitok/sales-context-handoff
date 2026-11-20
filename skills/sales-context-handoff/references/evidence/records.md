@@ -8,6 +8,10 @@ Read the actual spreadsheet headers or CRM schema. Record the organization's out
 
 Begin with an inexpensive filtered candidate query in the chosen period. For large exports, filter locally. Record population size only if known, filters and selection method. Pick recent records while preserving the user's nominated best/poor-fit wins. Do not imply this purposive sample is statistically representative.
 
+As you read supplied documents, preserve labels such as illustrative, simulated, forecast, target or proposed beside the relevant excerpts. A document may mix actual records with examples: classify the relevant passage, not the whole document. Keep hypothetical numbers and example cases out of observed-case tables and counts; proposed ICP criteria can inform a labeled hypothesis, not an observed customer attribute. If status is unclear, mark it unverified and seek clarification only when it materially affects interpretation.
+
+Capture comparison context where readily available: offer, acquisition source, segment, entry date, outcome date and the date through which outcomes were observed. Preserve existing report filters, period, denominator and metric definitions alongside any aggregate figures. Keep aggregate reports separate from sampled-case counts in extracts, using existing evidence IDs; do not require new fields, wider source access or exhaustive history to obtain these details.
+
 ## Identity and resumption
 
 Use account IDs or a verified domain to link companies, and opportunity IDs for deals. Company names alone are insufficient. Distinct opportunities at one company remain distinct.
