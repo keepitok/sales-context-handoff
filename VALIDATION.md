@@ -41,6 +41,8 @@ The common index loads one stage at a time: `01-setup.md`, `02-collect.md`, `03-
 
 The helper checks structure, counts, references and reviewed bytes. It does not determine whether an agent chose a representative sample, whether an inference follows from a quotation, or whether every sensitive fact has been redacted. Those require a real workflow review.
 
+During development, keep one current workspace contract in the runtime helper. If an existing test workspace needs migration after a model change, prepare a one-off helper under ignored `tmp/`, preview and test it on a copy, and preserve a backup before applying it. Do not add compatibility branches to the distributed skill or commit temporary migration helpers and data.
+
 ## Live app status
 
 | Capability | Status |
