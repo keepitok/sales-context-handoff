@@ -57,13 +57,9 @@ Collection starts with your website and offer material, saving separate offer an
 | `working/reports/case-study.md` | One documented deal or contact journey, from initial context to observed outcome. |
 | `working/reports/outreach-examples.md` | Exact openings, follow-ups and replies, with identifiable examples and observed outcomes. |
 | `working/reports/gaps.md` | Missing information, contradictions and the next inputs needed. |
-| `working/accounts.csv` | Company names, available websites/profile links and attributes already present in the evidence. |
-| `working/contacts.csv` | Contact names, available LinkedIn/profile links, roles and company associations. |
-| `working/deals.csv` | Commercial opportunities, outcomes and sampling reasons; empty for noncommercial work. |
-| `working/outreach.csv` | Outreach sequences linked to contacts/accounts, conversations and response outcomes. |
-| `working/outcomes.csv` | Separately verified status observations, such as registration or attendance, with unknowns preserved. |
-| `working/evidence.csv` | Source locations, dates and identifiers connecting records to extracts. |
 | `working/extracts/*.md` | Source excerpts and exact conversations supporting the reports and tables. |
+
+Supporting CSV evidence in `working/` preserves accounts, contacts, deals, outreach, outcomes and source references behind the reports.
 
 `working/progress.json` saves scope, coverage and review status so you can resume. Reports remain preliminary where evidence is insufficient. The later handoff stage creates selected, redacted copies, a reading-order index and a reviewed ZIP.
 
