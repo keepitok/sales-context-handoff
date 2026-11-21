@@ -11,7 +11,7 @@ Use the data you already have: CRM records or spreadsheets, email, existing call
 Start a new project in **ChatGPT Work** (desktop app) or **Claude Cowork**, then paste this prompt:
 
 ```text
-Read the README at https://github.com/keepitok/sales-context-handoff, install sales-context-handoff in this project only, and tell me the next step.
+Read the README at https://github.com/keepitok/sales-context-handoff, install sales-context-handoff in this project, and tell me the next step.
 ```
 
 Your assistant should follow the [installation instructions](INSTALL.md). You do not need to work through them yourself.
