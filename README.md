@@ -38,11 +38,11 @@ You can also use it for event invitations and other outreach. See who replied, r
 
 ## What you get
 
-Collection starts with your website and offer material. It creates offer and ICP drafts, then refines them with evidence and counterexamples. Analysis brings these findings together in the following files:
+By the end of analysis, you have these files:
 
 | File | What it contains |
 | --- | --- |
-| `working/reports/offer.md` | Your offer's problem, promise, delivery, terms and observed buyer value. Refined with evidence throughout the workflow. |
+| `working/reports/offer.md` | Your offer's problem, promise, delivery, terms and observed buyer value. |
 | `working/reports/icp.md` | Customer fit, buyer roles and available evidence of value beyond the sale. Includes examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
 | `working/reports/sales-context.md` | Sales process, qualification rules and constraints. Business concerns and possible explanations to examine. |
 | `working/reports/customer-context.md` | Customer and prospect situations, needs, workflows, alternatives and constraints. Signals and triggers that may reveal fit or timing. |
@@ -53,19 +53,19 @@ Collection starts with your website and offer material. It creates offer and ICP
 
 Supporting CSV files in `working/` hold accounts, contacts, deals, outreach, outcomes and source references.
 
-`working/progress.json` saves scope, coverage and review status. Reports remain preliminary where evidence is insufficient. Handoff produces selected, redacted copies, a reading-order index and a reviewed ZIP.
+`working/progress.json` saves scope, coverage and review status. Reports remain preliminary where evidence is insufficient.
 
 The workflow explains existing evidence. It does not enrich companies, create campaigns or implement a GTM engine. Replies, meetings and associated won deals remain distinct outcomes. A message associated with a win did not necessarily cause it.
 
 ## Your data and review
 
-Your workspace keeps originals in `raw/` and analysis in `working/`. Selected shareable copies go in `handoff/`. Review and redaction apply to those copies. The ZIP contains only selected, reviewed files. Nothing is sent automatically.
+Your workspace keeps originals in `raw/` and analysis in `working/`. Selected shareable copies go in `handoff/`. Review and redaction apply to those copies. The ZIP contains only selected, reviewed files and a reading-order index. Nothing is sent automatically.
 
 Email addresses may be kept privately to match records. They are removed from the handoff. Names, company websites and LinkedIn profiles remain unless you redact them.
 
-Tables, extracts and drafts are saved in your local project folder. The assistant links to those files for review. You do not need to download or reattach them between stages.
+The assistant links to your saved files for review. You do not need to download or reattach them between stages.
 
-The workflow checks for duplicates and missing evidence links. You review findings before packaging. Important gaps lead to targeted collection or your acceptance of a limited handoff. You choose what to include or redact.
+The workflow checks for duplicates and missing evidence links. You review findings before packaging. Important gaps lead to targeted collection or your acceptance of a limited handoff.
 
 Check your AI app's settings for its current privacy options.
 
