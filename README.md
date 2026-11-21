@@ -22,16 +22,12 @@ One skill guides you through four stages at your own pace. After installation, i
 
 Setup asks for your business website, the offers in scope and where relevant evidence lives. It helps you connect selected sources so the assistant can collect evidence with as little manual work from you as practical.
 
-Use these prompts to start or resume a stage:
-
-| Stage | Prompt |
+| Stage | What happens |
 | --- | --- |
-| **Set up** | Help me set up a sales-context handoff: confirm my business, offers and data sources. |
-| **Collect** | Collect my deal evidence and successful outreach examples from my selected sources. |
-| **Analyze** | Analyze my sales context and prepare findings for handoff. |
-| **Review and hand off** | Help me review and redact my sales-context handoff, then package the results I choose to share. |
-
-To resume, point the assistant to your workspace and say: “Resume my sales-context analysis from the saved progress.”
+| **1. Set up** | Confirm your business and offers, choose data sources and verify access. |
+| **2. Collect** | Gather deal records and exact outreach conversations, refining offer and ICP drafts as evidence accumulates. |
+| **3. Analyze** | Compare outcomes, refine your sales context and review supported findings and gaps. |
+| **4. Review and hand off** | Choose what to share, review corrections and redactions, and package the selected results. |
 
 The default starting point is the last 12 months, aiming for 10 wins and 10 losses where available. You can expand the sample to 50 deals and include up to 10 additional outreach examples that led to a reply or meeting. Missing history stays visible as a gap.
 
