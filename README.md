@@ -32,9 +32,9 @@ One skill guides you through four stages at your own pace. Setup questions start
 
 Setup asks for your website, offers and relevant data sources. The assistant helps connect those sources to reduce manual collection.
 
-Start with the last 12 months and 10 wins and 10 losses, where available. You can expand to 50 deals. Add up to 10 other outreach examples that led to replies or meetings. Missing history stays visible as a gap.
+See what your recent wins, losses and successful outreach have in common. The assistant usually starts with the last 12 months. You can adjust the period and sample size.
 
-For event invitations or other noncommercial outreach, setup defines success. Collection compares confirmed positive and negative cases where available. Replies, registrations, attendance and unknown outcomes stay distinct.
+You can also use it for event invitations and other outreach. See who replied, registered or attended, based on the available evidence. Unconfirmed outcomes remain unknown.
 
 ## What you get
 
