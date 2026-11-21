@@ -30,7 +30,7 @@ Your AI assistant should follow the [installation instructions](INSTALL.md).
 
 One skill guides you through four stages at your own pace. Setup questions start after installation. Before each later stage, the assistant waits for you to proceed. Saved results let you review or resume in a new conversation.
 
-Setup asks for your website, offers and relevant data sources. The assistant helps connect those sources to reduce manual collection.
+Setup asks about your business and data sources together. You can name best-fit wins, poor-fit wins and lost accounts to guide collection. The assistant helps connect those sources to reduce manual collection.
 
 See what your recent wins, losses and successful outreach have in common. The assistant usually starts with the last 12 months. You can adjust the period and sample size.
 

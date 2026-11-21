@@ -4,14 +4,18 @@ Prepare the workspace and connect the user's selected data sources so collection
 
 ## Start from what exists
 
-Start with the context already supplied in chat. On a fresh setup, the first substantive response should ask the missing business/offer or source question below, rather than announce a general project inspection. If resuming and saved answers are needed, read the existing `working/progress.json` first, then ask only about missing or changed choices. Reuse verified connections. Do not repeat installation checks, run the helper or inventory connections before asking for missing scope. If scope and source choices are already sufficient, proceed to the next concrete setup action without asking redundant questions.
+Start with the context already supplied in chat. On a fresh setup, ask for the missing inputs in one message with the two numbered groups below. Do not split business scope, account examples and source locations into separate interview steps. Omit answered items and reuse supplied links. If resuming, read `working/progress.json` only when needed to recover saved answers. Do not repeat installation checks, run the helper or inventory connections before this opening. If the inputs are already sufficient, proceed to the next concrete setup action.
 
-When the user has already described their activity, begin by asking where its records and conversations live. Do not ask them to select, copy or attach a quota of example threads to begin setup. Ask for a source location and a useful search anchor, such as a project/event name and dates, rather than material the agent could retrieve. Adapt questions to the stated activity; do not assume outreach concerns closed deals.
+Use this opening, adapted to the user's context:
 
-Ask only what is missing, one or two short questions at a time, using choices when the app supports them:
+1. **Your business:** What's your website, and which offers should we focus on? Name a few best-fit accounts you've won, poor-fit accounts you've won, and accounts you've lost. Links and brief reasons help. Skip any group you cannot name.
+2. **Your data sources:** Where do you keep the relevant records and conversations? For example: CRM, spreadsheets, email, transcripts, LinkedIn or Sales Navigator. Include any existing ICP, qualification or sales documents. Point me to the sources you'd like to use or connect.
 
-- What is your business website, and which offer or offers should this handoff cover? Offer pages, sales decks or a short explanation can substitute for a website.
-- Where do you keep the relevant sales records and conversations: CRM or spreadsheets, email, existing transcripts, LinkedIn, Sales Navigator? Each source can be skipped.
+Names are enough to start. Websites, LinkedIn profiles or CRM links help identify the right accounts. Offer pages, decks or a short explanation can substitute for a website. Account examples and existing documents are optional. Do not ask for a quota, copied threads or attachments that the agent can retrieve. Ask follow-up questions only when a missing or ambiguous answer affects scope, access or collection. Do not re-ask skipped optional inputs.
+
+Adapt both groups to the activity. For event invitations or other noncommercial outreach, ask for useful contact or organization examples and known outcomes instead of closed accounts. Use a project/event name and dates as search anchors. Do not invent won/lost deals. If the activity is already clear, omit its answered business questions while retaining any useful unanswered inputs.
+
+Save supplied account/contact identities in `progress.selection_notes`. Preserve the user's group, reason, links and any known offer or deal dates. Attribute fit judgments and reported outcomes to the user; they are not yet verified findings. Keep best-fit and poor-fit wins distinct from losses. A lost account is not automatically poor fit. Resolve ambiguous account or opportunity matches from selected sources during collection; ask only if ambiguity remains material.
 
 Read the supplied website's relevant offer pages or supplied documents only far enough to confirm the selected offers. Summarize that understanding for correction before collection; record the URLs or file locations for later evidence capture. Ask about sales-team scope if needed. Propose the last 12 calendar months ending on the user's current date, showing exact dates, and offer a different period for historical exports. Save the agreed dates; do not silently shift them to fit an old file.
 
@@ -19,9 +23,9 @@ Establish what counts as the outcome before selecting examples. Use recorded sta
 
 Don't require the user to define an ICP or know qualification terminology. Capture any existing definitions or frameworks they use; otherwise, ask plain-language questions about their customers and sales process.
 
-Reuse any stated reason for this work. If none is clear, ask once: "Is there a particular sales problem you want to understand, or is this a general handoff?" Capture reported symptoms and any explanations already offered by the user or team, with attribution, in progress.selection_notes for collection. Treat explanations as claims to examine, not established causes. A general handoff needs no invented problem or extra diagnostic interview.
+Reuse any stated reason for this work. Capture reported symptoms and explanations with attribution in `progress.selection_notes`. Treat them as claims to examine, not established causes. Ask about the purpose only if it materially changes the scope. A general handoff needs no extra diagnostic interview.
 
-Also offer an optional document input: "Do you have existing documents that explain who you sell to, how you qualify deals or how your team sells? You can share files or links, point me to a connected folder, or skip this." Give a few relevant examples if useful: ICP or buyer-persona definitions; qualification/scoring models and pipeline-stage criteria; sales playbooks or objection guides; offer decks and pricing; positioning or competitor notes; previous customer research or win/loss reviews. Reuse documents already supplied. Do not ask the user to create missing documents or complete a checklist. Save selected file/link locations as sources for collection; note known dates or versions and whether the user considers them current.
+The source group already invites existing documents. Do not ask for them again as a separate step. Relevant material includes ICP definitions, qualification models, sales playbooks, offer decks, pricing and past win/loss reviews. Save supplied locations as sources, with dates or versions and current/historical status when known. Do not ask the user to create missing documents.
 
 ## Prepare the workspace
 

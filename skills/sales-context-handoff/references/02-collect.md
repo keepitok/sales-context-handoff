@@ -21,10 +21,11 @@ Before selecting deal or outreach examples, follow [the offer and ICP draft guid
 ## Select a useful bounded sample
 
 Use the chosen business, rep/team and dates:
-1. Find up to 10 won and 10 lost opportunities, preferring recent records. Include user-identified best-fit and poor-fit wins when available. Record selection reasons rather than interpreting a win as good fit.
-2. If short, ask once whether to extend the period or continue with a shortfall. Do not block the workflow on unavailable history.
-3. Offer expansion only when useful; never exceed 50 sampled deals without a new scope. Include up to 10 additional reply/meeting outreach successes outside the closed-deal sample.
-4. Use connector filters or export rows to identify candidates before opening conversations. Do not enumerate an entire mailbox. If a source cannot support scoped searching, check the other selected access routes before requesting a narrower export or specific user-picked threads.
+1. Start with the account/contact examples saved during setup. Resolve their identities and relevant opportunities within the agreed offer and dates. Retrieve their records and conversations yourself. Preserve the user's fit judgments as attributed claims in linked evidence; record the match or unresolved identity in selection notes. Names alone do not establish a match. If an example is outside scope, note it and ask before expanding scope.
+2. Fill the sample with recent opportunities, up to 10 won and 10 lost where available. Include the named best-fit wins, poor-fit wins and losses within those counts, not as extra quotas. Add cases beyond the named examples, including counterexamples to the user's assessments. Record which examples were user-selected and which were selected from sources. If no examples were supplied, proceed with source-led sampling. A win does not establish good fit, and a loss does not establish poor fit.
+3. If short, ask once whether to extend the period or continue with a shortfall. Do not block the workflow on unavailable history.
+4. Offer expansion only when useful; never exceed 50 sampled deals without a new scope. Include up to 10 additional reply/meeting outreach successes outside the closed-deal sample.
+5. Use connector filters or export rows to identify candidates before opening conversations. Do not enumerate an entire mailbox. If a source cannot support scoped searching, check the other selected access routes before requesting a narrower export or specific user-picked threads.
 
 Keep different opportunities at one company distinct. Preserve original stages and loss reasons alongside normalized outcomes. Silence, a declined meeting, and an unanswered InMail do not establish a lost deal. Conflicting outcome sources remain unresolved until clarified.
 
