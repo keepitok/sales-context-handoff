@@ -16,7 +16,7 @@ Install only inside the selected project. For Codex, copy the complete `skills/s
 
 ## Verify availability
 
-Verify the copied entrypoint and supporting files through file reads or available skill metadata. Do not open desktop settings, inspect the screen or request computer-control access to check installation or the picker. If project write access is unavailable, explain the specific folder-access issue and guide the user through connecting the project folder or copying the skill there; do not switch to a personal install or a desktop-control workaround. Distinguish files saved, instructions loaded and automatic discovery verified. Repository development tests are not an end-user setup step.
+Verify the copied entrypoint and supporting files through file reads or available skill metadata. Do not open desktop settings, inspect the screen or request computer-control access to check installation or the picker. If project write access is unavailable, explain the specific folder-access issue and guide the user through connecting the project folder, then retry installation with project file tools; do not switch to a personal install or a desktop-control workaround. Distinguish files saved, instructions loaded and automatic discovery verified. Repository development tests are not an end-user setup step.
 
 ## Start setup
 

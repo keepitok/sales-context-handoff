@@ -20,6 +20,8 @@ Your assistant should follow the [installation instructions](INSTALL.md). You do
 
 One skill guides you through four stages at your own pace. After installation, it starts with the setup questions. Between later stages, it explains the next step and waits for you to proceed. Each stage saves its results so you can review them or resume in a new conversation.
 
+Setup asks for your business website, the offers in scope and where relevant evidence lives. It helps you connect selected sources so the assistant can collect evidence with as little manual work from you as practical.
+
 Use these prompts to start or resume a stage:
 
 | Stage | Prompt |
@@ -28,8 +30,6 @@ Use these prompts to start or resume a stage:
 | **Collect** | Collect my deal evidence and successful outreach examples from my selected sources. |
 | **Analyze** | Analyze my sales context and prepare findings for handoff. |
 | **Review and hand off** | Help me review and redact my sales-context handoff, then package the results I choose to share. |
-
-If the skill appears in ChatGPT Work's `@` picker, you can select it there. Otherwise, ask the assistant to read the project's `sales-context-handoff/SKILL.md` at the saved installation path and follow it. The skill uses your request and saved progress to choose the current stage.
 
 To resume, point the assistant to your workspace and say: “Resume my sales-context analysis from the saved progress.”
 
@@ -56,19 +56,7 @@ Supporting CSV evidence in `working/` preserves accounts, contacts, deals, outre
 
 `working/progress.json` saves scope, coverage and review status so you can resume. Reports remain preliminary where evidence is insufficient. The later handoff stage creates selected, redacted copies, a reading-order index and a reviewed ZIP.
 
-Setup asks for your business website, the offers in scope and where relevant evidence lives.
-
 The workflow explains existing evidence; it does not run enrichment, create campaigns or implement a GTM engine. A reply, a booked meeting and an outreach sequence associated with a won deal remain distinct outcomes; association is not treated as proof of causation.
-
-## Project-only installation
-
-The starting prompt keeps the skill inside your selected project. It does not install it across your account. If your app cannot discover the skill automatically, the assistant can follow the saved project instructions directly.
-
-Installation uses project file access. For web sources, the workflow uses suitable connections or the app's built-in browser by default. It does not require full computer control. If a user-only action is needed, the assistant explains the steps for you to perform.
-
-Once the instructions are available, the assistant starts the setup questions. Setup creates the shared workspace and checks that results can be saved there.
-
-Setup helps connect your selected sources so the assistant can find and collect relevant evidence with as little manual work from you as practical. It can also use existing files, native exports and browser access. Manual extracts are an option when they are the most practical route or you prefer them. For LinkedIn, it requests an export and collects a few browser examples while the archive prepares, then uses the archive for broader collection. Sales Navigator coverage is checked separately.
 
 ## Your data and review
 
