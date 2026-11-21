@@ -2,76 +2,79 @@
 
 **Turn your sales history into a clear, evidence-backed handoff.**
 
-Sales Context Handoff helps sales leaders prepare a reviewed handoff for a new sales hire, a GTM engineer or another recipient who needs to understand the business's sales context.
+Sales Context Handoff helps sales leaders document their business's sales context. Prepare a reviewed handoff for a new sales hire, a GTM engineer or another recipient.
 
-Use the data you already have: CRM records or spreadsheets, email, existing call transcripts, LinkedIn messages and Sales Navigator conversations. No particular CRM or enrichment subscription is required.
+Use the data you already have: CRM records, spreadsheets, email, call transcripts and LinkedIn conversations.
+
+> **Privacy:** Collected files stay in your project workspace. Your AI provider may process their contents. You choose what to share at handoff.
 
 ## Start here
 
-Start a new project in **ChatGPT Work** (desktop app) or **Claude Cowork**, then paste this prompt:
+Start a new project in **ChatGPT Work** (desktop app) or **Claude Cowork**. Then paste this prompt:
 
 ```text
-Read the README at https://github.com/keepitok/sales-context-handoff, install sales-context-handoff in this project, and tell me the next step.
+Read the README at https://github.com/keepitok/sales-context-handoff.
+Install the sales-context-handoff skill in this project. Tell me the next step.
 ```
 
-Your assistant should follow the [installation instructions](INSTALL.md). You do not need to work through them yourself.
+Your AI assistant should follow the [installation instructions](INSTALL.md).
 
 ## The workflow
 
-One skill guides you through four stages at your own pace. After installation, it starts with the setup questions. Between later stages, it explains the next step and waits for you to proceed. Each stage saves its results so you can review them or resume in a new conversation.
-
-Setup asks for your business website, the offers in scope and where relevant evidence lives. It helps you connect selected sources so the assistant can collect evidence with as little manual work from you as practical.
-
 | Stage | What happens |
 | --- | --- |
-| **1. Set up** | Confirm your business and offers, choose data sources and verify access. |
-| **2. Collect** | Gather deal records and exact outreach conversations, refining offer and ICP drafts as evidence accumulates. |
-| **3. Analyze** | Compare outcomes, refine your sales context and review supported findings and gaps. |
-| **4. Review and hand off** | Choose what to share, review corrections and redactions, and package the selected results. |
+| **1. Set up** | Confirm your business and offers. Choose data sources and verify access. |
+| **2. Collect** | Gather deal records and exact outreach conversations. Refine offer and ICP drafts as evidence accumulates. |
+| **3. Analyze** | Compare outcomes and refine your sales context. Review supported findings and gaps. |
+| **4. Review and hand off** | Choose what to share. Review corrections and redactions. Package the selected results. |
 
-The default starting point is the last 12 months, aiming for 10 wins and 10 losses where available. You can expand the sample to 50 deals and include up to 10 additional outreach examples that led to a reply or meeting. Missing history stays visible as a gap.
+One skill guides you through four stages at your own pace. Setup questions start after installation. Before each later stage, the assistant waits for you to proceed. Saved results let you review or resume in a new conversation.
 
-For noncommercial outreach, such as event invitations, setup establishes what success means. Collection compares confirmed positive and negative cases where available, keeping replies, registrations, attendance and unknown outcomes distinct.
+Setup asks for your website, offers and relevant data sources. The assistant helps connect those sources to reduce manual collection.
+
+Start with the last 12 months and 10 wins and 10 losses, where available. You can expand to 50 deals. Add up to 10 other outreach examples that led to replies or meetings. Missing history stays visible as a gap.
+
+For event invitations or other noncommercial outreach, setup defines success. Collection compares confirmed positive and negative cases where available. Replies, registrations, attendance and unknown outcomes stay distinct.
 
 ## What you get
 
-Collection starts with your website and offer material, saving separate offer and ICP drafts. As records and conversations are collected, those drafts are refined with supporting evidence and counterexamples. Analyze reconciles the working definitions and prepares these files:
+Collection starts with your website and offer material. It creates offer and ICP drafts, then refines them with evidence and counterexamples. Analysis brings these findings together in the following files:
 
 | File | What it contains |
 | --- | --- |
-| `working/reports/offer.md` | Evidence-backed offer description, refined throughout collection and analysis: problem, promise, delivery, terms and observed buyer value. |
-| `working/reports/icp.md` | Evidence-backed working ICP with customer fit, buyer roles and available evidence of customer value beyond the sale, plus examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
-| `working/reports/sales-context.md` | Your sales process, qualification rules, operational constraints and any business concerns and explanations to examine. |
-| `working/reports/customer-context.md` | Customers' and prospects' situations, needs, workflows, alternatives and constraints, plus signals and triggers that may reveal fit or timing. |
-| `working/reports/outcome-analysis.md` | Outcome comparisons, objections and counterexamples, considering fit, sales follow-up and timing where evidence permits. |
-| `working/reports/examples.md` | One documented journey plus exact outreach sequences and replies, with identifiable accounts/contacts and verified outcomes. |
-| `working/reports/gaps.md` | Missing information, contradictions and the next inputs needed. |
-| `working/extracts/*.md` | Source excerpts and exact conversations supporting the reports and tables. |
+| `working/reports/offer.md` | Your offer's problem, promise, delivery, terms and observed buyer value. Refined with evidence throughout the workflow. |
+| `working/reports/icp.md` | Customer fit, buyer roles and available evidence of value beyond the sale. Includes examples, counterexamples and unknowns. For noncommercial outreach, an audience profile. |
+| `working/reports/sales-context.md` | Sales process, qualification rules and constraints. Business concerns and possible explanations to examine. |
+| `working/reports/customer-context.md` | Customer and prospect situations, needs, workflows, alternatives and constraints. Signals and triggers that may reveal fit or timing. |
+| `working/reports/outcome-analysis.md` | Outcome comparisons, objections and counterexamples. Considers fit, sales follow-up and timing where evidence permits. |
+| `working/reports/examples.md` | One documented journey and exact outreach sequences. Includes identifiable accounts or contacts, replies and verified outcomes. |
+| `working/reports/gaps.md` | Missing information, contradictions and next inputs. |
+| `working/extracts/*.md` | Source excerpts and exact conversations supporting the reports. |
 
-Supporting CSV evidence in `working/` preserves accounts, contacts, deals, outreach, outcomes and source references behind the reports.
+Supporting CSV files in `working/` hold accounts, contacts, deals, outreach, outcomes and source references.
 
-`working/progress.json` saves scope, coverage and review status so you can resume. Reports remain preliminary where evidence is insufficient. The later handoff stage creates selected, redacted copies, a reading-order index and a reviewed ZIP.
+`working/progress.json` saves scope, coverage and review status. Reports remain preliminary where evidence is insufficient. Handoff produces selected, redacted copies, a reading-order index and a reviewed ZIP.
 
-The workflow explains existing evidence; it does not run enrichment, create campaigns or implement a GTM engine. A reply, a booked meeting and an outreach sequence associated with a won deal remain distinct outcomes; association is not treated as proof of causation.
+The workflow explains existing evidence. It does not enrich companies, create campaigns or implement a GTM engine. Replies, meetings and associated won deals remain distinct outcomes. A message associated with a win did not necessarily cause it.
 
 ## Your data and review
 
-Your workspace separates original captures (`raw/`), analysis and source mappings (`working/`), and selected shareable copies (`handoff/`). Review and redaction apply to the handoff copies. The ZIP includes only selected, reviewed files; the workflow does not send it automatically.
+Your workspace keeps originals in `raw/` and analysis in `working/`. Selected shareable copies go in `handoff/`. Review and redaction apply to those copies. The ZIP contains only selected, reviewed files. Nothing is sent automatically.
 
-Email addresses can be kept privately for matching records and are removed from the handoff. Names, company websites and LinkedIn profiles remain unless you choose to redact them.
+Email addresses may be kept privately to match records. They are removed from the handoff. Names, company websites and LinkedIn profiles remain unless you redact them.
 
-Intermediate tables, extracts and drafts are saved directly in your local project folder. The assistant points you to those files for review; you do not need to download or reattach them between stages.
+Tables, extracts and drafts are saved in your local project folder. The assistant links to those files for review. You do not need to download or reattach them between stages.
 
-The workflow checks for duplicate records and missing evidence links. You review the findings before moving to packaging. If important outcomes, comparisons or audience attributes are missing, it proposes targeted collection or asks whether you want a limited handoff with those gaps stated. You then choose what to include or redact.
+The workflow checks for duplicates and missing evidence links. You review findings before packaging. Important gaps lead to targeted collection or your acceptance of a limited handoff. You choose what to include or redact.
 
-Your data may be shared with your AI provider (OpenAI or Anthropic). Check your AI app's settings for your current privacy options.
+Check your AI app's settings for its current privacy options.
 
 ## Status
 
-The workflow has been tested with synthetic sales data. Installation in the target apps, live source connections and LinkedIn/Sales Navigator browser collection still need verification. See [validation notes](VALIDATION.md) for details.
+The workflow has been tested with synthetic sales data. App installation and live source connections still need verification. LinkedIn and Sales Navigator browser collection also needs verification. See [validation notes](VALIDATION.md).
 
 ## License and acknowledgments
 
-Original contributions are licensed under [MIT](LICENSE). Third-party material remains subject to its respective licenses; see the notices and license files included with the skill.
+Original contributions use the [MIT license](LICENSE). Third-party material keeps its own licenses. Notices and license files are included with the skill.
 
-Adapted from selected skills by [Zarif](https://github.com/zarif3624/gtm-skills), [Anthropic](https://github.com/anthropics/knowledge-work-plugins) and [Checkpoint GTM](https://github.com/noahatcheckpoint/gtm-skills). Their license texts and attribution notices are preserved alongside the adapted material.
+Adapted from skills by [Zarif](https://github.com/zarif3624/gtm-skills), [Anthropic](https://github.com/anthropics/knowledge-work-plugins) and [Checkpoint GTM](https://github.com/noahatcheckpoint/gtm-skills). Their license texts and attribution notices are preserved.
