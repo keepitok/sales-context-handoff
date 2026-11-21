@@ -4,8 +4,6 @@
 
 Sales Context Handoff helps sales leaders document their business's sales context. Prepare a reviewed handoff for a new sales hire, a GTM engineer or another recipient.
 
-Use the data you already have: CRM records, spreadsheets, email, call transcripts and LinkedIn conversations.
-
 > **Privacy:** Collected files stay in your project workspace. You choose what to share at handoff. Your AI provider may process their contents.
 
 ## Start here
@@ -22,15 +20,14 @@ Or include your context to get setup moving right away. Fill in what you know. O
 ```text
 Read the README at https://github.com/keepitok/sales-context-handoff.
 Install the sales-context-handoff skill in this project.
+
 Start setup with these inputs:
 
 Our website: <URL>
 Offer to focus on: <name, URL or short description>
 
-Our sales data lives in: <tools, files or folder links>
-Examples: CRM, Excel, Gmail, LinkedIn messages, call transcripts, webinar or meetup platforms.
-Existing ICP or sales documents: <file locations or links, if available>
-
+Our sales data lives in: <tools, files or folder links. Examples: CRM, Excel, Gmail, LinkedIn messages, call transcripts, webinar or meetup platforms.>
+Existing ICP or sales documents: <file locations, links or attachments, if available>
 Best-fit accounts we've won: <names or URLs; brief reasons if handy>
 Poor-fit accounts we've won: <names or URLs; brief reasons if handy>
 Accounts we've lost: <names or URLs; brief reasons if known>
