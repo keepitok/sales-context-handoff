@@ -11,10 +11,8 @@ Use the data you already have: CRM records or spreadsheets, email, existing call
 Start a new project in **ChatGPT Work** (desktop app) or **Claude Cowork**, then paste this prompt:
 
 ```text
-Read the README at <PUBLIC_REPOSITORY_URL>, install sales-context-handoff in this project only, and tell me the next step.
+Read the README at https://github.com/keepitok/sales-context-handoff, install sales-context-handoff in this project only, and tell me the next step.
 ```
-
-Replace `<PUBLIC_REPOSITORY_URL>` with this repository's public URL once published.
 
 > **For agents:** Before installing, check that the user is in ChatGPT Work or Claude Cowork, in a dedicated project with skill support and persistent file access. Ask if the app or project is unclear. If needed, guide the user to the appropriate app and help them start a project, then ask them to paste the prompt there. Reuse an existing Sales Context Handoff project when resuming.
 
