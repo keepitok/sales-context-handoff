@@ -17,6 +17,25 @@ Read the README at https://github.com/keepitok/sales-context-handoff.
 Install the sales-context-handoff skill in this project. Tell me the next step.
 ```
 
+Or include your context to get setup moving right away. Fill in what you know. Omit anything unavailable.
+
+```text
+Read the README at https://github.com/keepitok/sales-context-handoff.
+Install the sales-context-handoff skill in this project.
+Start setup with these inputs:
+
+Our website: <URL>
+Offer to focus on: <name, URL or short description>
+
+Our sales data lives in: <tools, files or folder links>
+Examples: CRM, Excel, Gmail, LinkedIn messages, call transcripts, webinar or meetup platforms.
+Existing ICP or sales documents: <file locations or links, if available>
+
+Best-fit accounts we've won: <names or URLs; brief reasons if handy>
+Poor-fit accounts we've won: <names or URLs; brief reasons if handy>
+Accounts we've lost: <names or URLs; brief reasons if known>
+```
+
 Your AI assistant should follow the [installation instructions](INSTALL.md).
 
 ## The workflow
