@@ -6,7 +6,7 @@ Sales Context Handoff helps sales leaders document their business's sales contex
 
 Use the data you already have: CRM records, spreadsheets, email, call transcripts and LinkedIn conversations.
 
-> **Privacy:** Collected files stay in your project workspace. Your AI provider may process their contents. You choose what to share at handoff.
+> **Privacy:** Collected files stay in your project workspace. You choose what to share at handoff. Your AI provider may process their contents.
 
 ## Start here
 
